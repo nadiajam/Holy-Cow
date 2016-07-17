@@ -23,13 +23,12 @@
 		678078C71D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 678078B71D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf */; };
 		678078C81D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 678078B81D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Black.otf */; };
 		678078C91D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Black-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 678078B91D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */; };
-		678078CB1D3C4F4500DF3A6A /* Colors2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678078CA1D3C4F4500DF3A6A /* Colors2.swift */; };
+		678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678078CA1D3C4F4500DF3A6A /* Colors.swift */; };
 		67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */; };
 		67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30681D3BEE7C00C9B751 /* ViewController.swift */; };
 		67EB306C1D3BEE7C00C9B751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EB306A1D3BEE7C00C9B751 /* Main.storyboard */; };
 		67EB306E1D3BEE7C00C9B751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */; };
 		67EB30711D3BEE7C00C9B751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */; };
-		67EB30791D3BEEFC00C9B751 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30781D3BEEFC00C9B751 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +48,7 @@
 		678078B71D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Pro-Trial-Bold-Oblique.otf"; path = "../../../../../Desktop/font/GT-Walsheim-Pro-Trial-Bold-Oblique.otf"; sourceTree = "<group>"; };
 		678078B81D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Pro-Trial-Black.otf"; path = "../../../../../Desktop/font/GT-Walsheim-Pro-Trial-Black.otf"; sourceTree = "<group>"; };
 		678078B91D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Pro-Trial-Black-Oblique.otf"; path = "../../../../../Desktop/font/GT-Walsheim-Pro-Trial-Black-Oblique.otf"; sourceTree = "<group>"; };
-		678078CA1D3C4F4500DF3A6A /* Colors2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors2.swift; sourceTree = "<group>"; };
+		678078CA1D3C4F4500DF3A6A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		67EB30631D3BEE7C00C9B751 /* Holy-Cow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holy-Cow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67EB30681D3BEE7C00C9B751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +56,6 @@
 		67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67EB30701D3BEE7C00C9B751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67EB30721D3BEE7C00C9B751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67EB30781D3BEEFC00C9B751 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = ../../../Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +91,7 @@
 				67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */,
 				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
 				67EB306A1D3BEE7C00C9B751 /* Main.storyboard */,
-				67EB30781D3BEEFC00C9B751 /* Colors.swift */,
-				678078CA1D3C4F4500DF3A6A /* Colors2.swift */,
+				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
 				678078AA1D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Ultra-Light.otf */,
 				678078AB1D3C216F00DF3A6A /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf */,
@@ -206,9 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678078CB1D3C4F4500DF3A6A /* Colors2.swift in Sources */,
+				678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */,
 				67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */,
-				67EB30791D3BEEFC00C9B751 /* Colors.swift in Sources */,
 				67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
