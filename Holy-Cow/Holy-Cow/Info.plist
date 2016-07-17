@@ -36,5 +36,24 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GT-Walsheim-Pro-Trial-Regular.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Light.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Ultra-Light.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Thin.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Medium.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Black.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Ultra-Bold.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Bold.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Regular-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Light-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Thin-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Medium-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Black-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf</string>
+		<string>GT-Walsheim-Pro-Trial-Bold-Oblique.otf</string>
+	</array>
 </dict>
 </plist>
