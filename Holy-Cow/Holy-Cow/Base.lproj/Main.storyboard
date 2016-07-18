@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMA-ew-rkb">
+                                <rect key="frame" x="235" y="420" width="130" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="4pI-XW-AAC"/>
+                                    <constraint firstAttribute="height" constant="50" id="qmR-MW-vnp"/>
+                                </constraints>
+                                <state key="normal" title="sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjd-hk-RTu">
+                                <rect key="frame" x="235" y="490" width="130" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Uma-PZ-uUB"/>
+                                    <constraint firstAttribute="height" constant="50" id="hKt-Jm-whn"/>
+                                </constraints>
+                                <state key="normal" title="sign in">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-logo" translatesAutoresizingMaskIntoConstraints="NO" id="kfD-Z8-nEH">
+                                <rect key="frame" x="175" y="100" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="7zO-YZ-8eu"/>
+                                    <constraint firstAttribute="width" constant="250" id="FHb-qg-WbA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fjd-hk-RTu" firstAttribute="top" secondItem="ZMA-ew-rkb" secondAttribute="bottom" constant="20" id="47f-VY-9bS"/>
+                            <constraint firstItem="kfD-Z8-nEH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9NS-uB-ajL"/>
+                            <constraint firstItem="ZMA-ew-rkb" firstAttribute="top" secondItem="kfD-Z8-nEH" secondAttribute="bottom" constant="70" id="Jax-Qj-gCR"/>
+                            <constraint firstItem="kfD-Z8-nEH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="LDk-Lq-NGs"/>
+                            <constraint firstItem="Fjd-hk-RTu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VM3-OF-nzp"/>
+                            <constraint firstItem="ZMA-ew-rkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wEt-M7-vOe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signInButton" destination="Fjd-hk-RTu" id="i0c-ja-VUd"/>
+                        <outlet property="signUpButton" destination="ZMA-ew-rkb" id="qVh-1O-dAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle-logo" width="2480" height="2480"/>
+    </resources>
 </document>
