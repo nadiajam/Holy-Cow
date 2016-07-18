@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E73C6261D3CD72D00F41471 /* InfoTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */; };
+		4E73C6281D3CD77E00F41471 /* InfoTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E73C6271D3CD77E00F41471 /* InfoTabs.storyboard */; };
+		4E73C62A1D3CF3D700F41471 /* InfoTabsContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73C6291D3CF3D700F41471 /* InfoTabsContentController.swift */; };
 		678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678078CA1D3C4F4500DF3A6A /* Colors.swift */; };
 		67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */; };
 		67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30681D3BEE7C00C9B751 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTabsViewController.swift; sourceTree = "<group>"; };
+		4E73C6271D3CD77E00F41471 /* InfoTabs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoTabs.storyboard; sourceTree = "<group>"; };
+		4E73C6291D3CF3D700F41471 /* InfoTabsContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTabsContentController.swift; sourceTree = "<group>"; };
 		678078CA1D3C4F4500DF3A6A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		67EB30631D3BEE7C00C9B751 /* Holy-Cow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holy-Cow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E73C62B1D3CF48F00F41471 /* InfoTabs */ = {
+			isa = PBXGroup;
+			children = (
+				4E73C6271D3CD77E00F41471 /* InfoTabs.storyboard */,
+				4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */,
+				4E73C6291D3CF3D700F41471 /* InfoTabsContentController.swift */,
+			);
+			name = InfoTabs;
+			sourceTree = "<group>";
+		};
 		67EB305A1D3BEE7C00C9B751 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +79,7 @@
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
 				67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */,
 				67EB30721D3BEE7C00C9B751 /* Info.plist */,
+				4E73C62B1D3CF48F00F41471 /* InfoTabs */,
 			);
 			path = "Holy-Cow";
 			sourceTree = "<group>";
@@ -126,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E73C6281D3CD77E00F41471 /* InfoTabs.storyboard in Resources */,
 				67EB30711D3BEE7C00C9B751 /* LaunchScreen.storyboard in Resources */,
 				67EB306E1D3BEE7C00C9B751 /* Assets.xcassets in Resources */,
 				67EB306C1D3BEE7C00C9B751 /* Main.storyboard in Resources */,
@@ -139,6 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E73C62A1D3CF3D700F41471 /* InfoTabsContentController.swift in Sources */,
+				4E73C6261D3CD72D00F41471 /* InfoTabsViewController.swift in Sources */,
 				678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */,
 				67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */,
 				67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */,
