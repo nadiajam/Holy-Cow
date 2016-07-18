@@ -13,17 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
  
         signInButton.backgroundColor = UIColor.holyRed
         signInButton.layer.cornerRadius = 4
+        signUpButton.titleLabel?.textColor = UIColor.holyRed
         signUpButton.layer.borderColor = UIColor.holyRed.CGColor
         signUpButton.layer.borderWidth = 2
         signUpButton.layer.cornerRadius = 4
-        signUpButton.titleLabel?.textColor = UIColor.holyRed
+        
     }
 
     override func didReceiveMemoryWarning() {
