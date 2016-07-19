@@ -35,6 +35,7 @@
 		67EB30711D3BEE7C00C9B751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */; };
 		6A46F7A51D3CE47600A2C258 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */; };
 		6AAC32301D3E371600F10964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC322F1D3E371600F10964 /* LoginViewController.swift */; };
+		6AAC32331D3E484800F10964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAC32311D3E484800F10964 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		67EB30721D3BEE7C00C9B751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6AAC322F1D3E371600F10964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6AAC32321D3E484800F10964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +139,9 @@
 				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
 				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
 				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
-				67EB306A1D3BEE7C00C9B751 /* Main.storyboard */,
 				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
 				672E4C661D3CF862003906EF /* Calendar.storyboard */,
+				6AAC32311D3E484800F10964 /* Main.storyboard */,
 				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
 				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
@@ -214,6 +216,7 @@
 				672E4CC31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf in Resources */,
 				672E4CC71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */,
 				672E4CCE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf in Resources */,
+				6AAC32331D3E484800F10964 /* Main.storyboard in Resources */,
 				672E4CC61D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular-Oblique.otf in Resources */,
 				672E4C671D3CF862003906EF /* Calendar.storyboard in Resources */,
 				672E4CC01D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf in Resources */,
@@ -259,6 +262,14 @@
 				67EB30701D3BEE7C00C9B751 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6AAC32311D3E484800F10964 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AAC32321D3E484800F10964 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
