@@ -22,8 +22,7 @@ class InfoTabsViewController: UIPageViewController, UIPageViewControllerDelegate
             setViewControllers([firstInfoTab], direction: .Forward, animated: true, completion: nil)
         }
         
-        self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30)
-        
+//        self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height - 30)
     }
 
     override func viewDidLayoutSubviews() {
@@ -31,6 +30,7 @@ class InfoTabsViewController: UIPageViewController, UIPageViewControllerDelegate
         for i in 0..<infoTabsArray.count {
             infoTabsArray[i].view.backgroundColor = colorsArray[i]
             infoTabsArray[i].view.frame = UIScreen.mainScreen().bounds
+//            infoTabsArray[i].
         }
     }
     
@@ -78,17 +78,17 @@ extension InfoTabsViewController : UIPageViewControllerDataSource {
         return infoTabsArray[nextIndex]
     }
     
-    //need for dots
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return infoTabsArray.count
-    }
-    
-    //need for dots
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        guard let firstTab = viewControllers?.first, firstTabIndex = infoTabsArray.indexOf(firstTab) else {
-            return 0
-        }
-        return firstTabIndex
-    }
+//    //need for dots
+//    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        return infoTabsArray.count
+//    }
+//    
+//    //need for dots
+//    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+//        guard let firstTab = viewControllers?.first, firstTabIndex = infoTabsArray.indexOf(firstTab) else {
+//            return 0
+//        }
+//        return firstTabIndex
+//    }
     
 }
