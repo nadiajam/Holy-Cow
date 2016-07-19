@@ -12,9 +12,6 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var daysLabel: UILabel!
-    @IBOutlet weak var minusLabel: UIButton!
-    @IBOutlet weak var plusLabel: UIButton!
     @IBOutlet weak var sundayLabel: UITextField!
     @IBOutlet weak var mondayLabel: UITextField!
     @IBOutlet weak var tuesdayLabel: UITextField!
@@ -27,17 +24,9 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        plusLabel.layer.borderWidth = 3
-        plusLabel.layer.cornerRadius = 15
-        
-        minusLabel.layer.borderWidth = 3
-        minusLabel.layer.cornerRadius = 15
        
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
-        plusLabel.layer.borderColor = UIColor.holyGrey.CGColor
-        minusLabel.layer.borderColor = UIColor.holyGrey.CGColor
-        
         
         //setting text colors
         calendarLabel.textColor = UIColor.whiteColor()
@@ -49,8 +38,6 @@ class CalendarViewController: UIViewController {
         thursdayLabel.textColor = UIColor.holyGrey
         fridayLabel.textColor = UIColor.holyGrey
         saturdayLabel.textColor = UIColor.holyGrey
-        daysLabel.textColor = UIColor.holyGrey
-    
     }
 
     override func didReceiveMemoryWarning() {

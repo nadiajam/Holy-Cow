@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W9F-64-pEz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W9F-64-pEz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="175" width="600" height="108"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="lunch" backgroundImage="Beautiful-Food-Photos-1">
+                                <state key="normal" title="lunch" backgroundImage="lunch-image">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="286" width="600" height="108"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="dinner" backgroundImage="pizza-junk-food-600">
+                                <state key="normal" title="dinner" backgroundImage="dinner-image">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -55,7 +55,7 @@
                                 <rect key="frame" x="0.0" y="397" width="600" height="108"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="shopping list" backgroundImage="foodsafebnr">
+                                <state key="normal" title="shopping list" backgroundImage="shopping-list">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -185,9 +185,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Beautiful-Food-Photos-1" width="600" height="300"/>
         <image name="breakfast-image" width="131" height="46"/>
-        <image name="foodsafebnr" width="660" height="330"/>
-        <image name="pizza-junk-food-600" width="600" height="350"/>
+        <image name="dinner-image" width="132" height="47"/>
+        <image name="lunch-image" width="131" height="46"/>
+        <image name="shopping-list" width="132" height="47"/>
     </resources>
 </document>
