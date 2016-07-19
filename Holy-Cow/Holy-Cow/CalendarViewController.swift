@@ -20,6 +20,9 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var fridayLabel: UITextField!
     @IBOutlet weak var saturdayLabel: UITextField!
     
+    //array
+    var calendarArray = []
+    
     @IBOutlet weak var calendarViewLabel: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
