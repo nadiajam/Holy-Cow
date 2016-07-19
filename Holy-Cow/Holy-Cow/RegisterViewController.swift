@@ -11,8 +11,13 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     @IBOutlet weak var orLabel: UILabel!
-    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    
+    
+    @IBAction func closeButtonTapped(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +28,16 @@ class RegisterViewController: UIViewController {
         orLabel.layer.borderColor = UIColor.whiteColor().CGColor
         orLabel.layer.borderWidth = 2
         
+        closeButton.layer.bounds = CGRectMake(0, 0, 50, 50)
+        closeButton.layer.masksToBounds = true
+        closeButton.layer.cornerRadius = 15
+        closeButton.layer.borderColor = UIColor.whiteColor().CGColor
+        closeButton.layer.borderWidth = 2
+        
         facebookButton.titleLabel?.textColor = UIColor.holyRed
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor
-        
+                        
     }
 
     override func didReceiveMemoryWarning() {

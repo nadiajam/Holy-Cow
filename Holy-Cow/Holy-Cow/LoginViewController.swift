@@ -9,11 +9,30 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    @IBOutlet weak var orLabel: UILabel!
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        orLabel.layer.bounds = CGRectMake(0, 0, 70, 70)
+        orLabel.layer.masksToBounds = true
+        orLabel.layer.cornerRadius = 25
+        orLabel.layer.borderColor = UIColor.whiteColor().CGColor
+        orLabel.layer.borderWidth = 2
+        
+        closeButton.layer.bounds = CGRectMake(0, 0, 50, 50)
+        closeButton.layer.masksToBounds = true
+        closeButton.layer.cornerRadius = 15
+        closeButton.layer.borderColor = UIColor.whiteColor().CGColor
+        closeButton.layer.borderWidth = 2
+        
+        facebookButton.titleLabel?.textColor = UIColor.holyRed
+        
+        view.layer.backgroundColor = UIColor.holyRed.CGColor
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
