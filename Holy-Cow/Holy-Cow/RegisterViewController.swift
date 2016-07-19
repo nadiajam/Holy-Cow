@@ -11,14 +11,21 @@ import UIKit
 class RegisterViewController: UIViewController {
     
     @IBOutlet weak var orLabel: UILabel!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var facebookButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         orLabel.layer.bounds = CGRectMake(0, 0, 70, 70)
-        orLabel.layer.cornerRadius = 40
-        orLabel.layer.borderColor = UIColor.holyRed.CGColor
+        orLabel.layer.masksToBounds = true
+        orLabel.layer.cornerRadius = 25
+        orLabel.layer.borderColor = UIColor.whiteColor().CGColor
         orLabel.layer.borderWidth = 2
+        
+        facebookButton.titleLabel?.textColor = UIColor.holyRed
+        
+        view.layer.backgroundColor = UIColor.holyRed.CGColor
         
     }
 
