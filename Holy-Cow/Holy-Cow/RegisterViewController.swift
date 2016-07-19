@@ -14,6 +14,16 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     
+    @IBAction func signUpButtonTapped(sender: AnyObject) {
+        
+        let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()
+        let application = UIApplication.sharedApplication()
+        let window = application.keyWindow
+        window?.rootViewController = viewController
+        
+    }
+    
     
     @IBAction func closeButtonTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
