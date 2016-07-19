@@ -13,6 +13,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    
+    @IBAction func closeButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
