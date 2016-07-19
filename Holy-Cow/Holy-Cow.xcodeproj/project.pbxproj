@@ -10,6 +10,22 @@
 		672E4C671D3CF862003906EF /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C661D3CF862003906EF /* Calendar.storyboard */; };
 		672E4C691D3CF8ED003906EF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C681D3CF8ED003906EF /* CalendarViewController.swift */; };
 		672E4C8C1D3D6B9D003906EF /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */; };
+		672E4CBF1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CAF1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light.otf */; };
+		672E4CC01D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB01D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf */; };
+		672E4CC11D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB11D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold.otf */; };
+		672E4CC21D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB21D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf */; };
+		672E4CC31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf */; };
+		672E4CC41D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB41D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin-Oblique.otf */; };
+		672E4CC51D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB51D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular.otf */; };
+		672E4CC61D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB61D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular-Oblique.otf */; };
+		672E4CC71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf */; };
+		672E4CC81D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB81D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium-Oblique.otf */; };
+		672E4CC91D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CB91D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light.otf */; };
+		672E4CCA1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBA1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light-Oblique.otf */; };
+		672E4CCB1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBB1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold.otf */; };
+		672E4CCC1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBC1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf */; };
+		672E4CCD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf */; };
+		672E4CCE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */; };
 		678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678078CA1D3C4F4500DF3A6A /* Colors.swift */; };
 		67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */; };
 		67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30681D3BEE7C00C9B751 /* ViewController.swift */; };
@@ -22,6 +38,22 @@
 		672E4C661D3CF862003906EF /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		672E4C681D3CF8ED003906EF /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
+		672E4CAF1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Ultra-Light.otf"; sourceTree = "<group>"; };
+		672E4CB01D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CB11D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Ultra-Bold.otf"; sourceTree = "<group>"; };
+		672E4CB21D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CB31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Thin.otf"; sourceTree = "<group>"; };
+		672E4CB41D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Thin-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CB51D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Regular.otf"; sourceTree = "<group>"; };
+		672E4CB61D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Regular-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CB71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Medium.otf"; sourceTree = "<group>"; };
+		672E4CB81D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Medium-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CB91D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Light.otf"; sourceTree = "<group>"; };
+		672E4CBA1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Light-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CBB1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Bold.otf"; sourceTree = "<group>"; };
+		672E4CBC1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Bold-Oblique.otf"; sourceTree = "<group>"; };
+		672E4CBD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Black.otf"; sourceTree = "<group>"; };
+		672E4CBE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Black-Oblique.otf"; sourceTree = "<group>"; };
 		678078CA1D3C4F4500DF3A6A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		67EB30631D3BEE7C00C9B751 /* Holy-Cow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holy-Cow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +75,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672E4CCF1D3E217F003906EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				672E4CAF1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light.otf */,
+				672E4CB01D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf */,
+				672E4CB11D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold.otf */,
+				672E4CB21D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf */,
+				672E4CB31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf */,
+				672E4CB41D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin-Oblique.otf */,
+				672E4CB51D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular.otf */,
+				672E4CB61D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular-Oblique.otf */,
+				672E4CB71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf */,
+				672E4CB81D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium-Oblique.otf */,
+				672E4CB91D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light.otf */,
+				672E4CBA1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light-Oblique.otf */,
+				672E4CBB1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold.otf */,
+				672E4CBC1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf */,
+				672E4CBD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf */,
+				672E4CBE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		67EB305A1D3BEE7C00C9B751 = {
 			isa = PBXGroup;
 			children = (
+				672E4CCF1D3E217F003906EF /* Fonts */,
 				67EB30651D3BEE7C00C9B751 /* Holy-Cow */,
 				67EB30641D3BEE7C00C9B751 /* Products */,
 			);
@@ -65,9 +121,9 @@
 				67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */,
 				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
 				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
+				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
 				672E4C661D3CF862003906EF /* Calendar.storyboard */,
 				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
-				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
 				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
 				67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */,
@@ -135,10 +191,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672E4CC41D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin-Oblique.otf in Resources */,
+				672E4CC31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf in Resources */,
+				672E4CC71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */,
+				672E4CCE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf in Resources */,
+				672E4CC61D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular-Oblique.otf in Resources */,
 				672E4C671D3CF862003906EF /* Calendar.storyboard in Resources */,
+				672E4CC01D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light-Oblique.otf in Resources */,
 				67EB30711D3BEE7C00C9B751 /* LaunchScreen.storyboard in Resources */,
+				672E4CBF1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Light.otf in Resources */,
+				672E4CCC1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold-Oblique.otf in Resources */,
+				672E4CCB1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Bold.otf in Resources */,
+				672E4CC81D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium-Oblique.otf in Resources */,
+				672E4CC11D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold.otf in Resources */,
+				672E4CCA1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light-Oblique.otf in Resources */,
+				672E4CC21D3E2179003906EF /* GT-Walsheim-Pro-Trial-Ultra-Bold-Oblique.otf in Resources */,
 				67EB306E1D3BEE7C00C9B751 /* Assets.xcassets in Resources */,
+				672E4CCD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf in Resources */,
 				672E4C8C1D3D6B9D003906EF /* Recipes.storyboard in Resources */,
+				672E4CC51D3E2179003906EF /* GT-Walsheim-Pro-Trial-Regular.otf in Resources */,
+				672E4CC91D3E2179003906EF /* GT-Walsheim-Pro-Trial-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

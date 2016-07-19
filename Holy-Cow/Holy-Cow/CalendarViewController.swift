@@ -26,9 +26,6 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarViewLabel: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
         
         plusLabel.layer.borderWidth = 3
         plusLabel.layer.cornerRadius = 15
@@ -53,7 +50,7 @@ class CalendarViewController: UIViewController {
         fridayLabel.textColor = UIColor.holyGrey
         saturdayLabel.textColor = UIColor.holyGrey
         daysLabel.textColor = UIColor.holyGrey
-        
+    
     }
 
     override func didReceiveMemoryWarning() {

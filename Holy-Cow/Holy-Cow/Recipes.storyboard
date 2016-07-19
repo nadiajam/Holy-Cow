@@ -1,7 +1,193 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="W9F-64-pEz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--recipes-->
+        <scene sceneID="n3I-xa-0vf">
+            <objects>
+                <viewController id="6Ei-uD-Eya" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d3s-Fs-YY0"/>
+                        <viewControllerLayoutGuide type="bottom" id="AYc-L7-wie"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3vc-ex-pbE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-rd-RgW" userLabel="Breakfast">
+                                <rect key="frame" x="0.0" y="64" width="600" height="108"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="breakfast" backgroundImage="hp_slide_11">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8aA-Dx-fP6" kind="show" id="qxg-uQ-TVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-wo-0Pk" userLabel="Lunch">
+                                <rect key="frame" x="0.0" y="175" width="600" height="108"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="lunch" backgroundImage="Beautiful-Food-Photos-1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Kbz-NQ-kq2" kind="show" id="BgF-Nn-cb7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-Zb-J2S" userLabel="Dinner">
+                                <rect key="frame" x="0.0" y="286" width="600" height="108"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="dinner" backgroundImage="pizza-junk-food-600">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4Z2-Sl-R4y" kind="show" id="JKn-U8-RzS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dO-Lj-mge" userLabel="Shopping List">
+                                <rect key="frame" x="0.0" y="397" width="600" height="108"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="shopping list" backgroundImage="foodsafebnr">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Hv-ZJ-g9e" kind="show" id="kOC-Og-ot6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.18" id="3W9-NP-PnT"/>
+                            <constraint firstItem="0dO-Lj-mge" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.18" id="4k1-I3-J1G"/>
+                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.18" id="7ZF-b5-Sqp"/>
+                            <constraint firstItem="0dO-Lj-mge" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="Fz4-oU-3TK"/>
+                            <constraint firstItem="WZA-rd-RgW" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="IUK-Kh-gCP"/>
+                            <constraint firstItem="WZA-rd-RgW" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.18" id="NG6-Zo-GSr"/>
+                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="a1h-Yo-BqL"/>
+                            <constraint firstAttribute="trailing" secondItem="7E9-wo-0Pk" secondAttribute="trailing" id="dFD-xz-HdW"/>
+                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="eFM-WT-7qT"/>
+                            <constraint firstAttribute="trailing" secondItem="CM4-Zb-J2S" secondAttribute="trailing" id="faa-uX-Gpk"/>
+                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="top" secondItem="WZA-rd-RgW" secondAttribute="bottom" constant="3" id="fu7-W1-hvH"/>
+                            <constraint firstAttribute="trailing" secondItem="WZA-rd-RgW" secondAttribute="trailing" id="je7-cO-FJP"/>
+                            <constraint firstAttribute="trailing" secondItem="0dO-Lj-mge" secondAttribute="trailing" id="kwX-KX-3vK"/>
+                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="top" secondItem="7E9-wo-0Pk" secondAttribute="bottom" constant="3" id="nbr-fW-fdu"/>
+                            <constraint firstItem="0dO-Lj-mge" firstAttribute="top" secondItem="CM4-Zb-J2S" secondAttribute="bottom" constant="3" id="qc4-CN-EcJ"/>
+                            <constraint firstItem="WZA-rd-RgW" firstAttribute="top" secondItem="d3s-Fs-YY0" secondAttribute="bottom" id="sWS-uK-RAA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="recipes" id="wy1-SZ-4mN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iaz-Lq-Zup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="354"/>
+        </scene>
+        <!--dinner-->
+        <scene sceneID="sc8-pQ-yRC">
+            <objects>
+                <viewController id="4Z2-Sl-R4y" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ipG-12-uYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="t9o-at-gJq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cDB-rM-NcB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="dinner" id="5T3-AU-QeZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bI8-dk-GJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="852"/>
+        </scene>
+        <!--shopping list-->
+        <scene sceneID="2yb-uQ-NE5">
+            <objects>
+                <viewController id="0Hv-ZJ-g9e" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oGo-O6-Fvq"/>
+                        <viewControllerLayoutGuide type="bottom" id="dXH-6I-yMW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="odw-15-4jP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="shopping list" id="rPc-cN-hAe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTD-O9-OoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="1520"/>
+        </scene>
+        <!--breakfast-->
+        <scene sceneID="AYq-gP-nFY">
+            <objects>
+                <viewController id="8aA-Dx-fP6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qzN-IW-qbT"/>
+                        <viewControllerLayoutGuide type="bottom" id="s5r-de-Rjf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8cP-WW-UCk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="breakfast" id="ZpO-vV-1dt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oge-Jf-Ctx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="-492"/>
+        </scene>
+        <!--lunch-->
+        <scene sceneID="MJJ-k7-CgQ">
+            <objects>
+                <viewController id="Kbz-NQ-kq2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c1P-xM-46l"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAj-0h-ljZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4I2-71-uIu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="lunch" id="NWf-Hc-rIY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6SQ-k1-Sap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="175"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qmY-2O-DCV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W9F-64-pEz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oT2-T6-6eZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Ei-uD-Eya" kind="relationship" relationship="rootViewController" id="yFQ-Oq-0KJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBv-Ai-c02" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="354"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Beautiful-Food-Photos-1" width="600" height="300"/>
+        <image name="foodsafebnr" width="660" height="330"/>
+        <image name="hp_slide_11" width="1680" height="1050"/>
+        <image name="pizza-junk-food-600" width="600" height="350"/>
+    </resources>
 </document>
