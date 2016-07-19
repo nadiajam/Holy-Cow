@@ -245,6 +245,10 @@
                                         <rect key="frame" x="77" y="180" width="77" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.72474984850000002" blue="0.48606411160000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DlR-78-YMQ" userLabel="36">
+                                        <rect key="frame" x="0.0" y="225" width="77" height="45"/>
+                                        <color key="backgroundColor" red="1" green="0.72474984850000002" blue="0.48606411160000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r9-Uf-8Nu" userLabel="31">
                                         <rect key="frame" x="154" y="180" width="77" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,7 +257,7 @@
                                         <rect key="frame" x="231" y="180" width="77" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.72474984850000002" blue="0.48606411160000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQA-VQ-XxG" userLabel="32">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQA-VQ-XxG" userLabel="34">
                                         <rect key="frame" x="385" y="180" width="77" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.72474984850000002" blue="0.48606411160000002" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
@@ -261,7 +265,7 @@
                                         <rect key="frame" x="308" y="180" width="77" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdn-an-at4" userLabel="33">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdn-an-at4" userLabel="35">
                                         <rect key="frame" x="462" y="180" width="77" height="45"/>
                                         <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>

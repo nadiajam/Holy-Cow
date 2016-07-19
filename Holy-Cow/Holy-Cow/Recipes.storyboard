@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="108"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="breakfast" backgroundImage="hp_slide_11">
+                                <state key="normal" title="breakfast" backgroundImage="breakfast-image">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -186,8 +186,8 @@
     </scenes>
     <resources>
         <image name="Beautiful-Food-Photos-1" width="600" height="300"/>
+        <image name="breakfast-image" width="131" height="46"/>
         <image name="foodsafebnr" width="660" height="330"/>
-        <image name="hp_slide_11" width="1680" height="1050"/>
         <image name="pizza-junk-food-600" width="600" height="350"/>
     </resources>
 </document>
