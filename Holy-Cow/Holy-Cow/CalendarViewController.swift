@@ -16,12 +16,50 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
     
-    var calendarArray = [String](count: 42, repeatedValue: "")
+//    var calendarArray = [String](count: 42, repeatedValue: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColors()
         
+        var startCell: Int = 5 //change later with NSDate
+        var endCell: Int = startCell + 30  //change later with NSDate
+        
+        
+        var buttonsArray = [UIButton]() //ALL BUTTONS IN CALENDAR
+        let calendarDays = [Int](startCell...endCell) //MONTH DAYS
+        
+        
+        
+        
+        //ordered array of buttons based on button tag
+        for subview in calendarBoard.subviews {
+            if let cell = subview as? UIButton {
+                for i in 0...42 {
+                    if cell.tag == i {
+                        buttonsArray.append(cell)
+                    }
+                    continue
+                }
+            }
+        }
+        
+        
+        for day in calendarDays { //1 - 30
+            
+            for button in buttonsArray { //1 - 42
+                
+                
+                
+            }
+            
+        }
+        
+        
+        
+        
+        
+/* *** Nadia's code ******
         let calendarDays: Int = 31
         let startDate: Int = 4
         let endDate: Int = startDate + 30
@@ -33,10 +71,10 @@ class CalendarViewController: UIViewController {
             firstNum += 1
             //            print(item)
         }
-        
-        //['', '' ]
+ 
         
         //calendarArray = ["", "", "", "", "", 1, 3, 4... 34, 35, "", "", "", "", "", "", ""]
+
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
@@ -50,6 +88,9 @@ class CalendarViewController: UIViewController {
             }
             
         }
+ */
+        
+        
     }
 
     
