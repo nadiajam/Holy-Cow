@@ -12,9 +12,6 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var daysLabel: UILabel!
-    @IBOutlet weak var minusLabel: UIButton!
-    @IBOutlet weak var plusLabel: UIButton!
     @IBOutlet weak var sundayLabel: UITextField!
     @IBOutlet weak var mondayLabel: UITextField!
     @IBOutlet weak var tuesdayLabel: UITextField!
@@ -22,22 +19,31 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var thursdayLabel: UITextField!
     @IBOutlet weak var fridayLabel: UITextField!
     @IBOutlet weak var saturdayLabel: UITextField!
+    @IBOutlet weak var calendarBoard: UIView!
+    
+    //array
+//    var calendarArray = []
     
     @IBOutlet weak var calendarViewLabel: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        plusLabel.layer.borderWidth = 3
-        plusLabel.layer.cornerRadius = 15
+        var calendarArray = [String](count: 42, repeatedValue: "")
         
-        minusLabel.layer.borderWidth = 3
-        minusLabel.layer.cornerRadius = 15
+        let startDate: Int = 5
+        let endDate: Int = startDate + 30
+
+        var firstNum = 1
+        
+        for var item in calendarArray[startDate...endDate] {
+            item = "\(firstNum)"
+            firstNum += 1
+            print(item)
+        }
        
+        
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
-        plusLabel.layer.borderColor = UIColor.holyGrey.CGColor
-        minusLabel.layer.borderColor = UIColor.holyGrey.CGColor
-        
         
         //setting text colors
         calendarLabel.textColor = UIColor.whiteColor()
@@ -49,8 +55,6 @@ class CalendarViewController: UIViewController {
         thursdayLabel.textColor = UIColor.holyGrey
         fridayLabel.textColor = UIColor.holyGrey
         saturdayLabel.textColor = UIColor.holyGrey
-        daysLabel.textColor = UIColor.holyGrey
-    
     }
 
     override func didReceiveMemoryWarning() {

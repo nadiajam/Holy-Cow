@@ -7,10 +7,18 @@
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
+=======
+      "filename" : "nav-button-5@2x.png",
+>>>>>>> 0b719ea5c15f8552f19c5afdcc7ef3efc701ebe1
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+<<<<<<< HEAD
+=======
+      "filename" : "nav-button-5@3x.png",
+>>>>>>> 0b719ea5c15f8552f19c5afdcc7ef3efc701ebe1
       "scale" : "3x"
     }
   ],

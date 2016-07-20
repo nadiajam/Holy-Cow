@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor
+        self.navigationController?.navigationBarHidden = true
         
     }
 
