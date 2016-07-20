@@ -30,10 +30,11 @@ class CalendarViewController: UIViewController {
         let calendarDays = [Int](startCell...endCell) //MONTH DAYS
         
         
-        
-        
         //ordered array of buttons based on button tag
         for subview in calendarBoard.subviews {
+            if let backView = subview as UIView? {
+                backView.backgroundColor = UIColor.whiteColor()
+            }
             if let cell = subview as? UIButton {
                 for i in 0...42 {
                     if cell.tag == i {
