@@ -2,23 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "shower.png",
+      "filename" : "water.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-<<<<<<< HEAD
-=======
-      "filename" : "shower@2x.png",
->>>>>>> 0b719ea5c15f8552f19c5afdcc7ef3efc701ebe1
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-<<<<<<< HEAD
-=======
-      "filename" : "shower@3x.png",
->>>>>>> 0b719ea5c15f8552f19c5afdcc7ef3efc701ebe1
       "scale" : "3x"
     }
   ],

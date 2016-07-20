@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E73C6261D3CD72D00F41471 /* InfoTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */; };
-		4E73C6281D3CD77E00F41471 /* InfoTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E73C6271D3CD77E00F41471 /* InfoTabs.storyboard */; };
+		4E80E53B1D3E566B00778E6D /* InfoTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */; };
 		672E4C671D3CF862003906EF /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C661D3CF862003906EF /* Calendar.storyboard */; };
 		672E4C691D3CF8ED003906EF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C681D3CF8ED003906EF /* CalendarViewController.swift */; };
 		672E4C8C1D3D6B9D003906EF /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTabsViewController.swift; sourceTree = "<group>"; };
-		4E73C6271D3CD77E00F41471 /* InfoTabs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoTabs.storyboard; sourceTree = "<group>"; };
+		4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoTabs.storyboard; sourceTree = "<group>"; };
 		672E4C661D3CF862003906EF /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		672E4C681D3CF8ED003906EF /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		4E73C62B1D3CF48F00F41471 /* InfoTabs */ = {
 			isa = PBXGroup;
 			children = (
-				4E73C6271D3CD77E00F41471 /* InfoTabs.storyboard */,
+				4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */,
 				4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */,
 			);
 			name = InfoTabs;
@@ -211,7 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E73C6281D3CD77E00F41471 /* InfoTabs.storyboard in Resources */,
+				4E80E53B1D3E566B00778E6D /* InfoTabs.storyboard in Resources */,
 				672E4CC41D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin-Oblique.otf in Resources */,
 				672E4CC31D3E2179003906EF /* GT-Walsheim-Pro-Trial-Thin.otf in Resources */,
 				672E4CC71D3E2179003906EF /* GT-Walsheim-Pro-Trial-Medium.otf in Resources */,
