@@ -19,6 +19,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var thursdayLabel: UITextField!
     @IBOutlet weak var fridayLabel: UITextField!
     @IBOutlet weak var saturdayLabel: UITextField!
+    @IBOutlet weak var calendarBoard: UIView!
     
     //array
     var calendarArray = []
@@ -27,7 +28,17 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        for subview in calendarBoard.subviews {
+            
+            if subview.tag == 0 {
+                subview.backgroundColor = UIColor.holyGreen
+            }
+            
+            subview.backgroundColor = UIColor.holyGreen
+            
+            
+        }
+        
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
         
