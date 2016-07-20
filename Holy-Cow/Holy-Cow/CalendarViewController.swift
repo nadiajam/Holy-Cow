@@ -38,8 +38,8 @@ class CalendarViewController: UIViewController {
         dateFormatterYear.dateFormat = "YYYY"
         dateFormatterMonth.dateFormat = "MM"
         dateFormatterDay.dateFormat = "dd"
-        var year = Int(dateFormatterYear.stringFromDate(today))
-        var month = Int(dateFormatterMonth.stringFromDate(today))
+        let year = Int(dateFormatterYear.stringFromDate(today))
+        let month = Int(dateFormatterMonth.stringFromDate(today))
         let dateComponents = NSDateComponents()
         dateComponents.year = year!
         dateComponents.month = month!
