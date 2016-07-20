@@ -235,7 +235,7 @@
                                         <rect key="frame" x="77" y="50" width="77" height="50"/>
                                         <subviews>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFx-cS-tfH">
-                                                <rect key="frame" x="16.5" y="5" width="43" height="40"/>
+                                                <rect key="frame" x="17" y="5" width="43" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="43" id="4dl-RT-m9F"/>
                                                     <constraint firstAttribute="height" constant="40" id="OKR-Kk-ZkI"/>
@@ -943,6 +943,7 @@
     </scenes>
     <resources>
         <image name="GreenCircle" width="26" height="25"/>
+        <image name="GreyRing" width="26" height="25"/>
         <image name="RedCircle" width="26" height="25"/>
     </resources>
 </document>

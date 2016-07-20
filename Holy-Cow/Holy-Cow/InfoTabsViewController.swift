@@ -67,18 +67,23 @@ class InfoTabsController: UIViewController {
     }
     
     @IBAction func challengeButtonTapped(sender: UIButton) {
+        var challengeArray = [Int]()
         switch sender.tag {
         case 0:
-            //send first challenge info
+            //send meatless mondays
+            challengeArray = [1, 8, 15, 22, 29, 36]
             break
         case 1:
-            //send 2nd challenge info
+            //send checkerboard
+            challengeArray = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
             break
         case 2:
-            //send 3rd challenge info
+            //send weekend carnivore
+            challengeArray = [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 29, 30, 31, 32, 33, 36, 37, 38, 39, 40]
             break
         default:
-            //send 4th challenge info
+            //send meatless month
+            challengeArray += 0...41
             break
         }
         
@@ -87,7 +92,6 @@ class InfoTabsController: UIViewController {
         let application = UIApplication.sharedApplication()
         let window = application.keyWindow
         window?.rootViewController = viewController
-
     }
     
     
