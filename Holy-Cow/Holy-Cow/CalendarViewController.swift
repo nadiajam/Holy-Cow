@@ -98,5 +98,15 @@ class CalendarViewController: UIViewController {
         calendarLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 25.0)
         monthLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18.0)
     }
+    
+    
+    @IBAction func calendarCellTapped(sender: CalendarCell) {
+        //if sender = future {
+//        sender.changeFutureDate()
+//        }
+//        if sender = past {
+//        sender.changePastDate()
+//        }
+    }
 
 }
