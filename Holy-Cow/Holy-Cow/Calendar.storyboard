@@ -916,14 +916,8 @@
                         <outlet property="calendarBoard" destination="Ldy-lw-naP" id="GQD-Fx-xfL"/>
                         <outlet property="calendarLabel" destination="11s-Bw-Ep7" id="Ue5-4T-i4V"/>
                         <outlet property="calendarViewLabel" destination="Ldy-lw-naP" id="98D-3C-Hew"/>
-                        <outlet property="fridayLabel" destination="fKl-l1-AFB" id="OWL-4C-sxy"/>
-                        <outlet property="mondayLabel" destination="Xgk-3w-q40" id="Yo6-9T-WDy"/>
+                        <outlet property="daysView" destination="pmu-sd-bJg" id="3xT-0x-es0"/>
                         <outlet property="monthLabel" destination="WPs-vJ-YaC" id="kRR-vW-JM8"/>
-                        <outlet property="saturdayLabel" destination="E1h-hI-7BJ" id="iQg-2h-hQe"/>
-                        <outlet property="sundayLabel" destination="Hu6-gc-xTD" id="6tK-5h-n1z"/>
-                        <outlet property="thursdayLabel" destination="nzG-T9-OZh" id="P8y-x9-E1B"/>
-                        <outlet property="tuesdayLabel" destination="sQe-d0-98c" id="N0V-Yh-dp2"/>
-                        <outlet property="wednesdayLabel" destination="cBH-Mj-96K" id="r1u-FZ-Ozg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aw5-MR-CLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
