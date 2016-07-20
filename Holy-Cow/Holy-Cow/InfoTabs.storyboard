@@ -514,34 +514,30 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-4c-IJN">
-                                <rect key="frame" x="255" y="191" width="300" height="98"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-4c-IJN">
+                                <rect key="frame" x="270" y="191" width="270" height="98"/>
+                                <state key="normal" image="Checkerboard"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="lij-yK-hrS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAw-cu-FyL">
-                                <rect key="frame" x="255" y="296" width="300" height="98"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAw-cu-FyL">
+                                <rect key="frame" x="270" y="296" width="270" height="98"/>
+                                <state key="normal" image="Weekend Carnivore"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="6Tr-eD-ZFh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-mR-A2f">
-                                <rect key="frame" x="255" y="401" width="300" height="98"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-mR-A2f">
+                                <rect key="frame" x="270" y="401" width="270" height="98"/>
+                                <state key="normal" image="Meatless Month"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="bqd-Ef-6lW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-IG-ooT">
-                                <rect key="frame" x="255" y="86" width="300" height="98"/>
-                                <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-IG-ooT">
+                                <rect key="frame" x="270" y="86" width="270" height="98"/>
+                                <state key="normal" image="Meatless Monday"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="eG9-Jg-4XI"/>
                                 </connections>
@@ -560,7 +556,7 @@
                             <constraint firstItem="zia-D8-X2J" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="1/3" id="1ND-Tk-AqB"/>
                             <constraint firstItem="a6j-jG-enZ" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="1/3" id="1jA-UV-caM"/>
                             <constraint firstItem="bbt-MM-Tnd" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" multiplier="0.55" id="46h-xi-IkK"/>
-                            <constraint firstItem="AAw-cu-FyL" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.5" id="A2B-Gg-qsQ"/>
+                            <constraint firstItem="AAw-cu-FyL" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.45" id="A2B-Gg-qsQ"/>
                             <constraint firstItem="WrB-2F-MBC" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" multiplier="0.55" id="Bpd-cH-xca"/>
                             <constraint firstItem="JC0-mR-A2f" firstAttribute="height" secondItem="bbt-MM-Tnd" secondAttribute="height" multiplier="1.2" id="FGg-t8-Vzq"/>
                             <constraint firstItem="AAw-cu-FyL" firstAttribute="height" secondItem="WrB-2F-MBC" secondAttribute="height" multiplier="1.2" id="HXa-f2-r26"/>
@@ -574,7 +570,7 @@
                             <constraint firstItem="h2Y-Lp-Ma4" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" id="SCC-KO-DLo"/>
                             <constraint firstItem="WrB-2F-MBC" firstAttribute="centerY" secondItem="spZ-Pe-z0e" secondAttribute="centerY" multiplier="1.15" id="Tbf-0Q-8hg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hbt-1V-wZy" secondAttribute="trailing" constant="-20" id="V1r-lo-S1z"/>
-                            <constraint firstItem="dGp-IG-ooT" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.5" id="X0l-M0-N9Y"/>
+                            <constraint firstItem="dGp-IG-ooT" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.45" id="X0l-M0-N9Y"/>
                             <constraint firstItem="zia-D8-X2J" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" multiplier="0.55" id="Y4d-Ka-k6D"/>
                             <constraint firstItem="Hbt-1V-wZy" firstAttribute="height" secondItem="spZ-Pe-z0e" secondAttribute="height" multiplier="0.1" id="Zfd-IP-66A"/>
                             <constraint firstItem="dGp-IG-ooT" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" multiplier="1.35" id="aF1-zu-SKX"/>
@@ -589,13 +585,13 @@
                             <constraint firstItem="WrB-2F-MBC" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="1/3" id="j70-g6-rhF"/>
                             <constraint firstItem="Hbt-1V-wZy" firstAttribute="top" secondItem="spZ-Pe-z0e" secondAttribute="topMargin" id="jzz-gE-E9P"/>
                             <constraint firstItem="TZm-32-f69" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" id="lbu-8b-Qlo"/>
-                            <constraint firstItem="FnH-4c-IJN" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.5" id="lww-QL-dh9"/>
+                            <constraint firstItem="FnH-4c-IJN" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.45" id="lww-QL-dh9"/>
                             <constraint firstItem="h2Y-Lp-Ma4" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.5" id="mhr-Ec-JZ6"/>
                             <constraint firstItem="bbt-MM-Tnd" firstAttribute="centerY" secondItem="spZ-Pe-z0e" secondAttribute="centerY" multiplier="1.5" id="mpy-ED-86C"/>
                             <constraint firstItem="FnH-4c-IJN" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" multiplier="1.35" id="sMv-QC-r9i"/>
                             <constraint firstItem="dGp-IG-ooT" firstAttribute="height" secondItem="a6j-jG-enZ" secondAttribute="height" multiplier="1.2" id="wWZ-Oj-PyT"/>
                             <constraint firstItem="AAw-cu-FyL" firstAttribute="centerX" secondItem="spZ-Pe-z0e" secondAttribute="centerX" multiplier="1.35" id="wpK-xF-V1O"/>
-                            <constraint firstItem="JC0-mR-A2f" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.5" id="x9y-s5-OYH"/>
+                            <constraint firstItem="JC0-mR-A2f" firstAttribute="width" secondItem="spZ-Pe-z0e" secondAttribute="width" multiplier="0.45" id="x9y-s5-OYH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -620,6 +616,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Checkerboard" width="362" height="200"/>
+        <image name="Meatless Monday" width="362" height="200"/>
+        <image name="Meatless Month" width="362" height="200"/>
+        <image name="Weekend Carnivore" width="362" height="200"/>
         <image name="burger" width="686" height="686"/>
         <image name="earth" width="1821" height="1821"/>
         <image name="nav-button-1" width="1312" height="186"/>
