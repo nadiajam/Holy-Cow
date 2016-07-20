@@ -19,6 +19,7 @@ class CalendarViewController: UIViewController {
     let today = NSDate()
     let dateFormatterYear = NSDateFormatter()
     let dateFormatterMonth = NSDateFormatter()
+    let dateFormatterDay = NSDateFormatter()
     let dateFormatterOverall = NSDateFormatter()
     let dateComponents = NSDateComponents()
     
@@ -36,6 +37,7 @@ class CalendarViewController: UIViewController {
         //getting number of days from month
         dateFormatterYear.dateFormat = "YYYY"
         dateFormatterMonth.dateFormat = "MM"
+        dateFormatterDay.dateFormat = "dd"
         var year = Int(dateFormatterYear.stringFromDate(today))
         var month = Int(dateFormatterMonth.stringFromDate(today))
         let dateComponents = NSDateComponents()
@@ -48,6 +50,13 @@ class CalendarViewController: UIViewController {
         let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
         let calendarDays:Int = range.length
         
+        let startOfMonth = calendar.dateFromComponents(dateComponents)!
+        let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let startDateComponents = myCalendar.components(.Weekday, fromDate: startOfMonth)
+        let weekDay = startDateComponents.weekday - 1
+        
+        
+        //array containing items 1 through days in current month
         var July: [String] = []
         var firstNum = 1
         while firstNum <= calendarDays {
@@ -55,7 +64,7 @@ class CalendarViewController: UIViewController {
             firstNum += 1
         }
         
-        calendarArray[5...calendarDays] = July[0..<July.count]
+        calendarArray[weekDay...calendarDays] = July[0..<July.count]
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
