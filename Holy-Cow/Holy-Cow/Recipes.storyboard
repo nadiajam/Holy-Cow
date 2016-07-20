@@ -9,7 +9,7 @@
         <!--recipes-->
         <scene sceneID="n3I-xa-0vf">
             <objects>
-                <viewController id="6Ei-uD-Eya" sceneMemberID="viewController">
+                <viewController id="6Ei-uD-Eya" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d3s-Fs-YY0"/>
                         <viewControllerLayoutGuide type="bottom" id="AYc-L7-wie"/>
@@ -92,7 +92,7 @@
         <!--dinner-->
         <scene sceneID="sc8-pQ-yRC">
             <objects>
-                <viewController id="4Z2-Sl-R4y" sceneMemberID="viewController">
+                <viewController id="4Z2-Sl-R4y" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ipG-12-uYc"/>
                         <viewControllerLayoutGuide type="bottom" id="t9o-at-gJq"/>
@@ -222,7 +222,7 @@
         <!--dinner-->
         <scene sceneID="k7P-mP-cAL">
             <objects>
-                <viewController id="iQM-vG-Gzd" sceneMemberID="viewController">
+                <viewController id="iQM-vG-Gzd" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8pC-pF-3xn"/>
                         <viewControllerLayoutGuide type="bottom" id="tzC-Op-e8J"/>
@@ -288,7 +288,7 @@
         <!--shopping list-->
         <scene sceneID="2yb-uQ-NE5">
             <objects>
-                <viewController id="0Hv-ZJ-g9e" sceneMemberID="viewController">
+                <viewController id="0Hv-ZJ-g9e" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oGo-O6-Fvq"/>
                         <viewControllerLayoutGuide type="bottom" id="dXH-6I-yMW"/>
@@ -307,7 +307,7 @@
         <!--breakfast-->
         <scene sceneID="AYq-gP-nFY">
             <objects>
-                <viewController id="8aA-Dx-fP6" sceneMemberID="viewController">
+                <viewController id="8aA-Dx-fP6" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qzN-IW-qbT"/>
                         <viewControllerLayoutGuide type="bottom" id="s5r-de-Rjf"/>
@@ -326,7 +326,7 @@
         <!--lunch-->
         <scene sceneID="MJJ-k7-CgQ">
             <objects>
-                <viewController id="Kbz-NQ-kq2" sceneMemberID="viewController">
+                <viewController id="Kbz-NQ-kq2" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c1P-xM-46l"/>
                         <viewControllerLayoutGuide type="bottom" id="pAj-0h-ljZ"/>

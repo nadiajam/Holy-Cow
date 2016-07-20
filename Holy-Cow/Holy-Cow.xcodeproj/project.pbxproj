@@ -29,6 +29,7 @@
 		672E4CCD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf */; };
 		672E4CCE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 672E4CBE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */; };
 		678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678078CA1D3C4F4500DF3A6A /* Colors.swift */; };
+		67963B341D3F8A290050B871 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67963B331D3F8A290050B871 /* RecipesViewController.swift */; };
 		67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */; };
 		67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67EB30681D3BEE7C00C9B751 /* ViewController.swift */; };
 		67EB306E1D3BEE7C00C9B751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		672E4CBD1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Black.otf"; sourceTree = "<group>"; };
 		672E4CBE1D3E2179003906EF /* GT-Walsheim-Pro-Trial-Black-Oblique.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-Walsheim-Pro-Trial-Black-Oblique.otf"; sourceTree = "<group>"; };
 		678078CA1D3C4F4500DF3A6A /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		67963B331D3F8A290050B871 /* RecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		67EB30631D3BEE7C00C9B751 /* Holy-Cow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holy-Cow.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67EB30681D3BEE7C00C9B751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				672E4C661D3CF862003906EF /* Calendar.storyboard */,
 				6AAC32311D3E484800F10964 /* Main.storyboard */,
 				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
+				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
 				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
 				67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67963B341D3F8A290050B871 /* RecipesViewController.swift in Sources */,
 				4E73C6261D3CD72D00F41471 /* InfoTabsViewController.swift in Sources */,
 				672E4C691D3CF8ED003906EF /* CalendarViewController.swift in Sources */,
 				678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */,

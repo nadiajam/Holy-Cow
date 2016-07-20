@@ -23,10 +23,10 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarViewLabel: UIView!
     
     var calendarArray = [String](count: 42, repeatedValue: "")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let calendarDays: Int = 31
         let startDate: Int = 4
         let endDate: Int = startDate + 30
