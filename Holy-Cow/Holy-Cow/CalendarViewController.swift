@@ -27,14 +27,14 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabelColors()
+        setupLabelColorsAndFonts()
         
         //setting title to current month
         dateFormatterOverall.dateFormat = "MMM yyyy"
         print(dateFormatterOverall.stringFromDate(today))
         monthLabel.text = dateFormatterOverall.stringFromDate(today)
         
-        //getting number of days from month
+        //getting current day and month
         dateFormatterYear.dateFormat = "YYYY"
         dateFormatterMonth.dateFormat = "MM"
         dateFormatterDay.dateFormat = "dd"
@@ -78,7 +78,7 @@ class CalendarViewController: UIViewController {
     }
 
 
-    func setupLabelColors() {
+    func setupLabelColorsAndFonts() {
         
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
@@ -89,10 +89,15 @@ class CalendarViewController: UIViewController {
         
         //setting day label colors
         for subview in daysView.subviews {
-            if let dayLabel = subview as? UILabel {
+            if let dayLabel = subview as? UITextField {
                 dayLabel.textColor = UIColor.holyGrey
+                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 15)
             }
         }
+        
+        //setting fonts
+        calendarLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 25.0)
+        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18.0)
     }
 
 }
