@@ -21,12 +21,24 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var saturdayLabel: UITextField!
     
     //array
-    var calendarArray = []
+//    var calendarArray = []
     
     @IBOutlet weak var calendarViewLabel: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var calendarArray = [String](count: 42, repeatedValue: "")
+        
+        let startDate: Int = 5
+        let endDate: Int = startDate + 30
+
+        var firstNum = 1
+        
+        for var item in calendarArray[startDate...endDate] {
+            item = "\(firstNum)"
+            firstNum += 1
+            print(item)
+        }
        
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
