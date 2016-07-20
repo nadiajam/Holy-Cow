@@ -19,6 +19,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var thursdayLabel: UITextField!
     @IBOutlet weak var fridayLabel: UITextField!
     @IBOutlet weak var saturdayLabel: UITextField!
+    @IBOutlet weak var calendarBoard: UIView!
     
     //array
 //    var calendarArray = []
@@ -40,6 +41,7 @@ class CalendarViewController: UIViewController {
             print(item)
         }
        
+        
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
         
