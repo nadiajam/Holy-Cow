@@ -133,6 +133,20 @@
                                             <constraint firstItem="AIP-7U-MmH" firstAttribute="centerX" secondItem="9bp-QM-qSK" secondAttribute="centerX" id="hvl-VK-BF2"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIj-b3-5G4" userLabel="2">
+                                        <rect key="frame" x="77" y="0.0" width="77" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-r1-2Yz">
+                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="0.72474984850000002" blue="0.48606411160000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="qbI-r1-2Yz" firstAttribute="centerX" secondItem="FIj-b3-5G4" secondAttribute="centerX" id="0Wo-G8-J6h"/>
+                                            <constraint firstItem="qbI-r1-2Yz" firstAttribute="centerY" secondItem="FIj-b3-5G4" secondAttribute="centerY" id="Pjn-2a-aCu"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7K-dS-7WX" userLabel="3">
                                         <rect key="frame" x="154" y="0.0" width="77" height="50"/>
                                         <subviews>
@@ -663,20 +677,6 @@
                                         <constraints>
                                             <constraint firstItem="31X-Wi-XhS" firstAttribute="centerX" secondItem="XtF-4r-huf" secondAttribute="centerX" id="84Z-Jh-rkf"/>
                                             <constraint firstItem="31X-Wi-XhS" firstAttribute="centerY" secondItem="XtF-4r-huf" secondAttribute="centerY" id="94k-jP-ZgP"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIj-b3-5G4" userLabel="2">
-                                        <rect key="frame" x="77" y="0.0" width="77" height="50"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbI-r1-2Yz">
-                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="0.72474984850000002" blue="0.48606411160000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="qbI-r1-2Yz" firstAttribute="centerX" secondItem="FIj-b3-5G4" secondAttribute="centerX" id="0Wo-G8-J6h"/>
-                                            <constraint firstItem="qbI-r1-2Yz" firstAttribute="centerY" secondItem="FIj-b3-5G4" secondAttribute="centerY" id="Pjn-2a-aCu"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-Hf-n0v" userLabel="39">
