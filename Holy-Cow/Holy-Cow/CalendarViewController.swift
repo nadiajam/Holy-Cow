@@ -16,11 +16,18 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
 
+    let now = NSDate()
+    let dateFormatter = NSDateFormatter()
 //    var calendarArray = [String](count: 42, repeatedValue: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColors()
+        
+        //setting title to current month
+        dateFormatter.dateFormat = "MMM yyyy"
+        print(dateFormatter.stringFromDate(now))
+        monthLabel.text = dateFormatter.stringFromDate(now)
         
         var startCell: Int = 5 //change later with NSDate
         var endCell: Int = startCell + 30  //change later with NSDate
