@@ -248,9 +248,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-wP-goa" userLabel="9">
                                         <rect key="frame" x="154" y="50" width="77" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJz-3k-xDt">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJz-3k-xDt">
                                                 <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Button" backgroundImage="GreenCircle"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -262,9 +262,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwH-6Y-xrO" userLabel="10">
                                         <rect key="frame" x="231" y="50" width="77" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-Tl-XfZ">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-Tl-XfZ">
                                                 <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Button" backgroundImage="RedCircle"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -925,4 +925,8 @@
             <point key="canvasLocation" x="373" y="393"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GreenCircle" width="26" height="25"/>
+        <image name="RedCircle" width="26" height="25"/>
+    </resources>
 </document>

@@ -15,13 +15,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
-        
         let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
         let viewController = storyboard.instantiateInitialViewController()
         let application = UIApplication.sharedApplication()
         let window = application.keyWindow
         window?.rootViewController = viewController
-        
     }
     
     
@@ -47,23 +45,16 @@ class RegisterViewController: UIViewController {
         facebookButton.titleLabel?.textColor = UIColor.holyRed
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor
-                        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(recognizer)
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dismissKeyboard(){
+        self.view.endEditing(true)
     }
-    */
 
 }

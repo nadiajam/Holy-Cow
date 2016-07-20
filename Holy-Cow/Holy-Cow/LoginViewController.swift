@@ -36,6 +36,9 @@ class LoginViewController: UIViewController {
         facebookButton.titleLabel?.textColor = UIColor.holyRed
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(recognizer)
 
     }
 
@@ -46,6 +49,10 @@ class LoginViewController: UIViewController {
         let application = UIApplication.sharedApplication()
         let window = application.keyWindow
         window?.rootViewController = viewController
+    }
+    
+    func dismissKeyboard(){
+        self.view.endEditing(true)
     }
     
 }
