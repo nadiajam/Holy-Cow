@@ -97,16 +97,17 @@ class CalendarViewController: UIViewController {
                     button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 }
                 
-                
-                
-                
-                
-                
                 //disabling button tap for inexistent days
                 if calendarArray[button.tag] == "" {
                     button.enabled = false
                     button.setBackgroundImage(nil, forState: .Normal)
                 }
+
+                //setting current day label to blue color
+                if dayOfMonth! ==  (button.tag - dayOfWeek! + 1) {
+                    button.setTitleColor(UIColor.holyBlue, forState: .Normal)
+                }
+                
             }
         }
         
