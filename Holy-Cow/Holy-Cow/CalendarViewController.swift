@@ -10,15 +10,9 @@ import UIKit
 
 class CalendarViewController: UIViewController {
 
+    @IBOutlet weak var daysView: UIView!
     @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var sundayLabel: UITextField!
-    @IBOutlet weak var mondayLabel: UITextField!
-    @IBOutlet weak var tuesdayLabel: UITextField!
-    @IBOutlet weak var wednesdayLabel: UITextField!
-    @IBOutlet weak var thursdayLabel: UITextField!
-    @IBOutlet weak var fridayLabel: UITextField!
-    @IBOutlet weak var saturdayLabel: UITextField!
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
     
@@ -26,6 +20,7 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupLabelColors()
         
         let calendarDays: Int = 31
         let startDate: Int = 4
@@ -39,22 +34,26 @@ class CalendarViewController: UIViewController {
             //            print(item)
         }
         
+        //['', '' ]
+        
         //calendarArray = ["", "", "", "", "", 1, 3, 4... 34, 35, "", "", "", "", "", "", ""]
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
+                
+                calendarCell.backgroundColor = UIColor.whiteColor()
 //                if button.tag =
 //                button.setTitle("\(button.tag)", forState: .Normal)
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
                 //button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  OMG HERE WE ADD THE CIRCLE BACKGROUND
             }
+            
         }
-        
-        for calendarCell in calendarBoard.subviews {
-            calendarCell.backgroundColor = UIColor.whiteColor()
-        }
-       
+    }
+
+    
+    func setupLabelColors() {
         
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
@@ -62,18 +61,13 @@ class CalendarViewController: UIViewController {
         //setting text colors
         calendarLabel.textColor = UIColor.whiteColor()
         monthLabel.textColor = UIColor.holyGreen
-        sundayLabel.textColor = UIColor.holyGrey
-        mondayLabel.textColor = UIColor.holyGrey
-        tuesdayLabel.textColor = UIColor.holyGrey
-        wednesdayLabel.textColor = UIColor.holyGrey
-        thursdayLabel.textColor = UIColor.holyGrey
-        fridayLabel.textColor = UIColor.holyGrey
-        saturdayLabel.textColor = UIColor.holyGrey
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        //setting day label colors
+        for subview in daysView.subviews {
+            if let dayLabel = subview as? UILabel {
+                dayLabel.textColor = UIColor.holyGrey
+            }
+        }
     }
 
 }
