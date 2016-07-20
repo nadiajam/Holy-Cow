@@ -13,6 +13,8 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
@@ -22,9 +24,16 @@ class RegisterViewController: UIViewController {
         window?.rootViewController = viewController
     }
     
-    
     @IBAction func closeButtonTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func emailFieldReturned(sender: UITextField) {
+        passwordField.becomeFirstResponder()
+    }
+    
+    @IBAction func passwordFieldReturned(sender: UITextField) {
+        passwordField.resignFirstResponder()
     }
     
     override func viewDidLoad() {
@@ -49,7 +58,6 @@ class RegisterViewController: UIViewController {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
-        
         
     }
     

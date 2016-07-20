@@ -13,6 +13,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    
+    @IBAction func emailFieldReturned(sender: UITextField) {
+        passwordField.becomeFirstResponder()
+    }
+    
+    @IBAction func passwordFieldReturned(sender: UITextField) {
+        passwordField.resignFirstResponder()
+    }
+    
+    
     
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
