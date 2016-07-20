@@ -31,7 +31,6 @@ class CalendarViewController: UIViewController {
         
         //setting title to current month
         dateFormatterOverall.dateFormat = "MMM yyyy"
-        print(dateFormatterOverall.stringFromDate(today))
         monthLabel.text = dateFormatterOverall.stringFromDate(today)
         
         //getting current day and month
