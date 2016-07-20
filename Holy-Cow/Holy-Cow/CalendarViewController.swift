@@ -24,6 +24,7 @@ class CalendarViewController: UIViewController {
     let dateComponents = NSDateComponents()
     
     var calendarArray = [String](count: 42, repeatedValue: "")
+//    var calendarCellsArray: [CalendarCell]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,24 +57,27 @@ class CalendarViewController: UIViewController {
         
         
         //array containing items 1 through days in current month
-        var July: [String] = []
+        var monthArray: [String] = []
         var firstNum = 1
         while firstNum <= calendarDays {
-            July.append("\(firstNum)")
+            monthArray.append("\(firstNum)")
             firstNum += 1
         }
         
-        calendarArray[weekDay...calendarDays] = July[0..<July.count]
+        calendarArray[weekDay...calendarDays] = monthArray[0..<monthArray.count]
+        
         
         for calendarCell in calendarBoard.subviews {
-            for button in calendarCell.subviews as! [UIButton] {
-                
+            for button in calendarCell.subviews as! [CalendarCell] {
                 calendarCell.backgroundColor = UIColor.whiteColor()
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
 //                button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  //OMG HERE WE ADD THE CIRCLE BACKGROUND
             }
         }
+        
+        
+        
     }
 
 
