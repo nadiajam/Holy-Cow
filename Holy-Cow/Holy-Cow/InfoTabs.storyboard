@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WJR-r6-QMK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WJR-r6-QMK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -523,21 +523,21 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAw-cu-FyL">
                                 <rect key="frame" x="270" y="296" width="270" height="98"/>
-                                <state key="normal" image="Weekend Carnivore"/>
+                                <state key="normal" image="WeekendCarnivore"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="6Tr-eD-ZFh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-mR-A2f">
                                 <rect key="frame" x="270" y="401" width="270" height="98"/>
-                                <state key="normal" image="Meatless Month"/>
+                                <state key="normal" image="MeatlessMonth"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="bqd-Ef-6lW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-IG-ooT">
                                 <rect key="frame" x="270" y="86" width="270" height="98"/>
-                                <state key="normal" image="Meatless Monday"/>
+                                <state key="normal" image="MeatlessMonday"/>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="eG9-Jg-4XI"/>
                                 </connections>
@@ -616,10 +616,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Checkerboard" width="362" height="200"/>
-        <image name="Meatless Monday" width="362" height="200"/>
-        <image name="Meatless Month" width="362" height="200"/>
-        <image name="Weekend Carnivore" width="362" height="200"/>
+        <image name="Checkerboard" width="120" height="66"/>
+        <image name="MeatlessMonday" width="120" height="66"/>
+        <image name="MeatlessMonth" width="120" height="66"/>
+        <image name="WeekendCarnivore" width="120" height="66"/>
         <image name="burger" width="686" height="686"/>
         <image name="earth" width="1821" height="1821"/>
         <image name="nav-button-1" width="1312" height="186"/>
