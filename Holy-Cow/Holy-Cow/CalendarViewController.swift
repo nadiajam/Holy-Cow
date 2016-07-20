@@ -29,6 +29,9 @@ class CalendarViewController: UIViewController {
     
     var calendarController = CalendarController()
     
+    var dayOfWeek:Int?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColorsAndFonts()
@@ -56,7 +59,8 @@ class CalendarViewController: UIViewController {
         let startOfMonth = calendar.dateFromComponents(dateComponents)!
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let startDateComponents = myCalendar.components(.Weekday, fromDate: startOfMonth)
-        let weekDay = startDateComponents.weekday - 1
+        self.dayOfWeek = startDateComponents.weekday - 1
+        
         
         
         //array containing items 1 through days in current month
@@ -67,7 +71,7 @@ class CalendarViewController: UIViewController {
             firstNum += 1
         }
         
-        calendarArray[weekDay...calendarDays] = monthArray[0..<monthArray.count]
+        calendarArray[self.dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
@@ -113,16 +117,40 @@ class CalendarViewController: UIViewController {
     
     @IBAction func calendarCellTapped(sender: UIButton) {
         
-        if calendarController.goalArray[sender.tag] == DayGoal.Meat {
-            calendarController.goalArray[sender.tag] = .Meatless
-//            print("just set button \(sender.tag) to MEATLESS")
-            sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+        if sender.tag <= dayOfMonth + (self.dayOfWeek! - 1) {
+            if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset || calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
+                calendarController.outcomeArray[sender.tag] = .Success
+                //            print("just set button \(sender.tag) to MEATLESS")
+                sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
+                
+            }
+//            else if calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
+//                calendarController.outcomeArray[sender.tag] = .Unset
+//                sender.setBackgroundImage(nil, forState: .Normal) // maybe add later?
+//            }
+            else {
+                calendarController.outcomeArray[sender.tag] = .Failure
+                //            print("just set button \(sender.tag)to MEAT")
+                sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
+            }
             
-        } else {
-            calendarController.goalArray[sender.tag] = .Meat
-//            print("just set button \(sender.tag)to MEAT")
-            sender.setBackgroundImage(nil, forState: .Normal)
         }
+
+        if sender.tag > dayOfMonth + (self.dayOfWeek! - 1) {
+            if calendarController.goalArray[sender.tag] == DayGoal.Meat {
+                calendarController.goalArray[sender.tag] = .Meatless
+                //            print("just set button \(sender.tag) to MEATLESS")
+                sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+                
+            } else {
+                calendarController.goalArray[sender.tag] = .Meat
+                //            print("just set button \(sender.tag)to MEAT")
+                sender.setBackgroundImage(nil, forState: .Normal)
+            }
+            
+        }
+        
+        
 
     }
 
