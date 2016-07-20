@@ -235,8 +235,12 @@
                                         <rect key="frame" x="77" y="50" width="77" height="50"/>
                                         <subviews>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFx-cS-tfH">
-                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="16.5" y="5" width="43" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="4dl-RT-m9F"/>
+                                                    <constraint firstAttribute="height" constant="40" id="OKR-Kk-ZkI"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" backgroundImage="RedCircle"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -248,9 +252,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDh-wP-goa" userLabel="9">
                                         <rect key="frame" x="154" y="50" width="77" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJz-3k-xDt">
-                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJz-3k-xDt">
+                                                <rect key="frame" x="16" y="5" width="43" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="lYJ-ar-BIG"/>
+                                                    <constraint firstAttribute="height" constant="40" id="oXf-JX-4bq"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" backgroundImage="GreenCircle"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -262,9 +270,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwH-6Y-xrO" userLabel="10">
                                         <rect key="frame" x="231" y="50" width="77" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-Tl-XfZ">
-                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAd-Tl-XfZ">
+                                                <rect key="frame" x="16" y="5" width="43" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="Yyl-wF-OMN"/>
+                                                    <constraint firstAttribute="height" constant="40" id="b8F-MR-NcZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" backgroundImage="GreenCircle"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -276,9 +288,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-34-dUr" userLabel="11">
                                         <rect key="frame" x="308" y="50" width="77" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-TR-sH3">
-                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFW-TR-sH3">
+                                                <rect key="frame" x="16" y="5" width="43" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="43" id="7Gf-pK-7VH"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Mki-RO-3L5"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" backgroundImage="GreyRing"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -925,4 +941,8 @@
             <point key="canvasLocation" x="373" y="393"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GreenCircle" width="26" height="25"/>
+        <image name="RedCircle" width="26" height="25"/>
+    </resources>
 </document>
