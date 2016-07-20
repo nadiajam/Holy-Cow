@@ -97,10 +97,16 @@ class CalendarViewController: UIViewController {
                     button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 }
                 
-                //disabling button tap for inexistent days
+                //disabling button tap for inexistent calendar days
                 if calendarArray[button.tag] == "" {
                     button.enabled = false
                     button.setBackgroundImage(nil, forState: .Normal)
+                }
+                
+                if button.tag <= dayOfMonth! + (self.dayOfWeek! - 1) {
+                    if calendarController.goalArray[button.tag] == DayGoal.Meat{
+                        button.enabled = false
+                    }
                 }
 
                 //setting current day label to blue color
@@ -142,20 +148,23 @@ class CalendarViewController: UIViewController {
     @IBAction func calendarCellTapped(sender: UIButton) {
         
         if sender.tag <= dayOfMonth! + (self.dayOfWeek! - 1) {
-            if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset || calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
-                calendarController.outcomeArray[sender.tag] = .Success
-                sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
-                
-            }
-//            else if calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
-//                calendarController.outcomeArray[sender.tag] = .Unset
-//                sender.setBackgroundImage(nil, forState: .Normal) // maybe add later?
-//            }
-            else {
-                calendarController.outcomeArray[sender.tag] = .Failure
-                sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
-            }
             
+            if calendarController.goalArray[sender.tag] == DayGoal.Meatless {
+           
+                if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset || calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
+                    calendarController.outcomeArray[sender.tag] = .Success
+                    sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
+                    
+                }
+    //            else if calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
+    //                calendarController.outcomeArray[sender.tag] = .Unset
+    //                sender.setBackgroundImage(nil, forState: .Normal) // maybe add later?
+    //            }
+                else {
+                    calendarController.outcomeArray[sender.tag] = .Failure
+                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
+                }
+            }
         }
 
         if sender.tag > dayOfMonth! + (self.dayOfWeek! - 1) {
