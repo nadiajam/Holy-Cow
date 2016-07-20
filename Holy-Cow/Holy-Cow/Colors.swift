@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
     
     class var holyBlue: UIColor {
-        return UIColor(red: 3.0/255.0, green: 196.0/255.0, blue: 251.0/255.0, alpha: 1.0)
+        return UIColor(red: 3.0/255.0, green: 196.0/255.0, blue: 250.0/255.0, alpha: 1.0)
     }
     
     class var holyGreen: UIColor {
@@ -19,11 +19,11 @@ extension UIColor {
     }
     
     class var holyPurple: UIColor {
-        return UIColor(red: 82.0/255.0, green: 39.0/255.0, blue: 108.0/255.0, alpha: 1.0)
+        return UIColor(red: 102.0/255.0, green: 81.0/255.0, blue: 168.0/255.0, alpha: 1.0)
     }
     
     class var holyOrange: UIColor {
-        return UIColor(red: 255.0/255.0, green: 171.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        return UIColor(red: 255.0/255.0, green: 147.0/255.0, blue: 49.0/255.0, alpha: 1.0)
     }
     
     class var holyRed: UIColor {
@@ -35,7 +35,7 @@ extension UIColor {
     }
     
     class var holyGrey: UIColor {
-        return UIColor(red: 189.0/255.0, green: 203.0/255.0, blue: 212.0/255.0, alpha: 1.0)
+        return UIColor(red: 189.0/255.0, green: 204.0/255.0, blue: 212.0/255.0, alpha: 1.0)
     }
     
 }
