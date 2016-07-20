@@ -24,7 +24,10 @@ class CalendarViewController: UIViewController {
     let dateComponents = NSDateComponents()
     
     var calendarArray = [String](count: 42, repeatedValue: "")
-//    var calendarCellsArray: [CalendarCell]
+    
+    var dayOfMonth = 15 ///dummy current day of month
+    
+    var calendarController = CalendarController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,13 +69,17 @@ class CalendarViewController: UIViewController {
         
         calendarArray[weekDay...calendarDays] = monthArray[0..<monthArray.count]
         
-        
         for calendarCell in calendarBoard.subviews {
-            for button in calendarCell.subviews as! [CalendarCell] {
+            for button in calendarCell.subviews as! [UIButton] {
                 calendarCell.backgroundColor = UIColor.whiteColor()
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
 //                button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  //OMG HERE WE ADD THE CIRCLE BACKGROUND
+                
+                //disabling button tap for inexistent days
+                if calendarArray[button.tag] == "" {
+                    button.enabled = false
+                }
             }
         }
         
@@ -104,13 +111,20 @@ class CalendarViewController: UIViewController {
     }
     
     
-//    @IBAction func calendarCellTapped(sender: CalendarCell) {
-        //if sender = future {
-//        sender.changeFutureDate()
-//        }
-//        if sender = past {
-//        sender.changePastDate()
-//        }
-//    }
+    @IBAction func calendarCellTapped(sender: UIButton) {
+        
+        if calendarController.goalArray[sender.tag] == DayGoal.Meat {
+            calendarController.goalArray[sender.tag] = .Meatless
+//            print("just set button \(sender.tag) to MEATLESS")
+            sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+            
+        } else {
+            calendarController.goalArray[sender.tag] = .Meat
+//            print("just set button \(sender.tag)to MEAT")
+            sender.setBackgroundImage(nil, forState: .Normal)
+        }
+
+    }
+
 
 }

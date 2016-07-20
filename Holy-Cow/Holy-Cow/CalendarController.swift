@@ -23,7 +23,7 @@ class CalendarController {
     
     //set plan here 
     func populate() {
-        var meatlessMonday = [1, 8, 15, 22, 29, 36]
+        var meatlessMonday = [1, 8, 15, 22, 29, 36] //change that later!
         for item in meatlessMonday {
             goalArray[item] = .Meatless
         }
