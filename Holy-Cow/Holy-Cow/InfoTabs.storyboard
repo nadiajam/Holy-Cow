@@ -606,7 +606,7 @@
     <resources>
         <image name="burger" width="686" height="686"/>
         <image name="earth" width="1821" height="1821"/>
-        <image name="nav-button-1" width="1312" height="186"/>
+        <image name="nav-button-1" width="131" height="46"/>
         <image name="nav-button-2" width="1312" height="186"/>
         <image name="nav-button-3" width="1312" height="186"/>
         <image name="nav-button-4" width="1312" height="186"/>
