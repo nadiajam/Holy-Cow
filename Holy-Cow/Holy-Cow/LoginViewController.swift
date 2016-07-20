@@ -39,8 +39,13 @@ class LoginViewController: UIViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func signInButtonTapped(sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()
+        let application = UIApplication.sharedApplication()
+        let window = application.keyWindow
+        window?.rootViewController = viewController
     }
-
+    
 }

@@ -514,25 +514,37 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-4c-IJN">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-4c-IJN">
                                 <rect key="frame" x="255" y="191" width="300" height="98"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="lij-yK-hrS"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAw-cu-FyL">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAw-cu-FyL">
                                 <rect key="frame" x="255" y="296" width="300" height="98"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="6Tr-eD-ZFh"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-mR-A2f">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JC0-mR-A2f">
                                 <rect key="frame" x="255" y="401" width="300" height="98"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="bqd-Ef-6lW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGp-IG-ooT">
                                 <rect key="frame" x="255" y="86" width="300" height="98"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.71372549019999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="eG9-Jg-4XI"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav-button-5" translatesAutoresizingMaskIntoConstraints="NO" id="h2Y-Lp-Ma4">
                                 <rect key="frame" x="150" y="520" width="300" height="30"/>
