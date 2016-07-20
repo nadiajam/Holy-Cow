@@ -151,18 +151,18 @@ class CalendarViewController: UIViewController {
             
             if calendarController.goalArray[sender.tag] == DayGoal.Meatless {
            
-                if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset || calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
+                if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset {
                     calendarController.outcomeArray[sender.tag] = .Success
                     sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
                     
                 }
-    //            else if calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
-    //                calendarController.outcomeArray[sender.tag] = .Unset
-    //                sender.setBackgroundImage(nil, forState: .Normal) // maybe add later?
-    //            }
-                else {
+                else if calendarController.outcomeArray[sender.tag] == DayOutcome.Success {
                     calendarController.outcomeArray[sender.tag] = .Failure
-                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
+                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal) // maybe add later?
+                }
+                else {
+                    calendarController.outcomeArray[sender.tag] = .Unset
+                    sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 }
             }
         }
