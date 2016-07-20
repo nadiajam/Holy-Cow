@@ -119,10 +119,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-lw-naP" userLabel="CalendarBoard">
                                 <rect key="frame" x="30" y="223" width="540" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-QM-qSK" userLabel="1">
-                                        <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7K-dS-7WX" userLabel="3">
                                         <rect key="frame" x="154" y="0.0" width="77" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -285,6 +281,10 @@
                                     </view>
                                     <view tag="38" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GY4-Hf-n0v" userLabel="39">
                                         <rect key="frame" x="232" y="250" width="77" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-QM-qSK" userLabel="1">
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.33314962860000003" blue="0.55833631039999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
