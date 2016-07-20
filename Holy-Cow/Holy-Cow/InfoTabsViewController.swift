@@ -29,8 +29,11 @@ class InfoTabsController: UIViewController {
                 } else if textField.tag == 2 { //tag 2 = numbers
                     textField.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 60.0)
                 } else if textField.tag == 3 { //equal signs
-                    textField.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 60.0)
-                } else { //standard text
+                    textField.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 55.0)
+                } else if textField.tag == 4 { //burger.etc. small labels
+                    textField.font = UIFont(name:"GTWalsheimProTrial-Regular", size: 25.0)
+                }
+                else { //standard text
                     textField.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 27.0)
                 }
                 
