@@ -16,92 +16,59 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
 
-    let now = NSDate()
-    let dateFormatter = NSDateFormatter()
-//    var calendarArray = [String](count: 42, repeatedValue: "")
+    let today = NSDate()
+    let dateFormatterYear = NSDateFormatter()
+    let dateFormatterMonth = NSDateFormatter()
+    let dateFormatterOverall = NSDateFormatter()
+    let dateComponents = NSDateComponents()
+    
+    var calendarArray = [String](count: 42, repeatedValue: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColors()
         
         //setting title to current month
-        dateFormatter.dateFormat = "MMM yyyy"
-        print(dateFormatter.stringFromDate(now))
-        monthLabel.text = dateFormatter.stringFromDate(now)
+        dateFormatterOverall.dateFormat = "MMM yyyy"
+        print(dateFormatterOverall.stringFromDate(today))
+        monthLabel.text = dateFormatterOverall.stringFromDate(today)
         
-        var startCell: Int = 5 //change later with NSDate
-        var endCell: Int = startCell + 30  //change later with NSDate
+        //getting number of days from month
+        dateFormatterYear.dateFormat = "YYYY"
+        dateFormatterMonth.dateFormat = "MM"
+        var year = Int(dateFormatterYear.stringFromDate(today))
+        var month = Int(dateFormatterMonth.stringFromDate(today))
+        let dateComponents = NSDateComponents()
+        dateComponents.year = year!
+        dateComponents.month = month!
         
+        let calendar = NSCalendar.currentCalendar()
+        let date = calendar.dateFromComponents(dateComponents)!
         
-        var buttonsArray = [UIButton]() //ALL BUTTONS IN CALENDAR
-        let calendarDays = [Int](startCell...endCell) //MONTH DAYS
+        let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
+        let calendarDays:Int = range.length
         
-        
-        //ordered array of buttons based on button tag
-        for subview in calendarBoard.subviews {
-            if let backView = subview as UIView? {
-                backView.backgroundColor = UIColor.whiteColor()
-            }
-            if let cell = subview as? UIButton {
-                for i in 0...42 {
-                    if cell.tag == i {
-                        buttonsArray.append(cell)
-                    }
-                    continue
-                }
-            }
-        }
-        
-        
-        for day in calendarDays { //1 - 30
-            
-            for button in buttonsArray { //1 - 42
-                
-                
-                
-            }
-            
-        }
-        
-        
-        
-        
-        
-/* *** Nadia's code ******
-        let calendarDays: Int = 31
-        let startDate: Int = 4
-        let endDate: Int = startDate + 30
-        
+        var July: [String] = []
         var firstNum = 1
-        
-        for var item in calendarArray[startDate...endDate] {
-            item = "\(firstNum)"
+        while firstNum <= calendarDays {
+            July.append("\(firstNum)")
             firstNum += 1
-            //            print(item)
         }
- 
         
-        //calendarArray = ["", "", "", "", "", 1, 3, 4... 34, 35, "", "", "", "", "", "", ""]
-
+        calendarArray[5...calendarDays] = July[0..<July.count]
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
                 
                 calendarCell.backgroundColor = UIColor.whiteColor()
-//                if button.tag =
-//                button.setTitle("\(button.tag)", forState: .Normal)
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
-                //button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  OMG HERE WE ADD THE CIRCLE BACKGROUND
+//                button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  //OMG HERE WE ADD THE CIRCLE BACKGROUND
             }
-            
         }
- */
-        
-        
     }
 
-    
+
     func setupLabelColors() {
         
         //setting background and bordercolors
