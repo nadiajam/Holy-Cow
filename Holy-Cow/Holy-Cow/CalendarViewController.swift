@@ -20,25 +20,39 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var fridayLabel: UITextField!
     @IBOutlet weak var saturdayLabel: UITextField!
     @IBOutlet weak var calendarBoard: UIView!
-    
-    //array
-//    var calendarArray = []
-    
     @IBOutlet weak var calendarViewLabel: UIView!
+    
+    var calendarArray = [String](count: 42, repeatedValue: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var calendarArray = [String](count: 42, repeatedValue: "")
-        
-        let startDate: Int = 5
+        let calendarDays: Int = 31
+        let startDate: Int = 4
         let endDate: Int = startDate + 30
-
+        
         var firstNum = 1
         
         for var item in calendarArray[startDate...endDate] {
             item = "\(firstNum)"
             firstNum += 1
-            print(item)
+            //            print(item)
+        }
+        
+        //calendarArray = ["", "", "", "", "", 1, 3, 4... 34, 35, "", "", "", "", "", "", ""]
+        
+        for calendarCell in calendarBoard.subviews {
+            for button in calendarCell.subviews as! [UIButton] {
+//                if button.tag =
+//                button.setTitle("\(button.tag)", forState: .Normal)
+                button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
+                button.setTitleColor(UIColor.holyBlack, forState: .Normal)
+                //button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  OMG HERE WE ADD THE CIRCLE BACKGROUND
+            }
+        }
+        
+        for calendarCell in calendarBoard.subviews {
+            calendarCell.backgroundColor = UIColor.whiteColor()
         }
        
         
