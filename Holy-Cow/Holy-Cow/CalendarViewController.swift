@@ -104,13 +104,13 @@ class CalendarViewController: UIViewController {
     }
     
     
-    @IBAction func calendarCellTapped(sender: CalendarCell) {
+//    @IBAction func calendarCellTapped(sender: CalendarCell) {
         //if sender = future {
 //        sender.changeFutureDate()
 //        }
 //        if sender = past {
 //        sender.changePastDate()
 //        }
-    }
+//    }
 
 }
