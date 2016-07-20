@@ -16,13 +16,13 @@ enum FutureDate {
     case Meat, Meatless
 }
 
-class CalendarCell {
+class CalendarCell: UIButton {
     //initialize to empty calendar
     var calendar = [FutureDate](count: 42, repeatedValue: .Meat)
     
     
     func changePastDate() {
-        
+         
     }
     
     func changeFutureDate() {
