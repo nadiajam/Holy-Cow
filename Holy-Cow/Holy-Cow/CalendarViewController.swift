@@ -11,7 +11,6 @@ import UIKit
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var daysView: UIView!
-    @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
@@ -111,12 +110,7 @@ class CalendarViewController: UIViewController {
 
     func setupLabelColorsAndFonts() {
         
-        //setting background and bordercolors
-        calendarLabel.backgroundColor = UIColor.holyGreen
-        
         //setting text and font colors
-        calendarLabel.textColor = UIColor.whiteColor()
-        calendarLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 25.0)
         monthLabel.textColor = UIColor.holyGreen
         monthLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 18.0)
         
