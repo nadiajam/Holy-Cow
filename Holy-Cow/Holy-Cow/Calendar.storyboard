@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cUb-vw-QgK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cUb-vw-QgK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -1090,26 +1090,13 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67V-Md-4LZ">
-                                <rect key="frame" x="30" y="530" width="100" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ag8-oR-8pE"/>
-                                    <constraint firstAttribute="width" constant="100" id="SAx-Co-GyE"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="Dpb-29-SAG" kind="show" id="Yh2-IB-Ej4"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="njJ-P0-7nF" firstAttribute="top" secondItem="67V-Md-4LZ" secondAttribute="bottom" constant="20" id="0JI-DS-HEI"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="top" secondItem="pmu-sd-bJg" secondAttribute="bottom" constant="20" id="19I-4z-jEB"/>
                             <constraint firstItem="bCf-kW-jga" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="5W8-EQ-J1g"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="top" secondItem="062-kQ-eRb" secondAttribute="bottom" id="5Xq-bC-8q5"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="centerX" secondItem="BnX-Nr-IQ9" secondAttribute="centerX" id="7MO-Q3-3cF"/>
-                            <constraint firstItem="67V-Md-4LZ" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" constant="30" id="BA9-HH-QsX"/>
                             <constraint firstItem="WPs-vJ-YaC" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.1" id="IDn-h3-4pU"/>
                             <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="ffZ-NB-agO" secondAttribute="bottom" id="JC0-Ym-pqW"/>
                             <constraint firstAttribute="trailing" secondItem="062-kQ-eRb" secondAttribute="trailing" id="QEE-RS-BdE"/>
@@ -1260,7 +1247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1n-JR-TaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="1034"/>
+            <point key="canvasLocation" x="1093" y="362"/>
         </scene>
         <!--Item-->
         <scene sceneID="JWz-TT-fhd">
@@ -1270,7 +1257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-vz-v0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="-1601"/>
+            <point key="canvasLocation" x="679" y="-513"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="e3t-la-DFr">
@@ -1280,7 +1267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnA-j9-GcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-305" y="-2262"/>
+            <point key="canvasLocation" x="671" y="-1218"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cs8-u9-Ybg">
@@ -1311,7 +1298,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bD-Lu-Dwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1125" y="-1931"/>
+            <point key="canvasLocation" x="-309" y="-703"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8eq-sB-ym6">
