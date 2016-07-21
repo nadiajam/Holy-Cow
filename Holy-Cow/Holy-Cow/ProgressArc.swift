@@ -20,8 +20,8 @@ import UIKit
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         let π = 3.141592653589793238462643383279502884197169399
-        let start = 3 * π / 4
-        let end = (3 * π / 4 ) + 2 * π
+        let start = π + π/2
+        let end = 3 * π + π/2
         let progress = progressValue * 2 * π + start
         
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
