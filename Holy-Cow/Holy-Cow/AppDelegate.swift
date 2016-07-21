@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/17/16.
-//  Copyright © 2016 Nadia Jamrozik. All rights reserved.
+//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
 //
 
 import UIKit

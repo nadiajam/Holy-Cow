@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/21/16.
-//  Copyright © 2016 Nadia Jamrozik. All rights reserved.
+//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
 //
 
 import UIKit
@@ -15,6 +15,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var gallonNumberLabel: UILabel!
     
     var meatNumber:Int = 0
+    var currentStreakLength:Int = 0
+    var currentLongestStreakLength:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,9 @@ class ProfileViewController: UIViewController {
         
         //modifying profile numbers
         numberLabel.text = "\(meatNumber)"
+        gallonNumberLabel.text = "\(currentStreakLength)"
+        
+        print(currentStreakLength)
         
         
     }
@@ -43,6 +48,6 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }

@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/20/16.
-//  Copyright © 2016 Nadia Jamrozik. All rights reserved.
+//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
 //
 
 import UIKit
@@ -16,31 +16,17 @@ enum DayGoal {
     case Meat, Meatless
 }
 
-class CalendarController: SendDataDelegate {
+class CalendarController {
     //initializing goal and outcome arrays
     var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
     var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
-    
-    var challengeArray = [Int]()
-    
-    func challengeChosen(challenge: [Int]) {
-        challengeArray = challenge
-        print(challengeArray)
-    }
-    
+    var longestStreak = 0
     
     //set plan here 
-    func populate() {
-        
-        print("this is the actual thing populated!!!!!!!!\(challengeArray)")
-        
-        for item in challengeArray {
+    func populate(challenge: [Int]) {
+        for item in challenge {
             goalArray[item] = .Meatless
-        }
-        
-        print(challengeArray)
-        print("justprintedagain_____________")
-        
+        }  
     }
     
     //tally how many days with goal of meatless in array
@@ -63,5 +49,30 @@ class CalendarController: SendDataDelegate {
         }
         return outcomeNum
     }
+    
+    
+    func currentStreakTally() -> Int {
+        
+        var streakNum = 0
+        
+        for i in (0...16).reverse() where goalArray[i] == .Meatless {
+            if outcomeArray[i] == .Success {
+                streakNum += 1
+            } else {
+                break
+            }
+        }
+        
+        if streakNum > longestStreak {
+            longestStreak = streakNum
+        }
+        return streakNum
+    }
+    
+    
+    func longestStreakTally() -> Int {
+        return longestStreak
+    }
+
     
 }

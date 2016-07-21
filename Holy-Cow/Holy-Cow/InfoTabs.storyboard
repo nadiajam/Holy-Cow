@@ -6,6 +6,31 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="GT-Walsheim-Pro-Trial-Medium.otf">
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+        </mutableArray>
+        <mutableArray key="GT-Walsheim-Pro-Trial-Ultra-Bold.otf">
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+            <string>GTWalsheimProTrialUltra-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="ZLj-gb-m38">
@@ -35,21 +60,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="way to go!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwO-QZ-kaG">
-                                <rect key="frame" x="213" y="154" width="174" height="64"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="way to go" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwO-QZ-kaG">
+                                <rect key="frame" x="196" y="158" width="209" height="56"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you just made a great life choice." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypP-g7-lxH">
                                 <rect key="frame" x="120" y="210" width="360" height="90"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="before we get started, this is the difference you're about to make." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK1-Gh-EMm">
                                 <rect key="frame" x="90" y="285" width="420" height="120"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -59,10 +84,17 @@
                                     <constraint firstAttribute="height" constant="30" id="ncO-Wg-WGT"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZF-XW-yhB">
+                                <rect key="frame" x="405" y="144" width="16" height="70"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.22745098039215686" green="0.13333333333333333" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="AZF-XW-yhB" firstAttribute="leading" secondItem="TwO-QZ-kaG" secondAttribute="trailing" id="1WP-73-c7z"/>
                             <constraint firstItem="P56-el-khc" firstAttribute="top" secondItem="bhk-Oj-6OG" secondAttribute="bottom" constant="50" id="42l-Kb-vZT"/>
                             <constraint firstItem="pK1-Gh-EMm" firstAttribute="width" secondItem="dlB-U0-I95" secondAttribute="width" multiplier="0.7" id="9lg-Kb-NCN"/>
                             <constraint firstItem="bhk-Oj-6OG" firstAttribute="centerX" secondItem="dlB-U0-I95" secondAttribute="centerX" id="Ac8-JQ-0xf"/>
@@ -76,6 +108,7 @@
                             <constraint firstItem="TwO-QZ-kaG" firstAttribute="centerX" secondItem="dlB-U0-I95" secondAttribute="centerX" id="ghJ-z3-CBv"/>
                             <constraint firstItem="TwO-QZ-kaG" firstAttribute="centerY" secondItem="dlB-U0-I95" secondAttribute="centerY" multiplier="0.62" id="tAA-EQ-l9W"/>
                             <constraint firstItem="bhk-Oj-6OG" firstAttribute="width" secondItem="dlB-U0-I95" secondAttribute="width" multiplier="0.5" id="tbX-wu-Lr9"/>
+                            <constraint firstItem="AZF-XW-yhB" firstAttribute="bottom" secondItem="TwO-QZ-kaG" secondAttribute="bottom" id="wUj-Hh-UxI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="McM-Ry-lhh" appends="YES" id="bLa-Ue-DsV"/>
@@ -104,9 +137,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meat and dairy production make up       1/3 of all of earth's fresh water consumption." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-bO-BHI">
-                                <rect key="frame" x="90" y="330" width="420" height="150"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meat and dairy production make up 1/3 of all of earth's fresh water consumption." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-bO-BHI">
+                                <rect key="frame" x="60" y="330" width="480" height="150"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -123,10 +156,16 @@
                                     <constraint firstAttribute="height" constant="30" id="nrc-0N-GQF"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azq-gU-rDg">
-                                <rect key="frame" x="245" y="50" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azq-gU-rDg">
+                                <rect key="frame" x="142" y="32" width="286" height="56"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-Kq-fmv">
+                                <rect key="frame" x="428" y="25" width="28" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -137,13 +176,15 @@
                             <constraint firstItem="kgg-bO-BHI" firstAttribute="centerY" secondItem="YbU-Is-MdJ" secondAttribute="centerY" multiplier="1.35" id="66j-CJ-RBh"/>
                             <constraint firstItem="kgg-bO-BHI" firstAttribute="height" secondItem="YbU-Is-MdJ" secondAttribute="height" multiplier="0.25" id="8mJ-kc-RCs"/>
                             <constraint firstItem="uOP-Fa-cht" firstAttribute="width" secondItem="YbU-Is-MdJ" secondAttribute="width" multiplier="0.5" id="AGR-mt-LxH"/>
-                            <constraint firstItem="kgg-bO-BHI" firstAttribute="width" secondItem="YbU-Is-MdJ" secondAttribute="width" multiplier="0.7" id="Axl-Dj-coN"/>
+                            <constraint firstItem="kgg-bO-BHI" firstAttribute="width" secondItem="YbU-Is-MdJ" secondAttribute="width" multiplier="0.8" id="Axl-Dj-coN"/>
                             <constraint firstItem="kgg-bO-BHI" firstAttribute="centerX" secondItem="YbU-Is-MdJ" secondAttribute="centerX" id="C5L-88-r2r"/>
                             <constraint firstItem="uOP-Fa-cht" firstAttribute="centerX" secondItem="YbU-Is-MdJ" secondAttribute="centerX" id="Xeo-BE-oCG"/>
                             <constraint firstItem="fde-LJ-7bt" firstAttribute="centerX" secondItem="YbU-Is-MdJ" secondAttribute="centerX" id="b2n-Ym-sOF"/>
                             <constraint firstItem="fde-LJ-7bt" firstAttribute="centerY" secondItem="YbU-Is-MdJ" secondAttribute="centerY" multiplier="0.725" id="bjy-SZ-nke"/>
                             <constraint firstItem="0pb-ef-Xy7" firstAttribute="top" secondItem="uOP-Fa-cht" secondAttribute="bottom" constant="50" id="gC3-nO-MQO"/>
-                            <constraint firstItem="azq-gU-rDg" firstAttribute="centerX" secondItem="YbU-Is-MdJ" secondAttribute="centerX" id="gwK-8L-ujc"/>
+                            <constraint firstItem="azq-gU-rDg" firstAttribute="centerX" secondItem="YbU-Is-MdJ" secondAttribute="centerX" multiplier="0.95" id="gwK-8L-ujc"/>
+                            <constraint firstItem="WQ9-Kq-fmv" firstAttribute="bottom" secondItem="azq-gU-rDg" secondAttribute="bottom" constant="-3" id="lgh-9c-Fgp"/>
+                            <constraint firstItem="WQ9-Kq-fmv" firstAttribute="leading" secondItem="azq-gU-rDg" secondAttribute="trailing" id="z1q-Ig-Xbl"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="NUK-1x-gku" appends="YES" id="D04-RU-qLw"/>
@@ -178,17 +219,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="burger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qn7-4C-Aw9">
-                                <rect key="frame" x="370" y="160" width="61" height="40"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <rect key="frame" x="370" y="169" width="77" height="31"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="gallons      of water" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGQ-aK-5Hf">
-                                <rect key="frame" x="370" y="324" width="130" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gallons      of water" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGQ-aK-5Hf">
+                                <rect key="frame" x="370" y="296" width="130" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="ccO-qZ-X4L"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -202,7 +243,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="bFI-9K-Wbu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -211,7 +252,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="8sz-xg-nBS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="85"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -220,7 +261,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="LwZ-yc-ErX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="90"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -244,9 +285,9 @@
                                     <constraint firstAttribute="height" constant="30" id="vzk-Ox-mkT"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XY-zE-hhT">
-                                <rect key="frame" x="245" y="50" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XY-zE-hhT">
+                                <rect key="frame" x="142" y="32" width="286" height="56"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -275,8 +316,14 @@
                                     <constraint firstAttribute="width" constant="130" id="dfa-qZ-nwK"/>
                                     <constraint firstAttribute="height" constant="55" id="sRa-i6-BfR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="80"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X0-AH-KU1">
+                                <rect key="frame" x="428" y="25" width="28" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -284,7 +331,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PRP-Ws-wuo" firstAttribute="leading" secondItem="oOH-y8-G35" secondAttribute="leading" id="20H-VM-3zW"/>
+                            <constraint firstItem="5X0-AH-KU1" firstAttribute="bottom" secondItem="7XY-zE-hhT" secondAttribute="bottom" constant="-3" id="4rJ-MO-hXd"/>
                             <constraint firstItem="7yb-e0-lF4" firstAttribute="centerX" secondItem="1RH-Xc-oNA" secondAttribute="centerX" multiplier="0.6" id="5vw-ev-u7C"/>
+                            <constraint firstItem="5X0-AH-KU1" firstAttribute="leading" secondItem="7XY-zE-hhT" secondAttribute="trailing" id="88v-MZ-MYq"/>
                             <constraint firstItem="6mI-Xw-HfU" firstAttribute="centerX" secondItem="1RH-Xc-oNA" secondAttribute="centerX" multiplier="0.6" id="8b5-KT-pJi"/>
                             <constraint firstItem="oOH-y8-G35" firstAttribute="leading" secondItem="Qn7-4C-Aw9" secondAttribute="leading" id="9iw-Dy-C0L"/>
                             <constraint firstItem="bGQ-aK-5Hf" firstAttribute="bottom" secondItem="bQe-in-HNi" secondAttribute="bottom" id="B4w-cf-bFV"/>
@@ -308,7 +357,7 @@
                             <constraint firstItem="qgD-bt-2h8" firstAttribute="leading" secondItem="bGQ-aK-5Hf" secondAttribute="leading" id="jJJ-3p-pps"/>
                             <constraint firstItem="qgD-bt-2h8" firstAttribute="top" secondItem="6mI-Xw-HfU" secondAttribute="top" id="jVh-b3-OV7"/>
                             <constraint firstItem="bGQ-aK-5Hf" firstAttribute="width" secondItem="PRP-Ws-wuo" secondAttribute="width" id="kpQ-hq-W9m"/>
-                            <constraint firstItem="7XY-zE-hhT" firstAttribute="centerX" secondItem="1RH-Xc-oNA" secondAttribute="centerX" id="m2j-AW-RUa"/>
+                            <constraint firstItem="7XY-zE-hhT" firstAttribute="centerX" secondItem="1RH-Xc-oNA" secondAttribute="centerX" multiplier="0.95" id="m2j-AW-RUa"/>
                             <constraint firstItem="bGQ-aK-5Hf" firstAttribute="leading" secondItem="PRP-Ws-wuo" secondAttribute="leading" id="mxX-Ig-RNX"/>
                             <constraint firstItem="gg8-4z-cGR" firstAttribute="top" secondItem="7yb-e0-lF4" secondAttribute="top" id="pOr-4l-pnY"/>
                             <constraint firstItem="SBJ-Mm-5w6" firstAttribute="centerX" secondItem="1RH-Xc-oNA" secondAttribute="centerX" id="qQc-xB-NZD"/>
@@ -350,7 +399,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 football fields worth of amazonian rainforest is bulldozed every minute for animal agriculture." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMS-jh-gjs">
                                 <rect key="frame" x="60" y="360" width="480" height="150"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -360,12 +409,6 @@
                                     <constraint firstAttribute="height" constant="30" id="kle-mh-47e"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alw-vC-ey5">
-                                <rect key="frame" x="245" y="50" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-fw-25p">
                                 <rect key="frame" x="75" y="105" width="450" height="240"/>
                                 <subviews>
@@ -422,15 +465,29 @@
                                     <constraint firstItem="9P4-RR-Wri" firstAttribute="height" secondItem="pwY-fw-25p" secondAttribute="height" multiplier="1/3" id="zzS-aJ-tci"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JX-PS-cjT">
+                                <rect key="frame" x="428" y="25" width="28" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alw-vC-ey5">
+                                <rect key="frame" x="142" y="32" width="286" height="56"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.31764705882352939" green="0.74509803921568629" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0Hh-xQ-gxP" firstAttribute="width" secondItem="M5l-ya-r6r" secondAttribute="width" multiplier="0.5" id="Aar-6j-9ZQ"/>
-                            <constraint firstItem="alw-vC-ey5" firstAttribute="centerX" secondItem="M5l-ya-r6r" secondAttribute="centerX" id="GP5-mQ-tPy"/>
+                            <constraint firstItem="alw-vC-ey5" firstAttribute="centerX" secondItem="M5l-ya-r6r" secondAttribute="centerX" multiplier="0.95" id="GP5-mQ-tPy"/>
                             <constraint firstItem="lMS-jh-gjs" firstAttribute="height" secondItem="M5l-ya-r6r" secondAttribute="height" multiplier="0.25" id="T66-4V-eHR"/>
                             <constraint firstItem="pwY-fw-25p" firstAttribute="height" secondItem="M5l-ya-r6r" secondAttribute="height" multiplier="0.4" id="a6d-l3-dtO"/>
                             <constraint firstItem="VXq-tG-nvL" firstAttribute="top" secondItem="0Hh-xQ-gxP" secondAttribute="bottom" constant="50" id="boc-PG-4BZ"/>
+                            <constraint firstItem="5JX-PS-cjT" firstAttribute="leading" secondItem="alw-vC-ey5" secondAttribute="trailing" id="ddA-my-aWA"/>
+                            <constraint firstItem="5JX-PS-cjT" firstAttribute="bottom" secondItem="alw-vC-ey5" secondAttribute="bottom" constant="-3" id="eHJ-pg-Rud"/>
                             <constraint firstItem="alw-vC-ey5" firstAttribute="centerY" secondItem="M5l-ya-r6r" secondAttribute="centerY" multiplier="0.2" id="fxd-4a-QYU"/>
                             <constraint firstItem="0Hh-xQ-gxP" firstAttribute="centerX" secondItem="M5l-ya-r6r" secondAttribute="centerX" id="ibn-Mr-NY8"/>
                             <constraint firstItem="pwY-fw-25p" firstAttribute="centerY" secondItem="M5l-ya-r6r" secondAttribute="centerY" multiplier="0.75" id="pWg-HZ-Yjh"/>
@@ -477,8 +534,8 @@
                                 <color key="backgroundColor" red="0.30196078431372547" green="0.70196078431372544" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pick your challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZm-32-f69">
-                                <rect key="frame" x="179" y="6" width="242" height="48"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                <rect key="frame" x="139" y="9" width="323" height="42"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -487,7 +544,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="x97-pS-J1j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="checker board" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zia-D8-X2J">
@@ -495,7 +552,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="tz0-3o-fMR"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weekend carnivore" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrB-2F-MBC">
@@ -503,7 +560,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="RMy-wM-LSW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meatless month" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbt-MM-Tnd">
@@ -511,7 +568,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="82" id="aFu-ZA-JGd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnH-4c-IJN">

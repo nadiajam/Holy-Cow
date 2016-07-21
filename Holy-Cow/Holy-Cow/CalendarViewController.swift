@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/18/16.
-//  Copyright © 2016 Nadia Jamrozik. All rights reserved.
+//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
 //
 
 import UIKit
@@ -34,8 +34,6 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColorsAndFonts()
-        
-        calendarController.populate()
         
         //setting title to current month
         dateFormatterOverall.dateFormat = "MMM yyyy"
@@ -81,7 +79,7 @@ class CalendarViewController: UIViewController {
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
                 
                 //improve runtime??? INCREMENTING INDEX
-                if calendarController.challengeArray.contains(button.tag) {
+                if case .Meatless = calendarController.goalArray[button.tag] {
                     button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 }
                 
@@ -160,7 +158,6 @@ class CalendarViewController: UIViewController {
 
         //total goal of meatless days
         let goalMeatless = calendarController.tallyGoal()
-        print("TALLY GOAL = \(goalMeatless)")
         
         //total successful meatless days
 //        var successMeatless = calendarController.tallyOutcome()
@@ -168,9 +165,18 @@ class CalendarViewController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        var successMeatless = calendarController.tallyOutcome()
-        let destination = segue.destinationViewController as! ProfileViewController
-        destination.meatNumber = successMeatless
+        let successMeatless = calendarController.tallyOutcome()
+        let destination1 = segue.destinationViewController as! ProfileViewController
+        destination1.meatNumber = successMeatless
+        
+        var streakLength = calendarController.currentStreakTally()
+        let destination2 = segue.destinationViewController as! ProfileViewController
+        destination2.currentStreakLength = streakLength
+        
+        var longestStreakLength = calendarController.longestStreakTally()
+        let destination3 = segue.destinationViewController as! ProfileViewController
+        destination3.currentLongestStreakLength = longestStreakLength
+        
     }
 
 }
