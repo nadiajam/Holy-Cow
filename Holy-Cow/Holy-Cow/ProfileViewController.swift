@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/21/16.
-//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
+//  Copyright © 2016 Holy iOS Cows. All rights reserved.
 //
 
 import UIKit
@@ -14,13 +14,15 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var blueView: UIView!
     @IBOutlet weak var gallonNumberLabel: UILabel!
     
-    var meatNumber:Int = 0
+    @IBOutlet var progressArc: ProgressArc! //set later
+    
+    var meatNumber:Double = 0
     var currentStreakLength:Int = 0
     var currentLongestStreakLength:Int = 0
+    var futureArcValue: Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //setting fonts and colors
         numberLabel.textColor = UIColor.holyPurple
         numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
@@ -36,18 +38,10 @@ class ProfileViewController: UIViewController {
         }
         
         //modifying profile numbers
-        numberLabel.text = "\(meatNumber)"
+        numberLabel.text = "\(Int(meatNumber))"
         gallonNumberLabel.text = "\(currentStreakLength)"
-        
-        print(currentStreakLength)
-        
-        
+        progressArc.progressValue = futureArcValue
+        print("progressValue \(progressArc.progressValue)")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
 }

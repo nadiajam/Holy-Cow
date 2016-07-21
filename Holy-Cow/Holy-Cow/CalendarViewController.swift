@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/18/16.
-//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
+//  Copyright © 2016 Holy iOS Cows. All rights reserved.
 //
 
 import UIKit
@@ -23,11 +23,8 @@ class CalendarViewController: UIViewController {
     let dateComponents = NSDateComponents()
     
     var calendarArray = [String](count: 42, repeatedValue: "")
-    
     var dayOfMonth:Int?
-    
     var calendarController = CalendarController()
-    
     var dayOfWeek:Int?
     
     
@@ -54,7 +51,7 @@ class CalendarViewController: UIViewController {
         let date = calendar.dateFromComponents(dateComponents)!
         
         let range = calendar.rangeOfUnit(.Day, inUnit: .Month, forDate: date)
-        let calendarDays:Int = range.length
+        let calendarDays: Int = range.length //length of current month
         
         let startOfMonth = calendar.dateFromComponents(dateComponents)!
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
@@ -99,7 +96,6 @@ class CalendarViewController: UIViewController {
                 if dayOfMonth! ==  (button.tag - dayOfWeek! + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
                 }
-                
             }
         }
     }
@@ -110,7 +106,6 @@ class CalendarViewController: UIViewController {
         //setting text and font colors
         monthLabel.textColor = UIColor.holyGreen
         monthLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 18.0)
-        
         
         //setting day label colors
         for subview in daysView.subviews {
@@ -131,7 +126,6 @@ class CalendarViewController: UIViewController {
                 if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset {
                     calendarController.outcomeArray[sender.tag] = .Success
                     sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
-                    
                 }
                 else if calendarController.outcomeArray[sender.tag] == DayOutcome.Success {
                     calendarController.outcomeArray[sender.tag] = .Failure
@@ -148,35 +142,27 @@ class CalendarViewController: UIViewController {
             if calendarController.goalArray[sender.tag] == DayGoal.Meat {
                 calendarController.goalArray[sender.tag] = .Meatless
                 sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
-                
             } else {
                 calendarController.goalArray[sender.tag] = .Meat
                 sender.setBackgroundImage(nil, forState: .Normal)
             }
-            
         }
 
-        //total goal of meatless days
-        let goalMeatless = calendarController.tallyGoal()
-        
-        //total successful meatless days
-//        var successMeatless = calendarController.tallyOutcome()
-//        print("TALLY SUCCESS = \(successMeatless)")
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let successMeatless = calendarController.tallyOutcome()
-        let destination1 = segue.destinationViewController as! ProfileViewController
-        destination1.meatNumber = successMeatless
+        let streakLength = calendarController.currentStreakTally()
+        let longestStreakLength = calendarController.longestStreakTally()
+        let arcFraction = calendarController.getArcFraction() //for arc
+        print("arcfraction\(arcFraction)")
         
-        var streakLength = calendarController.currentStreakTally()
-        let destination2 = segue.destinationViewController as! ProfileViewController
-        destination2.currentStreakLength = streakLength
+        let destination = segue.destinationViewController as! ProfileViewController
         
-        var longestStreakLength = calendarController.longestStreakTally()
-        let destination3 = segue.destinationViewController as! ProfileViewController
-        destination3.currentLongestStreakLength = longestStreakLength
-        
+        destination.meatNumber = successMeatless
+        destination.currentStreakLength = streakLength
+        destination.currentLongestStreakLength = longestStreakLength
+        destination.futureArcValue = arcFraction
     }
 
 }
