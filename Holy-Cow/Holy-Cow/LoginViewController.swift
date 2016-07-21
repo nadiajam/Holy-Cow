@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         
         facebookButton.titleLabel?.textColor = UIColor.holyRed
         
-        view.layer.backgroundColor = UIColor.holyRed.CGColor
+        view.layer.backgroundColor = UIColor.holyRed.CGColor //this does not work
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
