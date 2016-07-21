@@ -43,9 +43,9 @@ class LoginViewController: UIViewController {
         orLabel.layer.borderColor = UIColor.whiteColor().CGColor
         orLabel.layer.borderWidth = 2
         
-        closeButton.layer.bounds = CGRectMake(0, 0, 28, 28)
+        closeButton.layer.bounds = CGRectMake(0, 0, 50, 50)
         closeButton.layer.masksToBounds = true
-        closeButton.layer.cornerRadius = 7
+        closeButton.layer.cornerRadius = 15
         closeButton.layer.borderColor = UIColor.whiteColor().CGColor
         closeButton.layer.borderWidth = 2
         
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
         
         orLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         facebookButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 25.0)
+        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 12.0)
         emailField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         passwordField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         emailLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
@@ -70,9 +70,9 @@ class LoginViewController: UIViewController {
         
         
         
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-//        
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
         
 
     }
@@ -90,28 +90,33 @@ class LoginViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-//    func keyboardWillShow(notification:NSNotification) {
-//        adjustingHeight(true, notification: notification)
-//    }
-//    
-//    func keyboardWillHide(notification:NSNotification) {
-//        adjustingHeight(false, notification: notification)
-//    }
-//    
-//    func adjustingHeight(show:Bool, notification:NSNotification) {
-//        // 1
-//        var userInfo = notification.userInfo!
-//        // 2
-//        let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
-//        // 3
-//        let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
-//        // 4
-//        let changeInHeight = (CGRectGetHeight(keyboardFrame) + 40) * (show ? 1 : -1)
-//        //5
-//        UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
-//            self.bottomConstraint.constant += changeInHeight
-//        })
-//        
-//    }
+    func keyboardWillShow(notification:NSNotification) {
+        adjustingHeight(true, notification: notification)
+    }
+    
+    func keyboardWillHide(notification:NSNotification) {
+        adjustingHeight(false, notification: notification)
+    }
+    
+    func adjustingHeight(show:Bool, notification:NSNotification) {
+        // 1
+        var userInfo = notification.userInfo!
+        // 2
+        let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
+        // 3
+        let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
+        // 4
+        let changeInHeight = (CGRectGetHeight(keyboardFrame) + 40) * (show ? 1 : -1)
+        //5
+        UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
+            self.bottomConstraint.constant += changeInHeight
+        })
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+    }
     
 }
