@@ -1056,7 +1056,7 @@
         <!--jenny hall-->
         <scene sceneID="lEX-tB-Iwc">
             <objects>
-                <viewController id="Dpb-29-SAG" sceneMemberID="viewController">
+                <viewController id="Dpb-29-SAG" customClass="profileViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cV0-4N-Go8"/>
                         <viewControllerLayoutGuide type="bottom" id="Bcz-QI-dTz"/>
@@ -1064,13 +1064,37 @@
                     <view key="view" contentMode="scaleToFill" id="Ciz-SC-PgJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-ha-oDb">
+                                <rect key="frame" x="225" y="134" width="150" height="162"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by not eating meat for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-iN-DNF">
+                                <rect key="frame" x="120" y="84" width="360" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zhb-iN-DNF" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="21F-jb-8zb"/>
+                            <constraint firstItem="Zhb-iN-DNF" firstAttribute="top" secondItem="cV0-4N-Go8" secondAttribute="bottom" constant="20" id="8ov-mI-FPc"/>
+                            <constraint firstItem="Zhb-iN-DNF" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.05" id="ASV-lk-bEs"/>
+                            <constraint firstItem="OOD-ha-oDb" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="NQH-uu-vIG"/>
+                            <constraint firstItem="OOD-ha-oDb" firstAttribute="top" secondItem="Zhb-iN-DNF" secondAttribute="bottom" constant="20" id="afj-y7-W8b"/>
+                            <constraint firstItem="Zhb-iN-DNF" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.6" id="dc2-gK-e51"/>
+                            <constraint firstItem="OOD-ha-oDb" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.25" id="g4O-5f-iMi"/>
+                            <constraint firstItem="OOD-ha-oDb" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.27" id="vAu-CR-Jj7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="jenny hall" id="b6i-ne-4e2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1n-JR-TaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="1098"/>
+            <point key="canvasLocation" x="373" y="1034"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8eq-sB-ym6">
