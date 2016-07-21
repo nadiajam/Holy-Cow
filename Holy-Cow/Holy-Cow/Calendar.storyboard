@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cUb-vw-QgK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cUb-vw-QgK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -116,8 +116,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-QM-qSK" userLabel="0">
                                         <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIP-7U-MmH">
-                                                <rect key="frame" x="15" y="10" width="46" height="30"/>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIP-7U-MmH">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
                                                 <state key="normal" title="Button"/>
                                                 <connections>
                                                     <action selector="calendarCellTapped:" destination="8Zp-ne-2ck" eventType="touchUpInside" id="3Xl-YB-JJW"/>
@@ -126,8 +126,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="AIP-7U-MmH" firstAttribute="centerY" secondItem="9bp-QM-qSK" secondAttribute="centerY" id="Gll-PE-MmC"/>
-                                            <constraint firstItem="AIP-7U-MmH" firstAttribute="centerX" secondItem="9bp-QM-qSK" secondAttribute="centerX" id="hvl-VK-BF2"/>
+                                            <constraint firstAttribute="trailing" secondItem="AIP-7U-MmH" secondAttribute="trailing" id="3oC-c7-nEl"/>
+                                            <constraint firstItem="AIP-7U-MmH" firstAttribute="top" secondItem="9bp-QM-qSK" secondAttribute="top" id="jqZ-mn-oWz"/>
+                                            <constraint firstItem="AIP-7U-MmH" firstAttribute="leading" secondItem="9bp-QM-qSK" secondAttribute="leading" id="vKV-1E-SYK"/>
+                                            <constraint firstAttribute="bottom" secondItem="AIP-7U-MmH" secondAttribute="bottom" id="vcp-Un-Yzr"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIj-b3-5G4" userLabel="1">
@@ -1065,6 +1067,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYd-A3-U6T" customClass="ProgressArc" customModule="Holy_Cow" customModuleProvider="target">
+                                <rect key="frame" x="175" y="55" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="k2I-os-V8A"/>
+                                    <constraint firstAttribute="height" constant="250" id="sj7-54-QRe"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by not eating meat for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-iN-DNF">
                                 <rect key="frame" x="120" y="84" width="360" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1126,6 +1136,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="21F-jb-8zb"/>
+                            <constraint firstItem="AYd-A3-U6T" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="64G-uu-GHr"/>
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="top" secondItem="cV0-4N-Go8" secondAttribute="bottom" constant="20" id="8ov-mI-FPc"/>
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.04" id="ASV-lk-bEs"/>
                             <constraint firstItem="IyG-uR-Ywp" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.4" id="BAx-ud-GvS"/>
@@ -1140,6 +1151,7 @@
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.6" id="dc2-gK-e51"/>
                             <constraint firstItem="Bqq-su-VjZ" firstAttribute="top" secondItem="IyG-uR-Ywp" secondAttribute="bottom" constant="20" id="eZU-kw-K29"/>
                             <constraint firstItem="OOD-ha-oDb" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.8" id="g4O-5f-iMi"/>
+                            <constraint firstItem="AYd-A3-U6T" firstAttribute="centerY" secondItem="Ciz-SC-PgJ" secondAttribute="centerY" multiplier="0.6" id="rDb-px-Fb0"/>
                             <constraint firstItem="OOD-ha-oDb" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.32" id="vAu-CR-Jj7"/>
                         </constraints>
                     </view>
@@ -1148,6 +1160,7 @@
                         <outlet property="blueView" destination="Bqq-su-VjZ" id="SAn-p3-n9T"/>
                         <outlet property="gallonNumberLabel" destination="fRd-Od-z8K" id="zQu-CT-V24"/>
                         <outlet property="numberLabel" destination="OOD-ha-oDb" id="FV3-9f-D3G"/>
+                        <outlet property="progressArc" destination="AYd-A3-U6T" id="QKt-oB-v2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1n-JR-TaH" userLabel="First Responder" sceneMemberID="firstResponder"/>

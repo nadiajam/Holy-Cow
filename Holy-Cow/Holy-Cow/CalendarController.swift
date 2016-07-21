@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/20/16.
-//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
+//  Copyright © 2016 Holy iOS Cows. All rights reserved.
 //
 
 import UIKit
@@ -40,8 +40,8 @@ class CalendarController {
         return goalNum
     }
     
-    func tallyOutcome() -> Int {
-        var outcomeNum = 0
+    func tallyOutcome() -> Double {
+        var outcomeNum: Double = 0.0
         for item in outcomeArray {
             if item == .Success {
                 outcomeNum += 1
@@ -55,6 +55,7 @@ class CalendarController {
         
         var streakNum = 0
         
+        //change the range to represent the actual day today!!!!!!!!!!!!!!
         for i in (0...16).reverse() where goalArray[i] == .Meatless {
             if outcomeArray[i] == .Success {
                 streakNum += 1
@@ -72,6 +73,20 @@ class CalendarController {
     
     func longestStreakTally() -> Int {
         return longestStreak
+    }
+    
+    
+    
+    //for arc
+    //for now, this is just for the current month!
+    func getArcFraction() -> Double {
+        
+        // delete these lines later on, just add return in one line
+        let monthSuccessDays = tallyOutcome()
+        let monthLength = 30.0 //change to represent the actual month length!!!!!!!!!!!!!!
+        
+        print("initial value of fraction \(Double(monthSuccessDays / monthLength))")
+        return Double(monthSuccessDays / monthLength)
     }
 
     

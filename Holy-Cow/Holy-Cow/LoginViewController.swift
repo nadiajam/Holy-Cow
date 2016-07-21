@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Enrique Pajuelo on 7/19/16.
-//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
+//  Copyright © 2016 Holy iOS Cows. All rights reserved.
 //
 
 import UIKit
