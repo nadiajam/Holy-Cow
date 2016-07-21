@@ -11,8 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var blueView: UIView!
-    @IBOutlet weak var gallonNumberLabel: UILabel!
+//    @IBOutlet weak var gallonNumberLabel: UILabel!
     
     @IBOutlet var progressArc: ProgressArc! //set later
     
@@ -26,10 +25,7 @@ class ProfileViewController: UIViewController {
         //setting fonts and colors
         numberLabel.textColor = UIColor.holyPurple
         numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
-        blueView.backgroundColor = UIColor.blueColor()
-        
-        print("this is the current streak length \(currentStreakLength)")
-        
+
         for subview in view.subviews {
             if let textField = subview as? UILabel {
                 
@@ -41,7 +37,7 @@ class ProfileViewController: UIViewController {
         
         //modifying profile numbers
         numberLabel.text = "\(Int(meatNumber))"
-        gallonNumberLabel.text = "\(currentStreakLength)"
+//        gallonNumberLabel.text = "\(currentStreakLength)"
         progressArc.progressValue = futureArcValue
     }
 
