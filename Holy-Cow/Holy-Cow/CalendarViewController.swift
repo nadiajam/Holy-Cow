@@ -25,7 +25,7 @@ class CalendarViewController: UIViewController {
     
     var calendarArray = [String](count: 42, repeatedValue: "")
     
-    var dayOfMonth = 15 ///dummy current day of month
+    var dayOfMonth:Int?
     
     var calendarController = CalendarController()
     
@@ -35,6 +35,9 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColorsAndFonts()
+        
+        
+        calendarController.populate()
         
         //setting title to current month
         dateFormatterOverall.dateFormat = "MMM yyyy"
@@ -46,6 +49,7 @@ class CalendarViewController: UIViewController {
         dateFormatterDay.dateFormat = "dd"
         let year = Int(dateFormatterYear.stringFromDate(today))
         let month = Int(dateFormatterMonth.stringFromDate(today))
+        dayOfMonth = Int(dateFormatterDay.stringFromDate(today))
         let dateComponents = NSDateComponents()
         dateComponents.year = year!
         dateComponents.month = month!
@@ -59,8 +63,7 @@ class CalendarViewController: UIViewController {
         let startOfMonth = calendar.dateFromComponents(dateComponents)!
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let startDateComponents = myCalendar.components(.Weekday, fromDate: startOfMonth)
-        self.dayOfWeek = startDateComponents.weekday - 1
-        
+        dayOfWeek = startDateComponents.weekday - 1
         
         
         //array containing items 1 through days in current month
@@ -71,24 +74,38 @@ class CalendarViewController: UIViewController {
             firstNum += 1
         }
         
-        calendarArray[self.dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
+        calendarArray[dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
                 calendarCell.backgroundColor = UIColor.whiteColor()
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
-//                button.setBackgroundImage(<#T##image: UIImage?##UIImage?#>, forState: UIControlState)  //OMG HERE WE ADD THE CIRCLE BACKGROUND
                 
-                //disabling button tap for inexistent days
+                //improve runtime??? INCREMENTING INDEX
+                if calendarController.dummyChallenge.contains(button.tag) {
+                    button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+                }
+                
+                //disabling button tap for inexistent calendar days
                 if calendarArray[button.tag] == "" {
                     button.enabled = false
+                    button.setBackgroundImage(nil, forState: .Normal)
                 }
+                
+                if button.tag <= dayOfMonth! + (self.dayOfWeek! - 1) {
+                    if calendarController.goalArray[button.tag] == DayGoal.Meat{
+                        button.enabled = false
+                    }
+                }
+
+                //setting current day label to blue color
+                if dayOfMonth! ==  (button.tag - dayOfWeek! + 1) {
+                    button.setTitleColor(UIColor.holyBlue, forState: .Normal)
+                }
+                
             }
         }
-        
-        
-        
     }
 
 
@@ -97,59 +114,67 @@ class CalendarViewController: UIViewController {
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
         
-        //setting text colors
+        //setting text and font colors
         calendarLabel.textColor = UIColor.whiteColor()
+        calendarLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 25.0)
         monthLabel.textColor = UIColor.holyGreen
+        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 18.0)
+        
         
         //setting day label colors
         for subview in daysView.subviews {
             if let dayLabel = subview as? UITextField {
                 dayLabel.textColor = UIColor.holyGrey
-                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 15)
+                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
             }
         }
-        
-        //setting fonts
-        calendarLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 25.0)
-        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18.0)
     }
     
     
     @IBAction func calendarCellTapped(sender: UIButton) {
         
-        if sender.tag <= dayOfMonth + (self.dayOfWeek! - 1) {
-            if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset || calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
-                calendarController.outcomeArray[sender.tag] = .Success
-                //            print("just set button \(sender.tag) to MEATLESS")
-                sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
-                
-            }
-//            else if calendarController.outcomeArray[sender.tag] == DayOutcome.Failure {
-//                calendarController.outcomeArray[sender.tag] = .Unset
-//                sender.setBackgroundImage(nil, forState: .Normal) // maybe add later?
-//            }
-            else {
-                calendarController.outcomeArray[sender.tag] = .Failure
-                //            print("just set button \(sender.tag)to MEAT")
-                sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
-            }
+        if sender.tag <= dayOfMonth! + (self.dayOfWeek! - 1) {
             
+            if calendarController.goalArray[sender.tag] == DayGoal.Meatless {
+           
+                if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset {
+                    calendarController.outcomeArray[sender.tag] = .Success
+                    sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
+                    
+                }
+                else if calendarController.outcomeArray[sender.tag] == DayOutcome.Success {
+                    calendarController.outcomeArray[sender.tag] = .Failure
+                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal) // maybe add later?
+                }
+                else {
+                    calendarController.outcomeArray[sender.tag] = .Unset
+                    sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+                }
+            }
         }
 
-        if sender.tag > dayOfMonth + (self.dayOfWeek! - 1) {
+        if sender.tag > dayOfMonth! + (self.dayOfWeek! - 1) {
             if calendarController.goalArray[sender.tag] == DayGoal.Meat {
                 calendarController.goalArray[sender.tag] = .Meatless
-                //            print("just set button \(sender.tag) to MEATLESS")
                 sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 
             } else {
                 calendarController.goalArray[sender.tag] = .Meat
-                //            print("just set button \(sender.tag)to MEAT")
                 sender.setBackgroundImage(nil, forState: .Normal)
             }
             
         }
         
+        
+        
+        //total goal of meatless days
+        var goalMeatless = calendarController.tallyGoal()
+        print("TALLY GOAL = \(goalMeatless)")
+        
+        
+        //total successful meatless days
+        var successMeatless = calendarController.tallyOutcome()
+        print("TALLY SUCCESS = \(successMeatless)")
         
 
     }

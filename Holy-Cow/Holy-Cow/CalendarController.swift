@@ -21,10 +21,12 @@ class CalendarController {
     var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
     var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
     
+    var dummyChallenge = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
+    
+    
     //set plan here 
     func populate() {
-        var meatlessMonday = [1, 8, 15, 22, 29, 36] //change that later!
-        for item in meatlessMonday {
+        for item in dummyChallenge {
             goalArray[item] = .Meatless
         }
     }
