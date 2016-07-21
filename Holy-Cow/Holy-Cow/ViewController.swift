@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Holy-Cow
 //
-//  Created by Nadia Jamrozik on 7/17/16.
+//  Created by Enrique Pajuelo on 7/17/16.
 //  Copyright © 2016 Nadia Jamrozik. All rights reserved.
 //
 
@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor
         self.navigationController?.navigationBarHidden = true
+        
+        // Setting customized fonts
+        
+        signInButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        signUpButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         
     }
 

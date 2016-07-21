@@ -15,6 +15,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var connectLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
         let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
@@ -55,9 +60,20 @@ class RegisterViewController: UIViewController {
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor
         
-        
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
+        
+        // Setting customized fonts
+        
+        orLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        facebookButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 25.0)
+        emailField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        passwordField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        emailLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
+        passwordLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
+        signUpButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        connectLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 32.0)
         
     }
     
