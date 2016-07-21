@@ -13,6 +13,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var connectLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
+    
+    @IBAction func emailFieldReturned(sender: UITextField) {
+        passwordField.becomeFirstResponder()
+    }
+    
+    @IBAction func passwordFieldReturned(sender: UITextField) {
+        passwordField.resignFirstResponder()
+    }
     
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -39,6 +53,18 @@ class LoginViewController: UIViewController {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
+        
+        // Setting customized fonts
+        
+        orLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        facebookButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 25.0)
+        emailField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        passwordField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        emailLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
+        passwordLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
+        signInButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
+        connectLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 32.0)
 
     }
 
