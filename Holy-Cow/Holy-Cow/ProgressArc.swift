@@ -20,8 +20,8 @@ import UIKit
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         let π = 3.141592653589793238462643383279502884197169399
-        let start = 0.0
-        let end = 2 * π
+        let start = 3 * π / 4
+        let end = (3 * π / 4 ) + 2 * π
         let progress = progressValue * 2 * π + start
         
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
@@ -34,7 +34,7 @@ import UIKit
         path.stroke()
         
         let arc = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat(start), endAngle: CGFloat(progress), clockwise: true)
-        UIColor.holyBlue.setStroke()
+        UIColor.holyPurple.setStroke()
         arc.lineWidth = thickness
         arc.stroke()
     }

@@ -79,9 +79,7 @@ class CalendarController {
     }
     
     
-    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!!
-    //for arc
-    //for now, this is just for the current month
+    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!! lol if we have time
     func getArcFraction() -> Double {
         return Double(tallyOutcome() / tallyGoal())
     }
