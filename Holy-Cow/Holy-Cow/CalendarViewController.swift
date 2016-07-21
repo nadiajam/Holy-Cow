@@ -74,6 +74,7 @@ class CalendarViewController: UIViewController {
                 calendarCell.backgroundColor = UIColor.whiteColor()
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
+                button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
                 
                 //improve runtime??? INCREMENTING INDEX
                 if case .Meatless = calendarController.goalArray[button.tag] {
@@ -95,6 +96,7 @@ class CalendarViewController: UIViewController {
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
+                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 20)
                 }
             }
         }
@@ -136,7 +138,12 @@ class CalendarViewController: UIViewController {
                 else {
                     calendarController.outcomeArray[sender.tag] = .Unset
                     sender.setBackgroundImage(UIImage(named: "SmallGreyRing"), forState: .Normal)
-                    sender.setTitleColor(UIColor.holyBlack, forState: .Normal)
+                    if sender.tag == (dayOfMonth + (dayOfWeek) - 1) {
+                        sender.setTitleColor(UIColor.holyBlue, forState: .Normal)
+                    }
+                    else {
+                        sender.setTitleColor(UIColor.holyBlack, forState: .Normal)
+                    }
                 }
             }
         }
