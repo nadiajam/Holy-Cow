@@ -138,8 +138,6 @@ class CalendarViewController: UIViewController {
                 else {
                     calendarController.outcomeArray[sender.tag] = .Unset
                     sender.setBackgroundImage(UIImage(named: "SmallGreyRing"), forState: .Normal)
-                    print("tag: \(sender.tag)")
-                    print("dayOfMonth: \(dayOfMonth)")
                     if sender.tag == (dayOfMonth + (dayOfWeek) - 1) {
                         sender.setTitleColor(UIColor.holyBlue, forState: .Normal)
                     }
