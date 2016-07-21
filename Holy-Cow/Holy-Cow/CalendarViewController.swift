@@ -66,7 +66,6 @@ class CalendarViewController: UIViewController {
         dayOfWeek = startDateComponents.weekday - 1
         
         
-        
         //array containing items 1 through days in current month
         var monthArray: [String] = []
         var firstNum = 1
@@ -76,15 +75,6 @@ class CalendarViewController: UIViewController {
         }
         
         calendarArray[dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
-        
-//        for index in calendarController.goalArray {
-//            if index == .Meatless {
-//                
-//                //set image on normal board
-//                
-//                
-//            }
-//        }
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
@@ -116,9 +106,6 @@ class CalendarViewController: UIViewController {
                 
             }
         }
-        
-        
-        
     }
 
 
@@ -127,21 +114,20 @@ class CalendarViewController: UIViewController {
         //setting background and bordercolors
         calendarLabel.backgroundColor = UIColor.holyGreen
         
-        //setting text colors
+        //setting text and font colors
         calendarLabel.textColor = UIColor.whiteColor()
+        calendarLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 25.0)
         monthLabel.textColor = UIColor.holyGreen
+        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 18.0)
+        
         
         //setting day label colors
         for subview in daysView.subviews {
             if let dayLabel = subview as? UITextField {
                 dayLabel.textColor = UIColor.holyGrey
-                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 15)
+                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
             }
         }
-        
-        //setting fonts
-        calendarLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 25.0)
-        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18.0)
     }
     
     
