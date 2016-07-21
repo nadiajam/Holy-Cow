@@ -22,11 +22,18 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
-        let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController()
-        let application = UIApplication.sharedApplication()
-        let window = application.keyWindow
-        window?.rootViewController = viewController
+        
+        if passwordField.text!.characters.count < 6 {
+            let errorAlert = UIAlertController(title: "Error", message: "Password needs to be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
+            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+            errorAlert.addAction(dismissErrorAlert)
+        } else {
+            let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController()
+            let application = UIApplication.sharedApplication()
+            let window = application.keyWindow
+            window?.rootViewController = viewController
+        }
     }
     
     @IBAction func closeButtonTapped(sender: AnyObject) {
@@ -80,5 +87,5 @@ class RegisterViewController: UIViewController {
     func dismissKeyboard(){
         self.view.endEditing(true)
     }
-
+    
 }
