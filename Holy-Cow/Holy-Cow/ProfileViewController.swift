@@ -15,6 +15,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var gallonNumberLabel: UILabel!
     
     var meatNumber:Int = 0
+    var currentStreakLength:Int = 0
+    var currentLongestStreakLength:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,9 @@ class ProfileViewController: UIViewController {
         
         //modifying profile numbers
         numberLabel.text = "\(meatNumber)"
+        gallonNumberLabel.text = "\(currentStreakLength)"
+        
+        print(currentStreakLength)
         
         
     }

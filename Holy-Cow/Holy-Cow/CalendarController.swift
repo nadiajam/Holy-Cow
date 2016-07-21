@@ -20,6 +20,7 @@ class CalendarController {
     //initializing goal and outcome arrays
     var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
     var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
+    var longestStreak = 0
     
     //set plan here 
     func populate(challenge: [Int]) {
@@ -48,5 +49,30 @@ class CalendarController {
         }
         return outcomeNum
     }
+    
+    
+    func currentStreakTally() -> Int {
+        
+        var streakNum = 0
+        
+        for i in (0...16).reverse() where goalArray[i] == .Meatless {
+            if outcomeArray[i] == .Success {
+                streakNum += 1
+            } else {
+                break
+            }
+        }
+        
+        if streakNum > longestStreak {
+            longestStreak = streakNum
+        }
+        return streakNum
+    }
+    
+    
+    func longestStreakTally() -> Int {
+        return longestStreak
+    }
+
     
 }

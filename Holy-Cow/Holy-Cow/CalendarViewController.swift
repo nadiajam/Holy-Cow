@@ -166,8 +166,17 @@ class CalendarViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         let successMeatless = calendarController.tallyOutcome()
-        let destination = segue.destinationViewController as! ProfileViewController
-        destination.meatNumber = successMeatless
+        let destination1 = segue.destinationViewController as! ProfileViewController
+        destination1.meatNumber = successMeatless
+        
+        var streakLength = calendarController.currentStreakTally()
+        let destination2 = segue.destinationViewController as! ProfileViewController
+        destination2.currentStreakLength = streakLength
+        
+        var longestStreakLength = calendarController.longestStreakTally()
+        let destination3 = segue.destinationViewController as! ProfileViewController
+        destination3.currentLongestStreakLength = longestStreakLength
+        
     }
 
 }

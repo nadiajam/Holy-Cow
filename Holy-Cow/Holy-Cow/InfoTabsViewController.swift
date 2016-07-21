@@ -14,35 +14,13 @@ extension UIViewController {
     @IBAction func dismissAction(sender: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
-    
+
 }
 
 
 class InfoTabsController: UIViewController {
     
     var destinationController = CalendarController()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        for subview in view.subviews {
-//            if let textField = subview as? UILabel {
-//                
-//                if textField.tag == 1 {     //tag 1 = "did you know?"
-//                    textField.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 40.0)
-//                } else if textField.tag == 2 {     //tag 2 = large number
-//                    textField.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 60.0)
-//                } else if textField.tag == 3 {      //tag 3: "pick your challenge" <-- !!!! dont need
-//                    textField.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 30.0)
-//                }
-//                else if textField.tag == 4 { //tag 4 = general text
-//                    textField.font = UIFont(name:"GTWalsheimProTrial-Medium", size: 25.0)
-//                }
-//            }
-//        }
-    }
-    
-    
-    
     
     @IBAction func challengeButtonTapped(sender: UIButton) {
         var challengeArray:[Int] = []
@@ -69,8 +47,6 @@ class InfoTabsController: UIViewController {
         let viewController = storyboard.instantiateViewControllerWithIdentifier("UserCalendar") as! CalendarViewController
         viewController.calendarController.populate(challengeArray)
         navigationController?.pushViewController(viewController, animated: true)
-
     }
-    
     
 }
