@@ -16,19 +16,31 @@ enum DayGoal {
     case Meat, Meatless
 }
 
-class CalendarController {
+class CalendarController: SendDataDelegate {
     //initializing goal and outcome arrays
     var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
     var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
     
-    var dummyChallenge = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40]
+    var challengeArray = [Int]()
+    
+    func challengeChosen(challenge: [Int]) {
+        challengeArray = challenge
+        print(challengeArray)
+    }
     
     
     //set plan here 
     func populate() {
-        for item in dummyChallenge {
+        
+        print("this is the actual thing populated!!!!!!!!\(challengeArray)")
+        
+        for item in challengeArray {
             goalArray[item] = .Meatless
         }
+        
+        print(challengeArray)
+        print("justprintedagain_____________")
+        
     }
     
     //tally how many days with goal of meatless in array

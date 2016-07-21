@@ -36,7 +36,6 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         setupLabelColorsAndFonts()
         
-        
         calendarController.populate()
         
         //setting title to current month
@@ -76,16 +75,7 @@ class CalendarViewController: UIViewController {
         }
         
         calendarArray[dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
-        
-//        for index in calendarController.goalArray {
-//            if index == .Meatless {
-//                
-//                //set image on normal board
-//                
-//                
-//            }
-//        }
-        
+
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
                 calendarCell.backgroundColor = UIColor.whiteColor()
@@ -93,7 +83,7 @@ class CalendarViewController: UIViewController {
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
                 
                 //improve runtime??? INCREMENTING INDEX
-                if calendarController.dummyChallenge.contains(button.tag) {
+                if calendarController.challengeArray.contains(button.tag) {
                     button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 }
                 
@@ -116,8 +106,6 @@ class CalendarViewController: UIViewController {
                 
             }
         }
-        
-        
         
     }
 
@@ -158,7 +146,7 @@ class CalendarViewController: UIViewController {
                 }
                 else if calendarController.outcomeArray[sender.tag] == DayOutcome.Success {
                     calendarController.outcomeArray[sender.tag] = .Failure
-                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal) // maybe add later?
+                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
                 }
                 else {
                     calendarController.outcomeArray[sender.tag] = .Unset
@@ -182,12 +170,12 @@ class CalendarViewController: UIViewController {
         
         
         //total goal of meatless days
-        var goalMeatless = calendarController.tallyGoal()
+        let goalMeatless = calendarController.tallyGoal()
         print("TALLY GOAL = \(goalMeatless)")
         
         
         //total successful meatless days
-        var successMeatless = calendarController.tallyOutcome()
+        let successMeatless = calendarController.tallyOutcome()
         print("TALLY SUCCESS = \(successMeatless)")
         
 
