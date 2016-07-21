@@ -23,9 +23,9 @@ class CalendarViewController: UIViewController {
     let dateComponents = NSDateComponents()
     
     var calendarArray = [String](count: 42, repeatedValue: "")
-    var dayOfMonth:Int?
+    var dayOfMonth:Int = 0
     var calendarController = CalendarController()
-    var dayOfWeek:Int?
+    var dayOfWeek:Int = 0
     
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class CalendarViewController: UIViewController {
         dateFormatterDay.dateFormat = "dd"
         let year = Int(dateFormatterYear.stringFromDate(today))
         let month = Int(dateFormatterMonth.stringFromDate(today))
-        dayOfMonth = Int(dateFormatterDay.stringFromDate(today))
+        dayOfMonth = Int(dateFormatterDay.stringFromDate(today))!
         let dateComponents = NSDateComponents()
         dateComponents.year = year!
         dateComponents.month = month!
@@ -67,7 +67,7 @@ class CalendarViewController: UIViewController {
             firstNum += 1
         }
         
-        calendarArray[dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
+        calendarArray[dayOfWeek...calendarDays] = monthArray[0..<monthArray.count]
         
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
@@ -86,14 +86,14 @@ class CalendarViewController: UIViewController {
                     button.setBackgroundImage(nil, forState: .Normal)
                 }
                 
-                if button.tag <= dayOfMonth! + (self.dayOfWeek! - 1) {
+                if button.tag <= dayOfMonth + (dayOfWeek - 1) {
                     if calendarController.goalArray[button.tag] == DayGoal.Meat{
                         button.enabled = false
                     }
                 }
 
                 //setting current day label to blue color
-                if dayOfMonth! ==  (button.tag - dayOfWeek! + 1) {
+                if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
                 }
             }
@@ -119,7 +119,7 @@ class CalendarViewController: UIViewController {
     
     @IBAction func calendarCellTapped(sender: UIButton) {
         
-        if sender.tag <= dayOfMonth! + (self.dayOfWeek! - 1) {
+        if sender.tag <= dayOfMonth + (dayOfWeek - 1) {
             
             if calendarController.goalArray[sender.tag] == DayGoal.Meatless {
            
@@ -138,7 +138,7 @@ class CalendarViewController: UIViewController {
             }
         }
 
-        if sender.tag > dayOfMonth! + (self.dayOfWeek! - 1) {
+        if sender.tag > dayOfMonth + (dayOfWeek - 1) {
             if calendarController.goalArray[sender.tag] == DayGoal.Meat {
                 calendarController.goalArray[sender.tag] = .Meatless
                 sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
@@ -151,14 +151,18 @@ class CalendarViewController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        calendarController.calendar = calendarArray
+        calendarController.dayToday = dayOfMonth
+        calendarController.startInterval = dayOfWeek
+
         let successMeatless = calendarController.tallyOutcome()
         let streakLength = calendarController.currentStreakTally()
         let longestStreakLength = calendarController.longestStreakTally()
-        let arcFraction = calendarController.getArcFraction() //for arc
-        print("arcfraction\(arcFraction)")
+        let arcFraction = calendarController.getArcFraction()
         
         let destination = segue.destinationViewController as! ProfileViewController
-        
+
         destination.meatNumber = successMeatless
         destination.currentStreakLength = streakLength
         destination.currentLongestStreakLength = longestStreakLength

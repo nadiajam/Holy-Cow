@@ -28,6 +28,8 @@ class ProfileViewController: UIViewController {
         numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
         blueView.backgroundColor = UIColor.blueColor()
         
+        print("this is the current streak length \(currentStreakLength)")
+        
         for subview in view.subviews {
             if let textField = subview as? UILabel {
                 
@@ -41,7 +43,6 @@ class ProfileViewController: UIViewController {
         numberLabel.text = "\(Int(meatNumber))"
         gallonNumberLabel.text = "\(currentStreakLength)"
         progressArc.progressValue = futureArcValue
-        print("progressValue \(progressArc.progressValue)")
     }
 
 }

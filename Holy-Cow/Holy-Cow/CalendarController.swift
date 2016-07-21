@@ -21,6 +21,9 @@ class CalendarController {
     var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
     var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
     var longestStreak = 0
+    var calendar: [String] = []
+    var dayToday: Int = 0
+    var startInterval: Int = 0
     
     //set plan here 
     func populate(challenge: [Int]) {
@@ -30,12 +33,13 @@ class CalendarController {
     }
     
     //tally how many days with goal of meatless in array
-    func tallyGoal() -> Int {
-        var goalNum = 0
-        for item in goalArray {
-            if item == .Meatless {
-                goalNum += 1
+    func tallyGoal() -> Double {
+        var goalNum: Double = 0.0
+        for day in calendar {
+            if (day != "") && (goalArray[calendar.indexOf(day)!] == .Meatless) {
+                goalNum += 1.0
             }
+            
         }
         return goalNum
     }
@@ -52,12 +56,11 @@ class CalendarController {
     
     
     func currentStreakTally() -> Int {
-        
+
         var streakNum = 0
-        
-        //change the range to represent the actual day today!!!!!!!!!!!!!!
-        for i in (0...16).reverse() where goalArray[i] == .Meatless {
-            if outcomeArray[i] == .Success {
+
+        for i in (0...dayToday).reverse() where goalArray[i + startInterval - 1] == .Meatless {
+            if outcomeArray[i + startInterval - 1] == .Success {
                 streakNum += 1
             } else {
                 break
@@ -76,18 +79,11 @@ class CalendarController {
     }
     
     
-    
+    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!!
     //for arc
-    //for now, this is just for the current month!
+    //for now, this is just for the current month
     func getArcFraction() -> Double {
-        
-        // delete these lines later on, just add return in one line
-        let monthSuccessDays = tallyOutcome()
-        let monthLength = 30.0 //change to represent the actual month length!!!!!!!!!!!!!!
-        
-        print("initial value of fraction \(Double(monthSuccessDays / monthLength))")
-        return Double(monthSuccessDays / monthLength)
+        return Double(tallyOutcome() / tallyGoal())
     }
-
     
 }
