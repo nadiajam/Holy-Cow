@@ -42,43 +42,17 @@ class InfoTabsController: UIViewController {
         for subview in view.subviews {
             if let textField = subview as? UILabel {
                 
-                //bold
                 
-                
-                
-                
-                
-                
-                
-                
-                //medium
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                //helvetica
-                
-                
-                
-                
-                if textField.tag == 1 { //tag 1 = titles = 40
-                    textField.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 40.0)
-                } else if textField.tag == 2 { //tag 2 = numbers = 60
-                    textField.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 60.0)
-                } else if textField.tag == 3 { //equal signs = 55
-                    textField.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 55.0)
-                } else if textField.tag == 4 { //burger.etc. small labels = 25
-                    textField.font = UIFont(name:"GTWalsheimProTrial-Regular", size: 25.0)
+                if textField.tag == 1 {     //tag 1 = "did you know?"
+                    textField.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 40.0)
+                } else if textField.tag == 2 {     //tag 2 = large number
+                    textField.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 60.0)
+                } else if textField.tag == 3 {      //tag 3: "pick your challenge" <-- !!!! dont need
+                    textField.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 40.0)
                 }
-                else { //standard text = 27
-                    textField.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 27.0)
+                else if textField.tag == 4 { //tag 4 = general text
+                    textField.font = UIFont(name:"GTWalsheimProTrial-Medium", size: 25.0)
                 }
-                
             }
         }
     }

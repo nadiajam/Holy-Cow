@@ -11,7 +11,6 @@ import UIKit
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var daysView: UIView!
-    @IBOutlet weak var calendarLabel: UILabel!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
@@ -65,7 +64,6 @@ class CalendarViewController: UIViewController {
         dayOfWeek = startDateComponents.weekday - 1
         
         
-        
         //array containing items 1 through days in current month
         var monthArray: [String] = []
         var firstNum = 1
@@ -75,7 +73,7 @@ class CalendarViewController: UIViewController {
         }
         
         calendarArray[dayOfWeek!...calendarDays] = monthArray[0..<monthArray.count]
-
+        
         for calendarCell in calendarBoard.subviews {
             for button in calendarCell.subviews as! [UIButton] {
                 calendarCell.backgroundColor = UIColor.whiteColor()
@@ -106,30 +104,23 @@ class CalendarViewController: UIViewController {
                 
             }
         }
-        
     }
 
 
     func setupLabelColorsAndFonts() {
         
-        //setting background and bordercolors
-        calendarLabel.backgroundColor = UIColor.holyGreen
-        
-        //setting text colors
-        calendarLabel.textColor = UIColor.whiteColor()
+        //setting text and font colors
         monthLabel.textColor = UIColor.holyGreen
+        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 18.0)
+        
         
         //setting day label colors
         for subview in daysView.subviews {
             if let dayLabel = subview as? UITextField {
                 dayLabel.textColor = UIColor.holyGrey
-                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 15)
+                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
             }
         }
-        
-        //setting fonts
-        calendarLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 25.0)
-        monthLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18.0)
     }
     
     
@@ -166,20 +157,20 @@ class CalendarViewController: UIViewController {
             }
             
         }
-        
-        
-        
+
         //total goal of meatless days
         let goalMeatless = calendarController.tallyGoal()
         print("TALLY GOAL = \(goalMeatless)")
         
-        
         //total successful meatless days
-        let successMeatless = calendarController.tallyOutcome()
-        print("TALLY SUCCESS = \(successMeatless)")
-        
-
+//        var successMeatless = calendarController.tallyOutcome()
+//        print("TALLY SUCCESS = \(successMeatless)")
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        var successMeatless = calendarController.tallyOutcome()
+        let destination = segue.destinationViewController as! ProfileViewController
+        destination.meatNumber = successMeatless
+    }
 
 }
