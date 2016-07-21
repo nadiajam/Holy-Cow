@@ -43,9 +43,9 @@ class LoginViewController: UIViewController {
         orLabel.layer.borderColor = UIColor.whiteColor().CGColor
         orLabel.layer.borderWidth = 2
         
-        closeButton.layer.bounds = CGRectMake(0, 0, 50, 50)
+        closeButton.layer.bounds = CGRectMake(0, 0, 28, 28)
         closeButton.layer.masksToBounds = true
-        closeButton.layer.cornerRadius = 15
+        closeButton.layer.cornerRadius = 7
         closeButton.layer.borderColor = UIColor.whiteColor().CGColor
         closeButton.layer.borderWidth = 2
         
