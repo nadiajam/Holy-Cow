@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="86V-Yk-mOs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="86V-Yk-mOs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -393,6 +393,7 @@
                             <constraint firstItem="hOU-KQ-0VY" firstAttribute="top" secondItem="6ld-dg-ayi" secondAttribute="bottom" constant="-10" id="d0u-Fc-amu"/>
                             <constraint firstItem="hOU-KQ-0VY" firstAttribute="leading" secondItem="CcQ-t2-2am" secondAttribute="leading" constant="50" id="d2c-JJ-XHM"/>
                             <constraint firstItem="mUV-hb-C55" firstAttribute="top" secondItem="L7c-NJ-kUR" secondAttribute="bottom" constant="130" id="duw-AA-KsL"/>
+                            <constraint firstItem="8Hc-PE-F3J" firstAttribute="top" secondItem="AQv-IT-3hF" secondAttribute="bottom" constant="52" id="ffv-Bn-h64"/>
                             <constraint firstAttribute="trailing" secondItem="hOU-KQ-0VY" secondAttribute="trailing" constant="50" id="hgq-UP-S5V"/>
                             <constraint firstItem="mXJ-na-foE" firstAttribute="centerX" secondItem="CcQ-t2-2am" secondAttribute="centerX" id="l1l-Z0-4lE"/>
                             <constraint firstItem="hOU-KQ-0VY" firstAttribute="top" secondItem="J2I-9a-WCp" secondAttribute="bottom" constant="10" id="lop-jl-1iC"/>
@@ -405,6 +406,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="ffv-Bn-h64" id="MwP-FO-rLx"/>
                         <outlet property="closeButton" destination="UJn-CY-rwA" id="NYF-bl-6Vs"/>
                         <outlet property="connectLabel" destination="mUV-hb-C55" id="93U-iS-2xW"/>
                         <outlet property="emailField" destination="J2I-9a-WCp" id="maD-uk-GEg"/>
