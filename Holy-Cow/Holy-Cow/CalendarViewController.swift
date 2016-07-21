@@ -125,15 +125,18 @@ class CalendarViewController: UIViewController {
            
                 if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset {
                     calendarController.outcomeArray[sender.tag] = .Success
-                    sender.setBackgroundImage(UIImage(named: "GreenCircle"), forState: .Normal)
+                    sender.setBackgroundImage(UIImage(named: "SmallGreen"), forState: .Normal)
+                    sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
                 }
                 else if calendarController.outcomeArray[sender.tag] == DayOutcome.Success {
                     calendarController.outcomeArray[sender.tag] = .Failure
                     sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
+                    sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
                 }
                 else {
                     calendarController.outcomeArray[sender.tag] = .Unset
-                    sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+                    sender.setBackgroundImage(UIImage(named: "SmallGreyRing"), forState: .Normal)
+                    sender.setTitleColor(UIColor.holyBlack, forState: .Normal)
                 }
             }
         }
@@ -141,7 +144,7 @@ class CalendarViewController: UIViewController {
         if sender.tag > dayOfMonth + (dayOfWeek - 1) {
             if calendarController.goalArray[sender.tag] == DayGoal.Meat {
                 calendarController.goalArray[sender.tag] = .Meatless
-                sender.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+                sender.setBackgroundImage(UIImage(named: "SmallGreyRing"), forState: .Normal)
             } else {
                 calendarController.goalArray[sender.tag] = .Meat
                 sender.setBackgroundImage(nil, forState: .Normal)

@@ -67,7 +67,7 @@ class RegisterViewController: UIViewController {
         
         orLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         facebookButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 25.0)
+        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 12.0)
         emailField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         passwordField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         emailLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
