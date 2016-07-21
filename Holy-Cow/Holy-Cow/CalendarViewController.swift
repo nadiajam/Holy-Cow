@@ -35,8 +35,6 @@ class CalendarViewController: UIViewController {
         super.viewDidLoad()
         setupLabelColorsAndFonts()
         
-        calendarController.populate()
-        
         //setting title to current month
         dateFormatterOverall.dateFormat = "MMM yyyy"
         monthLabel.text = dateFormatterOverall.stringFromDate(today)
@@ -81,7 +79,7 @@ class CalendarViewController: UIViewController {
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
                 
                 //improve runtime??? INCREMENTING INDEX
-                if calendarController.challengeArray.contains(button.tag) {
+                if case .Meatless = calendarController.goalArray[button.tag] {
                     button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
                 }
                 
@@ -160,7 +158,6 @@ class CalendarViewController: UIViewController {
 
         //total goal of meatless days
         let goalMeatless = calendarController.tallyGoal()
-        print("TALLY GOAL = \(goalMeatless)")
         
         //total successful meatless days
 //        var successMeatless = calendarController.tallyOutcome()
@@ -168,7 +165,7 @@ class CalendarViewController: UIViewController {
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        var successMeatless = calendarController.tallyOutcome()
+        let successMeatless = calendarController.tallyOutcome()
         let destination = segue.destinationViewController as! ProfileViewController
         destination.meatNumber = successMeatless
     }
