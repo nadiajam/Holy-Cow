@@ -8,11 +8,13 @@
 
 import UIKit
 
-class profileViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var blueView: UIView!
     @IBOutlet weak var gallonNumberLabel: UILabel!
+    
+    var meatNumber:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class profileViewController: UIViewController {
         }
         
         //modifying profile numbers
-//        numberLabel.text = "\(CalendarController.tallyGoal())"
+        numberLabel.text = "\(meatNumber)"
         
         
     }

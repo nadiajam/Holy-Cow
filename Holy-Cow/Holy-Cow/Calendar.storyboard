@@ -1056,7 +1056,7 @@
         <!--jenny hall-->
         <scene sceneID="lEX-tB-Iwc">
             <objects>
-                <viewController id="Dpb-29-SAG" customClass="profileViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dpb-29-SAG" customClass="ProfileViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cV0-4N-Go8"/>
                         <viewControllerLayoutGuide type="bottom" id="Bcz-QI-dTz"/>
@@ -1065,26 +1065,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-ha-oDb">
-                                <rect key="frame" x="225" y="118" width="150" height="162"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by not eating meat for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-iN-DNF">
                                 <rect key="frame" x="120" y="84" width="360" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you've saved:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-uR-Ywp">
-                                <rect key="frame" x="180" y="290" width="240" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-su-VjZ" userLabel="BlueView">
-                                <rect key="frame" x="0.0" y="334" width="600" height="138"/>
+                                <rect key="frame" x="0.0" y="370" width="600" height="138"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-z8-Xv4">
                                         <rect key="frame" x="70" y="14" width="150" height="110"/>
@@ -1122,6 +1110,18 @@
                                     <constraint firstItem="0Vc-z8-Xv4" firstAttribute="height" secondItem="Bqq-su-VjZ" secondAttribute="height" multiplier="0.8" id="vem-GH-ovY"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you've saved:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-uR-Ywp">
+                                <rect key="frame" x="180" y="320" width="240" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-ha-oDb">
+                                <rect key="frame" x="60" y="118" width="480" height="192"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1133,14 +1133,14 @@
                             <constraint firstItem="Bqq-su-VjZ" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.23" id="M6Y-eV-NrD"/>
                             <constraint firstItem="OOD-ha-oDb" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="NQH-uu-vIG"/>
                             <constraint firstAttribute="trailing" secondItem="Bqq-su-VjZ" secondAttribute="trailing" id="PxN-9p-f71"/>
-                            <constraint firstItem="IyG-uR-Ywp" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.04" id="Vcb-as-cBy"/>
+                            <constraint firstItem="IyG-uR-Ywp" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.05" id="Vcb-as-cBy"/>
                             <constraint firstItem="Bqq-su-VjZ" firstAttribute="leading" secondItem="Ciz-SC-PgJ" secondAttribute="leading" id="Z9q-jc-2qq"/>
                             <constraint firstItem="OOD-ha-oDb" firstAttribute="top" secondItem="Zhb-iN-DNF" secondAttribute="bottom" constant="10" id="afj-y7-W8b"/>
                             <constraint firstItem="IyG-uR-Ywp" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="cFn-3w-ZFM"/>
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.6" id="dc2-gK-e51"/>
                             <constraint firstItem="Bqq-su-VjZ" firstAttribute="top" secondItem="IyG-uR-Ywp" secondAttribute="bottom" constant="20" id="eZU-kw-K29"/>
-                            <constraint firstItem="OOD-ha-oDb" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.25" id="g4O-5f-iMi"/>
-                            <constraint firstItem="OOD-ha-oDb" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.27" id="vAu-CR-Jj7"/>
+                            <constraint firstItem="OOD-ha-oDb" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.8" id="g4O-5f-iMi"/>
+                            <constraint firstItem="OOD-ha-oDb" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.32" id="vAu-CR-Jj7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="jenny hall" id="b6i-ne-4e2"/>

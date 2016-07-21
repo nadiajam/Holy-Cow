@@ -158,20 +158,20 @@ class CalendarViewController: UIViewController {
             }
             
         }
-        
-        
-        
+
         //total goal of meatless days
         var goalMeatless = calendarController.tallyGoal()
         print("TALLY GOAL = \(goalMeatless)")
         
-        
         //total successful meatless days
-        var successMeatless = calendarController.tallyOutcome()
-        print("TALLY SUCCESS = \(successMeatless)")
-        
-
+//        var successMeatless = calendarController.tallyOutcome()
+//        print("TALLY SUCCESS = \(successMeatless)")
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        var successMeatless = calendarController.tallyOutcome()
+        let destination = segue.destinationViewController as! ProfileViewController
+        destination.meatNumber = successMeatless
+    }
 
 }
