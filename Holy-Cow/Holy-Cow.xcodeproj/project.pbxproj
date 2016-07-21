@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E73C6261D3CD72D00F41471 /* InfoTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */; };
 		4E80E53B1D3E566B00778E6D /* InfoTabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */; };
+		4EAF31B21D41149900EA3FEA /* ProgressArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF31B11D41149900EA3FEA /* ProgressArc.swift */; };
 		672E4C671D3CF862003906EF /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C661D3CF862003906EF /* Calendar.storyboard */; };
 		672E4C691D3CF8ED003906EF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672E4C681D3CF8ED003906EF /* CalendarViewController.swift */; };
 		672E4C8C1D3D6B9D003906EF /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTabsViewController.swift; sourceTree = "<group>"; };
 		4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = InfoTabs.storyboard; sourceTree = "<group>"; };
+		4EAF31B11D41149900EA3FEA /* ProgressArc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressArc.swift; sourceTree = "<group>"; };
 		672E4C661D3CF862003906EF /* Calendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
 		672E4C681D3CF8ED003906EF /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */,
 				67EB30721D3BEE7C00C9B751 /* Info.plist */,
 				4E73C62B1D3CF48F00F41471 /* InfoTabs */,
+				4EAF31B11D41149900EA3FEA /* ProgressArc.swift */,
 			);
 			path = "Holy-Cow";
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				67963B341D3F8A290050B871 /* RecipesViewController.swift in Sources */,
 				4E73C6261D3CD72D00F41471 /* InfoTabsViewController.swift in Sources */,
+				4EAF31B21D41149900EA3FEA /* ProgressArc.swift in Sources */,
 				672E4C691D3CF8ED003906EF /* CalendarViewController.swift in Sources */,
 				678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */,
 				67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */,

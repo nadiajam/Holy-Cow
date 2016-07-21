@@ -3,7 +3,7 @@
 //  Holy-Cow
 //
 //  Created by Nadia Jamrozik on 7/21/16.
-//  Copyright © 2016 Nadia Jamrozik. All rights reserved.
+//  Copyright © 2016 Holy-Cow iOS Team. All rights reserved.
 //
 
 import UIKit
@@ -48,6 +48,6 @@ class ProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
