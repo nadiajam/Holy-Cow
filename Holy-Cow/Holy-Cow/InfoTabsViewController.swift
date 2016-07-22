@@ -45,7 +45,8 @@ class InfoTabsController: UIViewController {
         
         let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
         let viewController = storyboard.instantiateViewControllerWithIdentifier("UserCalendar") as! CalendarViewController
-        viewController.calendarController.populate(challengeArray)
+//        viewController.CalendarController.sharedInstance.populate(challengeArray)
+        CalendarController.sharedInstance.populate(challengeArray)
         navigationController?.pushViewController(viewController, animated: true)
     }
     

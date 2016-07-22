@@ -11,14 +11,14 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var numberLabel: UILabel!
-//    @IBOutlet weak var gallonNumberLabel: UILabel!
-    
-    @IBOutlet var progressArc: ProgressArc! //set later
+    @IBOutlet weak var gallonNumberLabel: UILabel!
+    @IBOutlet weak var forestAreaLabel: UILabel!
+    @IBOutlet weak var grainsLabel: UILabel!
+    @IBOutlet weak var carbonLabel: UILabel!
+    @IBOutlet var progressArc: ProgressArc!
     
     @IBOutlet weak var scrollView: UIScrollView!
-    
-//    @IBOutlet weak var blueViewWidth: NSLayoutConstraint!
-    
+
     
     var meatNumber:Double = 0
     var currentStreakLength:Int = 0
@@ -27,23 +27,40 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         scrollView.contentSize = CGSizeMake(scrollView.frame.width, 2000)
-        numberLabel.textColor = UIColor.holyPurple
-        
-        for subview in view.subviews {
-            if let textField = subview as? UILabel {
-                
-                if textField.tag == 4 { //tag 4 = general text
-                    textField.font = UIFont(name:"GTWalsheimProTrial-Medium", size: 20.0)
-                }
-            }
-        }
-        
-        //modifying profile numbers
-        numberLabel.text = "\(Int(meatNumber))"
-//        gallonNumberLabel.text = "\(currentStreakLength)"
-        progressArc.progressValue = futureArcValue
+        setUpLabels()
     }
 
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        meatNumber = CalendarController.sharedInstance.tallyOutcome()
+        currentStreakLength = CalendarController.sharedInstance.currentStreakTally()
+        currentLongestStreakLength = CalendarController.sharedInstance.longestStreakTally()
+        futureArcValue = CalendarController.sharedInstance.getArcFraction()
+    }
+    
+    func setUpLabels() {
+        
+        numberLabel.text = "\(Int(meatNumber))"
+        progressArc.progressValue = futureArcValue
+        
+        //measurements = 4 oz of meat, for an average of chicken, beef, pork, turkey, and lamb
+        
+        let waterAverage = (128.0 + 460.0 + 180.0 + 120.0 + 312.0) / 5.0
+        
+        let forestAverage = (12.5 + 62.5 + 17.5 + 12.5 + 56.0)/5.0
+        
+        let grainAverage = (1.048 + 1.640 + 1.048 + 0.6 + 0.776)/5.0
+        
+        let carbonAverage = (0.844 + 3.752 + 1.688 + 0.796 + 4.000)/5.0
+        
+        //setting labels to actual stat values
+        gallonNumberLabel.text = String(Int(waterAverage * meatNumber))
+        forestAreaLabel.text = String(Int(forestAverage * meatNumber))
+        grainsLabel.text = String(Int(grainAverage * meatNumber))
+        carbonLabel.text = String(Int(carbonAverage * meatNumber))
+    }
+    
+    
 }

@@ -17,6 +17,9 @@ enum DayGoal {
 }
 
 class CalendarController {
+    
+    static let sharedInstance = CalendarController()
+    
     //initializing goal and outcome arrays
     var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
     var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
@@ -79,7 +82,7 @@ class CalendarController {
     }
     
     
-    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!! lol if we have time
+//    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!! lol if we have time
     func getArcFraction() -> Double {
         return Double(tallyOutcome() / tallyGoal())
     }
