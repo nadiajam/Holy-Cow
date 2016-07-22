@@ -20,9 +20,9 @@
             <string>GTWalsheimProTrial-Medium</string>
             <string>GTWalsheimProTrial-Medium</string>
             <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
         </mutableArray>
         <mutableArray key="GT-Walsheim-Pro-Trial-Ultra-Bold.otf">
-            <string>GTWalsheimProTrialUltra-Bold</string>
             <string>GTWalsheimProTrialUltra-Bold</string>
             <string>GTWalsheimProTrialUltra-Bold</string>
             <string>GTWalsheimProTrialUltra-Bold</string>
@@ -61,8 +61,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="way to go" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwO-QZ-kaG">
-                                <rect key="frame" x="196" y="158" width="209" height="56"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="40"/>
+                                <rect key="frame" x="204" y="161" width="181" height="50"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -85,8 +85,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZF-XW-yhB">
-                                <rect key="frame" x="405" y="144" width="16" height="70"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="60"/>
+                                <rect key="frame" x="388" y="162" width="11" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -94,7 +94,7 @@
                         <color key="backgroundColor" red="0.30588235294117649" green="0.26666666666666666" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="AZF-XW-yhB" firstAttribute="leading" secondItem="TwO-QZ-kaG" secondAttribute="trailing" id="1WP-73-c7z"/>
+                            <constraint firstItem="AZF-XW-yhB" firstAttribute="leading" secondItem="TwO-QZ-kaG" secondAttribute="trailing" constant="3" id="1WP-73-c7z"/>
                             <constraint firstItem="P56-el-khc" firstAttribute="top" secondItem="bhk-Oj-6OG" secondAttribute="bottom" constant="50" id="42l-Kb-vZT"/>
                             <constraint firstItem="pK1-Gh-EMm" firstAttribute="width" secondItem="dlB-U0-I95" secondAttribute="width" multiplier="0.7" id="9lg-Kb-NCN"/>
                             <constraint firstItem="bhk-Oj-6OG" firstAttribute="centerX" secondItem="dlB-U0-I95" secondAttribute="centerX" id="Ac8-JQ-0xf"/>
@@ -105,10 +105,10 @@
                             <constraint firstItem="ypP-g7-lxH" firstAttribute="centerX" secondItem="dlB-U0-I95" secondAttribute="centerX" id="XhC-Cl-bNL"/>
                             <constraint firstItem="pK1-Gh-EMm" firstAttribute="centerY" secondItem="dlB-U0-I95" secondAttribute="centerY" multiplier="1.15" id="bVx-Gi-600"/>
                             <constraint firstItem="ypP-g7-lxH" firstAttribute="centerY" secondItem="dlB-U0-I95" secondAttribute="centerY" multiplier="0.85" id="ebu-mn-840"/>
-                            <constraint firstItem="TwO-QZ-kaG" firstAttribute="centerX" secondItem="dlB-U0-I95" secondAttribute="centerX" id="ghJ-z3-CBv"/>
+                            <constraint firstItem="TwO-QZ-kaG" firstAttribute="centerX" secondItem="dlB-U0-I95" secondAttribute="centerX" multiplier="0.98" id="ghJ-z3-CBv"/>
                             <constraint firstItem="TwO-QZ-kaG" firstAttribute="centerY" secondItem="dlB-U0-I95" secondAttribute="centerY" multiplier="0.62" id="tAA-EQ-l9W"/>
                             <constraint firstItem="bhk-Oj-6OG" firstAttribute="width" secondItem="dlB-U0-I95" secondAttribute="width" multiplier="0.5" id="tbX-wu-Lr9"/>
-                            <constraint firstItem="AZF-XW-yhB" firstAttribute="bottom" secondItem="TwO-QZ-kaG" secondAttribute="bottom" id="wUj-Hh-UxI"/>
+                            <constraint firstItem="AZF-XW-yhB" firstAttribute="bottom" secondItem="TwO-QZ-kaG" secondAttribute="bottom" constant="-2" id="wUj-Hh-UxI"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="McM-Ry-lhh" appends="YES" id="bLa-Ue-DsV"/>
@@ -478,7 +478,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.31764705882352939" green="0.74509803921568629" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.39330416917800903" green="0.81305128335952759" blue="0.62143301963806152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0Hh-xQ-gxP" firstAttribute="width" secondItem="M5l-ya-r6r" secondAttribute="width" multiplier="0.5" id="Aar-6j-9ZQ"/>
@@ -531,7 +531,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-1V-wZy">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                                <color key="backgroundColor" red="0.31764705882352939" green="0.74509803921568629" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pick your challenge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZm-32-f69">
                                 <rect key="frame" x="166" y="12" width="268" height="37"/>
