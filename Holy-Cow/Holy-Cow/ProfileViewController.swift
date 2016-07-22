@@ -2,7 +2,7 @@
 //  profileViewController.swift
 //  Holy-Cow
 //
-//  Created by Nadia Jamrozik on 7/21/16.
+//  Created by Marky Pertsemlides on 7/21/16.
 //  Copyright © 2016 Holy iOS Cows. All rights reserved.
 //
 

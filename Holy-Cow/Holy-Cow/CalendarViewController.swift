@@ -9,7 +9,7 @@
 import UIKit
 
 class CalendarViewController: UIViewController {
-
+    
     @IBOutlet weak var daysView: UIView!
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarBoard: UIView!
@@ -90,7 +90,7 @@ class CalendarViewController: UIViewController {
                         button.enabled = false
                     }
                 }
-
+                
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
@@ -104,8 +104,8 @@ class CalendarViewController: UIViewController {
         CalendarController.sharedInstance.dayToday = dayOfMonth
         CalendarController.sharedInstance.startInterval = dayOfWeek
     }
-
-
+    
+    
     func setupLabelColorsAndFonts() {
         
         //setting text and font colors
@@ -124,54 +124,105 @@ class CalendarViewController: UIViewController {
     
     @IBAction func calendarCellTapped(sender: UIButton) {
         
+        // if days is in the past
         if sender.tag <= dayOfMonth + (dayOfWeek - 1) {
             
-            if CalendarController.sharedInstance.goalArray[sender.tag] == DayGoal.Meatless {
-           
-                if CalendarController.sharedInstance.outcomeArray[sender.tag] == DayOutcome.Unset {
-                    CalendarController.sharedInstance.outcomeArray[sender.tag] = .Success
-                    sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-                    if CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] == .Success {
-                        sender.setBackgroundImage(UIImage(named: "MiddleBlob"), forState: .Normal)
-                    }
-                    else if CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] != .Success {
-                        sender.setBackgroundImage(UIImage(named: "RightBlob"), forState: .Normal)
-                    }
-                    else if CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] != .Success {
-                        sender.setBackgroundImage(UIImage(named: "LeftBlob"), forState: .Normal)
-                    }
-                    else {
-                        sender.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
-                    }
-                }
-                else if CalendarController.sharedInstance.outcomeArray[sender.tag] == DayOutcome.Success {
-                    CalendarController.sharedInstance.outcomeArray[sender.tag] = .Failure
-                    sender.setBackgroundImage(UIImage(named: "RedFilled"), forState: .Normal)
-                    sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-                }
-                else {
-                    CalendarController.sharedInstance.outcomeArray[sender.tag] = .Unset
-                    sender.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
-                    if sender.tag == (dayOfMonth + (dayOfWeek) - 1) {
-                        sender.setTitleColor(UIColor.holyBlue, forState: .Normal)
-                    }
-                    else {
-                        sender.setTitleColor(UIColor.holyBlack, forState: .Normal)
-                    }
-                }
+            // if it is set as meatless (goal)
+            if CalendarController.sharedInstance.goalArray[sender.tag] != .Meatless { return }
+            
+            // if unset, set to Success (...)
+            if CalendarController.sharedInstance.outcomeArray[sender.tag] != DayOutcome.Success {
+                CalendarController.sharedInstance.outcomeArray[sender.tag] = .Success
+            } else {
+                CalendarController.sharedInstance.outcomeArray[sender.tag] = .Failure
             }
+            
         }
-
-        if sender.tag > dayOfMonth + (dayOfWeek - 1) {
-            if CalendarController.sharedInstance.goalArray[sender.tag] == DayGoal.Meat {
+        
+        // if day is in the future
+        else {
+            if CalendarController.sharedInstance.goalArray[sender.tag] == .Meat {
                 CalendarController.sharedInstance.goalArray[sender.tag] = .Meatless
-                sender.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
             } else {
                 CalendarController.sharedInstance.goalArray[sender.tag] = .Meat
+            }
+        }
+        
+        updateBlob(for: sender.tag)
+        updateBlob(for: sender.tag - 1)
+        updateBlob(for: sender.tag + 1)
+    }
+    
+    func updateBlob(for senderTag: Int) {
+        
+        guard let sender = calendarBoard.viewWithTag(senderTag) as? UIButton else { return }
+        
+        let prev = CalendarController.sharedInstance.outcomeArray[senderTag - 1]
+        let curr = CalendarController.sharedInstance.outcomeArray[senderTag]
+        let next = CalendarController.sharedInstance.outcomeArray[senderTag + 1]
+        
+        if curr == .Unset {
+            let goal = CalendarController.sharedInstance.goalArray[senderTag]
+            if goal == .Meatless {
+                sender.setTitleColor(.blackColor(), forState: .Normal)
+                sender.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
+            } else {
+                sender.setTitleColor(.blackColor(), forState: .Normal)
                 sender.setBackgroundImage(nil, forState: .Normal)
             }
         }
-
+            
+        else if curr == .Failure {
+            sender.setTitleColor(.whiteColor(), forState: .Normal)
+            sender.setBackgroundImage(UIImage(named: "RedFilled"), forState: .Normal)
+        }
+            
+        else if prev != .Success && next != .Success {
+            sender.setTitleColor(.whiteColor(), forState: .Normal)
+            sender.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
+        }
+            
+        else if prev != .Success && next == .Success {
+            sender.setTitleColor(.whiteColor(), forState: .Normal)
+            sender.setBackgroundImage(UIImage(named: "LeftBlob"), forState: .Normal)
+        }
+            
+        else if prev == .Success && next != .Success {
+            sender.setTitleColor(.whiteColor(), forState: .Normal)
+            sender.setBackgroundImage(UIImage(named: "RightBlob"), forState: .Normal)
+        }
+            
+        else {
+            sender.setTitleColor(.whiteColor(), forState: .Normal)
+            sender.setBackgroundImage(UIImage(named: "MiddleBlob"), forState: .Normal)
+        }
     }
+    
+    
+    
+    //    func updateCalendarBlobs() {
+    //
+    //        for calendarCell in calendarBoard.subviews {
+    //            for button in calendarCell.subviews as! [UIButton] {
+    //                if button.currentBackgroundImage == UIImage(named: "GreenRing") {
+    //                    var tag = button.tag
+    //                    if let next = calendarCell.viewWithTag(tag + 1) as? UIButton {
+    //                        if next.currentBackgroundImage == UIImage(named: "LeftBlob") {
+    //                            button.setBackgroundImage(UIImage(named: "LeftBlob"), forState: .Normal)
+    //
+    //                        } else if next.currentBackgroundImage == UIImage(named: "LeftBlob") {
+    //
+    //                        }
+    //                    }
+    //                }
+    //
+    //                
+    //            }
+    //        }
+    //        
+    //        
+    //        
+    //    }
+    
     
 }
