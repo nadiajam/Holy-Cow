@@ -48,7 +48,7 @@ class InfoTabsController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if let tabController = segue.destinationViewController as? TabBarViewController {
-            if let calendar = tabController.viewControllers![1] as? CalendarViewController {
+            if tabController.viewControllers![1] is CalendarViewController {
                 CalendarController.sharedInstance.populate(challengeArray)
             }
         }

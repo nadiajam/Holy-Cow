@@ -17,13 +17,12 @@ class UserController: NSObject {
     
     func register(email:String, password:String, onCompletion:(User?,String?) -> Void) {
         
-        let user = ["email": email, "password": password]
-        
         currentUser = User(email: email, password: password)
         userList.append(currentUser!)
         
         for user in userList {
             if user.email == email {
+                
             }
         }
 

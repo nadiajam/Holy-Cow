@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMA-ew-rkb">
-                                <rect key="frame" x="171" y="394" width="258" height="51"/>
+                                <rect key="frame" x="269" y="402" width="62" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="sign up">
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjd-hk-RTu">
-                                <rect key="frame" x="171" y="454" width="258" height="51"/>
+                                <rect key="frame" x="272" y="462" width="56" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="sign in">
@@ -59,6 +59,14 @@
                             <constraint firstItem="Fjd-hk-RTu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.43" id="y9l-SI-dTL"/>
                             <constraint firstItem="kfD-Z8-nEH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.85" id="yMz-6E-joG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4AF-XQ-Hmv"/>
+                                <exclude reference="HJb-Rb-0C3"/>
+                                <exclude reference="bzZ-kz-Xc8"/>
+                                <exclude reference="y9l-SI-dTL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="a6a-a5-ft9"/>
                     <connections>
