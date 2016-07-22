@@ -1451,14 +1451,6 @@
             </objects>
             <point key="canvasLocation" x="666" y="-459"/>
         </scene>
-        <!--Recipes-->
-        <scene sceneID="ZN1-4J-TFL">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Recipes" id="k23-x1-0FZ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yri-41-Gy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1093" y="-1405"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="5hM-Ew-v6t">
             <objects>
