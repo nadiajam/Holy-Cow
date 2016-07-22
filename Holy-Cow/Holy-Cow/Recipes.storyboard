@@ -382,7 +382,7 @@
                         <constraints>
                             <constraint firstItem="Vo8-95-frA" firstAttribute="top" secondItem="iY7-8a-Sfs" secondAttribute="bottom" id="2za-YR-9WG"/>
                             <constraint firstItem="iY7-8a-Sfs" firstAttribute="leading" secondItem="cDB-rM-NcB" secondAttribute="leading" id="62G-ZT-fWO"/>
-                            <constraint firstItem="t9o-at-gJq" firstAttribute="top" secondItem="MaW-vX-Xxh" secondAttribute="bottom" constant="20" id="65t-02-yN5"/>
+                            <constraint firstItem="t9o-at-gJq" firstAttribute="top" secondItem="MaW-vX-Xxh" secondAttribute="bottom" constant="70" id="65t-02-yN5"/>
                             <constraint firstItem="Xk1-h9-BlH" firstAttribute="trailing" secondItem="hLq-Ii-cM8" secondAttribute="trailing" id="7b0-QH-1Og"/>
                             <constraint firstItem="MaW-vX-Xxh" firstAttribute="top" secondItem="Vo8-95-frA" secondAttribute="bottom" constant="20" id="7vp-xw-OUJ"/>
                             <constraint firstAttribute="trailing" secondItem="MaW-vX-Xxh" secondAttribute="trailing" constant="20" id="8vg-eS-LXc"/>
@@ -405,7 +405,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="dinner" id="5T3-AU-QeZ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Nb8-vq-okE"/>
                     </navigationItem>
@@ -551,9 +550,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="oT2-T6-6eZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
