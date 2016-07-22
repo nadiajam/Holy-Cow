@@ -24,7 +24,6 @@ class CalendarViewController: UIViewController {
     
     var calendarArray = [String](count: 42, repeatedValue: "")
     var dayOfMonth:Int = 0
-    var calendarController = CalendarController()
     var dayOfWeek:Int = 0
     
     
@@ -58,7 +57,6 @@ class CalendarViewController: UIViewController {
         let startDateComponents = myCalendar.components(.Weekday, fromDate: startOfMonth)
         dayOfWeek = startDateComponents.weekday - 1
         
-        
         //array containing items 1 through days in current month
         var monthArray: [String] = []
         var firstNum = 1
@@ -77,8 +75,8 @@ class CalendarViewController: UIViewController {
                 button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
                 
                 //improve runtime??? INCREMENTING INDEX
-                if case .Meatless = calendarController.goalArray[button.tag] {
-                    button.setBackgroundImage(UIImage(named: "GreyRing"), forState: .Normal)
+                if case .Meatless = CalendarController.sharedInstance.goalArray[button.tag] {
+                    button.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
                 }
                 
                 //disabling button tap for inexistent calendar days
@@ -88,7 +86,7 @@ class CalendarViewController: UIViewController {
                 }
                 
                 if button.tag <= dayOfMonth + (dayOfWeek - 1) {
-                    if calendarController.goalArray[button.tag] == DayGoal.Meat{
+                    if CalendarController.sharedInstance.goalArray[button.tag] == DayGoal.Meat{
                         button.enabled = false
                     }
                 }
@@ -100,6 +98,11 @@ class CalendarViewController: UIViewController {
                 }
             }
         }
+        
+        //sending updated data (calendarArray) and unaltered data (dayOfMonth & dayOfWeek) to calendar controller
+        CalendarController.sharedInstance.calendar = calendarArray
+        CalendarController.sharedInstance.dayToday = dayOfMonth
+        CalendarController.sharedInstance.startInterval = dayOfWeek
     }
 
 
@@ -123,21 +126,32 @@ class CalendarViewController: UIViewController {
         
         if sender.tag <= dayOfMonth + (dayOfWeek - 1) {
             
-            if calendarController.goalArray[sender.tag] == DayGoal.Meatless {
+            if CalendarController.sharedInstance.goalArray[sender.tag] == DayGoal.Meatless {
            
-                if calendarController.outcomeArray[sender.tag] == DayOutcome.Unset {
-                    calendarController.outcomeArray[sender.tag] = .Success
-                    sender.setBackgroundImage(UIImage(named: "SmallGreen"), forState: .Normal)
+                if CalendarController.sharedInstance.outcomeArray[sender.tag] == DayOutcome.Unset {
+                    CalendarController.sharedInstance.outcomeArray[sender.tag] = .Success
                     sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                    if CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] == .Success {
+                        sender.setBackgroundImage(UIImage(named: "MiddleBlob"), forState: .Normal)
+                    }
+                    else if CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] != .Success {
+                        sender.setBackgroundImage(UIImage(named: "RightBlob"), forState: .Normal)
+                    }
+                    else if CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] != .Success {
+                        sender.setBackgroundImage(UIImage(named: "LeftBlob"), forState: .Normal)
+                    }
+                    else {
+                        sender.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
+                    }
                 }
-                else if calendarController.outcomeArray[sender.tag] == DayOutcome.Success {
-                    calendarController.outcomeArray[sender.tag] = .Failure
-                    sender.setBackgroundImage(UIImage(named: "RedCircle"), forState: .Normal)
+                else if CalendarController.sharedInstance.outcomeArray[sender.tag] == DayOutcome.Success {
+                    CalendarController.sharedInstance.outcomeArray[sender.tag] = .Failure
+                    sender.setBackgroundImage(UIImage(named: "RedFilled"), forState: .Normal)
                     sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
                 }
                 else {
-                    calendarController.outcomeArray[sender.tag] = .Unset
-                    sender.setBackgroundImage(UIImage(named: "SmallGreyRing"), forState: .Normal)
+                    CalendarController.sharedInstance.outcomeArray[sender.tag] = .Unset
+                    sender.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
                     if sender.tag == (dayOfMonth + (dayOfWeek) - 1) {
                         sender.setTitleColor(UIColor.holyBlue, forState: .Normal)
                     }
@@ -149,34 +163,15 @@ class CalendarViewController: UIViewController {
         }
 
         if sender.tag > dayOfMonth + (dayOfWeek - 1) {
-            if calendarController.goalArray[sender.tag] == DayGoal.Meat {
-                calendarController.goalArray[sender.tag] = .Meatless
-                sender.setBackgroundImage(UIImage(named: "SmallGreyRing"), forState: .Normal)
+            if CalendarController.sharedInstance.goalArray[sender.tag] == DayGoal.Meat {
+                CalendarController.sharedInstance.goalArray[sender.tag] = .Meatless
+                sender.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
             } else {
-                calendarController.goalArray[sender.tag] = .Meat
+                CalendarController.sharedInstance.goalArray[sender.tag] = .Meat
                 sender.setBackgroundImage(nil, forState: .Normal)
             }
         }
 
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        calendarController.calendar = calendarArray
-        calendarController.dayToday = dayOfMonth
-        calendarController.startInterval = dayOfWeek
-
-        let successMeatless = calendarController.tallyOutcome()
-        let streakLength = calendarController.currentStreakTally()
-        let longestStreakLength = calendarController.longestStreakTally()
-        let arcFraction = calendarController.getArcFraction()
-        
-        let destination = segue.destinationViewController as! ProfileViewController
-
-        destination.meatNumber = successMeatless
-        destination.currentStreakLength = streakLength
-        destination.currentLongestStreakLength = longestStreakLength
-        destination.futureArcValue = arcFraction
     }
 
 }

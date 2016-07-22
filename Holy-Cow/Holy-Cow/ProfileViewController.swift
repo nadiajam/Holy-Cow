@@ -22,10 +22,52 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        meatNumber = CalendarController.sharedInstance.tallyOutcome()
+//        currentStreakLength = CalendarController.sharedInstance.currentStreakTally()
+//        currentLongestStreakLength = CalendarController.sharedInstance.longestStreakTally()
+//        futureArcValue = CalendarController.sharedInstance.getArcFraction()
+//        
+//        print("you have been successful: \(meatNumber) days")
+//        print("streak length: \(currentStreakLength)")
+//        
+//        
+//        //setting fonts and colors
+//        numberLabel.textColor = UIColor.holyPurple
+//        numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
+//
+//        for subview in view.subviews {
+//            if let textField = subview as? UILabel {
+//                
+//                if textField.tag == 4 { //tag 4 = general text
+//                    textField.font = UIFont(name:"GTWalsheimProTrial-Medium", size: 20.0)
+//                }
+//            }
+//        }
+//        
+//        //modifying profile numbers
+//        numberLabel.text = "\(Int(meatNumber))"
+////        gallonNumberLabel.text = "\(currentStreakLength)"
+//        progressArc.progressValue = futureArcValue
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        //Get data from calendar controller
+
+        meatNumber = CalendarController.sharedInstance.tallyOutcome()
+        currentStreakLength = CalendarController.sharedInstance.currentStreakTally()
+        currentLongestStreakLength = CalendarController.sharedInstance.longestStreakTally()
+        futureArcValue = CalendarController.sharedInstance.getArcFraction()
+        
+        print("you have been successful: \(meatNumber) days")
+        print("streak length: \(currentStreakLength)")
+        
+        
         //setting fonts and colors
         numberLabel.textColor = UIColor.holyPurple
         numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
-
+        
         for subview in view.subviews {
             if let textField = subview as? UILabel {
                 
@@ -37,8 +79,9 @@ class ProfileViewController: UIViewController {
         
         //modifying profile numbers
         numberLabel.text = "\(Int(meatNumber))"
-//        gallonNumberLabel.text = "\(currentStreakLength)"
+        //        gallonNumberLabel.text = "\(currentStreakLength)"
         progressArc.progressValue = futureArcValue
     }
+
 
 }

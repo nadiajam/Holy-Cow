@@ -1118,7 +1118,7 @@
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" multiplier="0.9" id="sla-dX-dbD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="Ihx-hd-by0"/>
+                    <tabBarItem key="tabBarItem" title="" image="calendar" id="Ihx-hd-by0"/>
                     <navigationItem key="navigationItem" title="Calendar" id="h4c-LD-RaY"/>
                     <connections>
                         <outlet property="calendarBoard" destination="Ldy-lw-naP" id="GQD-Fx-xfL"/>
@@ -1230,7 +1230,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="User" image="user" id="ODA-b7-pKg"/>
+                    <tabBarItem key="tabBarItem" title="" image="user" id="ODA-b7-pKg"/>
                     <navigationItem key="navigationItem" title="jenny hall" id="b6i-ne-4e2"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
@@ -1243,30 +1243,49 @@
             </objects>
             <point key="canvasLocation" x="197" y="490"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="JWz-TT-fhd">
             <objects>
                 <viewController id="RYo-wK-R9p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KmW-4t-6E9"/>
+                    <tabBarItem key="tabBarItem" title="" image="newsfeed" id="KmW-4t-6E9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-vz-v0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="679" y="-513"/>
+            <point key="canvasLocation" x="666" y="-1167"/>
         </scene>
-        <!--Item 1-->
+        <!--View Controller-->
+        <scene sceneID="2Nh-Zv-W3h">
+            <objects>
+                <viewController id="skJ-r9-AB4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1so-N5-Esj"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Dy-jr-VYt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xlg-S8-DiG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="users" id="iJ0-DG-Pem"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4g-Bs-vPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="-459"/>
+        </scene>
+        <!--Recipes View Controller-->
         <scene sceneID="e3t-la-DFr">
             <objects>
-                <viewController id="MYQ-SZ-fZl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="MCn-AD-lWb"/>
+                <viewController id="MYQ-SZ-fZl" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="recipes" id="MCn-AD-lWb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UnA-j9-GcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671" y="-1218"/>
+            <point key="canvasLocation" x="666" y="-1878"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="VVo-8T-6Mi">
             <objects>
-                <tabBarController id="96Z-7p-8MB" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" id="96Z-7p-8MB" customClass="TabBarViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4ak-3g-2cp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1275,8 +1294,9 @@
                     <connections>
                         <segue destination="Dpb-29-SAG" kind="relationship" relationship="viewControllers" id="hN2-rd-0kX"/>
                         <segue destination="8Zp-ne-2ck" kind="relationship" relationship="viewControllers" id="QUP-uO-ng9"/>
-                        <segue destination="RYo-wK-R9p" kind="relationship" relationship="viewControllers" id="QXD-BS-VCC"/>
                         <segue destination="MYQ-SZ-fZl" kind="relationship" relationship="viewControllers" id="gmz-qh-kGm"/>
+                        <segue destination="RYo-wK-R9p" kind="relationship" relationship="viewControllers" id="QXD-BS-VCC"/>
+                        <segue destination="skJ-r9-AB4" kind="relationship" relationship="viewControllers" id="sum-mb-FGQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bD-Lu-Dwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1286,6 +1306,9 @@
     </scenes>
     <resources>
         <image name="calendar" width="34" height="34"/>
+        <image name="newsfeed" width="38" height="29"/>
+        <image name="recipes" width="21" height="45"/>
         <image name="user" width="32" height="34"/>
+        <image name="users" width="47" height="34"/>
     </resources>
 </document>

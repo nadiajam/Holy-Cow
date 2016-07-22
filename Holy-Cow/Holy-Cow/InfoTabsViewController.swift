@@ -21,9 +21,10 @@ extension UIViewController {
 class InfoTabsController: UIViewController {
     
     var destinationController = CalendarController()
+    var challengeArray:[Int] = []
     
     @IBAction func challengeButtonTapped(sender: UIButton) {
-        var challengeArray:[Int] = []
+        
         switch sender.tag {
         case 0:
             //send meatless mondays
@@ -42,11 +43,16 @@ class InfoTabsController: UIViewController {
             challengeArray += 0...41
             break
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("UserCalendar") as! CalendarViewController
-        viewController.calendarController.populate(challengeArray)
-        navigationController?.pushViewController(viewController, animated: true)
+        if let tabController = segue.destinationViewController as? TabBarViewController {
+            if let calendar = tabController.viewControllers![1] as? CalendarViewController {
+                CalendarController.sharedInstance.populate(challengeArray)
+            }
+        }
+                
     }
     
 }
