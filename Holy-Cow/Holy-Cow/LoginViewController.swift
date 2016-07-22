@@ -34,6 +34,28 @@ class LoginViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func signInButtonTapped(sender: UIButton) {
+        
+        if emailField.text!.isValidEmail() == false {
+            let errorAlert = UIAlertController(title: "Error", message: "User email not found", preferredStyle: UIAlertControllerStyle.Alert)
+            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+            errorAlert.addAction(dismissErrorAlert)
+            self.presentViewController(errorAlert, animated: true, completion: nil)
+        } else if passwordField.text!.characters.count < 6 {
+            let errorAlert = UIAlertController(title: "Error", message: "The password does not match the user email", preferredStyle: UIAlertControllerStyle.Alert)
+            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+            errorAlert.addAction(dismissErrorAlert)
+            self.presentViewController(errorAlert, animated: true, completion: nil)
+        } else {
+            let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
+            let viewController = storyboard.instantiateInitialViewController()
+            let application = UIApplication.sharedApplication()
+            let window = application.keyWindow
+            window?.rootViewController = viewController
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +72,8 @@ class LoginViewController: UIViewController {
         closeButton.layer.borderWidth = 2
         
         facebookButton.titleLabel?.textColor = UIColor.holyRed
+        facebookButton.layer.cornerRadius = 2
+        signInButton.layer.cornerRadius = 2
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor //this does not work
         
@@ -68,22 +92,10 @@ class LoginViewController: UIViewController {
         signInButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
         connectLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 32.0)
         
-        
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
         
-
-    }
-
-    @IBAction func signInButtonTapped(sender: UIButton) {
-        
-        let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-        let viewController = storyboard.instantiateInitialViewController()
-        let application = UIApplication.sharedApplication()
-        let window = application.keyWindow
-        window?.rootViewController = viewController
     }
     
     func dismissKeyboard(){
@@ -99,19 +111,17 @@ class LoginViewController: UIViewController {
     }
     
     func adjustingHeight(show:Bool, notification:NSNotification) {
-        // 1
         var userInfo = notification.userInfo!
-        // 2
+        
         let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
-        // 3
-        let animationDurarion = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
-        // 4
+        
+        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
+        
         let changeInHeight = (CGRectGetHeight(keyboardFrame) + 40) * (show ? 1 : -1)
-        //5
-        UIView.animateWithDuration(animationDurarion, animations: { () -> Void in
+        
+        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
             self.bottomConstraint.constant += changeInHeight
         })
-        
     }
     
     override func viewWillDisappear(animated: Bool) {

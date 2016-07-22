@@ -23,10 +23,18 @@ class RegisterViewController: UIViewController {
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
         
-        if passwordField.text!.characters.count < 6 {
-            let errorAlert = UIAlertController(title: "Error", message: "Password needs to be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
+        if emailField.text!.isValidEmail() == false {
+            let errorAlert = UIAlertController(title: "Error", message: "Email is not valid", preferredStyle: UIAlertControllerStyle.Alert)
             let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
             errorAlert.addAction(dismissErrorAlert)
+            self.presentViewController(errorAlert, animated: true, completion: nil)
+            
+        } else if passwordField.text!.characters.count < 6 {
+            let errorAlert = UIAlertController(title: "Error", message: "Password must be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
+            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+            errorAlert.addAction(dismissErrorAlert)
+            self.presentViewController(errorAlert, animated: true, completion: nil)
+            
         } else {
             let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
             let viewController = storyboard.instantiateInitialViewController()
@@ -34,6 +42,7 @@ class RegisterViewController: UIViewController {
             let window = application.keyWindow
             window?.rootViewController = viewController
         }
+        
     }
     
     @IBAction func closeButtonTapped(sender: AnyObject) {
@@ -64,6 +73,8 @@ class RegisterViewController: UIViewController {
         closeButton.layer.borderWidth = 2
         
         facebookButton.titleLabel?.textColor = UIColor.holyRed
+        facebookButton.layer.cornerRadius = 2
+        signUpButton.layer.cornerRadius = 2
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor // this does not work
         
