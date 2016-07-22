@@ -10,13 +10,18 @@ import UIKit
 
 class RecipesViewController: UIViewController {
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var shoppingListButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.holyGreen
         
         navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.blackColor()
         
-        // Do any additional setup after loading the view.
+//        favoriteButton.layer.cornerRadius = 3
+//        shoppingListButton.layer.cornerRadius = 3
+        
 //        navigationController?.navigationBar.topItem.font
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
 //        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
