@@ -82,7 +82,7 @@ class CalendarController {
     }
     
     
-    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!! lol if we have time
+//    // PUT THIS IN THE CALENDARVIEWCONTROLLER!!!!!! lol if we have time
     func getArcFraction() -> Double {
         return Double(tallyOutcome() / tallyGoal())
     }

@@ -52,7 +52,6 @@ class InfoTabsController: UIViewController {
                 CalendarController.sharedInstance.populate(challengeArray)
             }
         }
-                
     }
     
 }
