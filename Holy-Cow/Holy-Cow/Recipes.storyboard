@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-rd-RgW" userLabel="Breakfast">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="breakfast" backgroundImage="breakfast-image">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-wo-0Pk" userLabel="Lunch">
-                                <rect key="frame" x="0.0" y="123" width="600" height="119"/>
+                                <rect key="frame" x="0.0" y="127" width="600" height="122"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="lunch" backgroundImage="lunch-image">
@@ -64,8 +64,8 @@
                                     <segue destination="Kbz-NQ-kq2" kind="show" id="BgF-Nn-cb7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-Zb-J2S" userLabel="Dinner">
-                                <rect key="frame" x="0.0" y="246" width="600" height="118"/>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-Zb-J2S" userLabel="Dinner">
+                                <rect key="frame" x="0.0" y="253" width="600" height="123"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="dinner" backgroundImage="dinner-image">
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dO-Lj-mge" userLabel="Shopping List">
-                                <rect key="frame" x="0.0" y="368" width="600" height="119"/>
+                                <rect key="frame" x="0.0" y="380" width="600" height="122"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="shopping list" backgroundImage="shopping-list">
@@ -108,7 +108,7 @@
                             <constraint firstItem="7E9-wo-0Pk" firstAttribute="height" secondItem="WZA-rd-RgW" secondAttribute="height" id="qkO-vz-N0U"/>
                             <constraint firstItem="0dO-Lj-mge" firstAttribute="height" secondItem="CM4-Zb-J2S" secondAttribute="height" id="sRa-CC-4sP"/>
                             <constraint firstItem="WZA-rd-RgW" firstAttribute="top" secondItem="d3s-Fs-YY0" secondAttribute="bottom" id="sWS-uK-RAA"/>
-                            <constraint firstItem="AYc-L7-wie" firstAttribute="top" secondItem="0dO-Lj-mge" secondAttribute="bottom" id="yoj-0V-rNc"/>
+                            <constraint firstItem="AYc-L7-wie" firstAttribute="top" secondItem="0dO-Lj-mge" secondAttribute="bottom" constant="34" id="yoj-0V-rNc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iaz-Lq-Zup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="342"/>
+            <point key="canvasLocation" x="963" y="354"/>
         </scene>
         <!--dinner-->
         <scene sceneID="sc8-pQ-yRC">
@@ -136,27 +136,27 @@
                         <viewControllerLayoutGuide type="bottom" id="t9o-at-gJq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cDB-rM-NcB">
-                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iY7-8a-Sfs" userLabel="top nav bar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iY7-8a-Sfs" userLabel="top nav bar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLq-Ii-cM8">
-                                        <rect key="frame" x="64" y="8" width="61" height="33"/>
+                                        <rect key="frame" x="64" y="9" width="61" height="33"/>
                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="17"/>
                                         <state key="normal" title="popular">
                                             <color key="titleColor" red="0.01176470588" green="0.76862745099999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-Ba-FFw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-Ba-FFw">
                                         <rect key="frame" x="172" y="7" width="32" height="34"/>
                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="17"/>
                                         <state key="normal" title="new">
                                             <color key="titleColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwp-59-hrc">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwp-59-hrc">
                                         <rect key="frame" x="248" y="7" width="67" height="34"/>
                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="17"/>
                                         <state key="normal" title="favorites">
@@ -187,7 +187,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vo8-95-frA" userLabel="line">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vo8-95-frA" userLabel="line">
                                 <rect key="frame" x="0.0" y="48" width="375" height="2"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -202,25 +202,29 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-vX-Xxh">
-                                <rect key="frame" x="29" y="70" width="318" height="464"/>
+                                <rect key="frame" x="27" y="70" width="321" height="468"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="grilled-halibut-peach-salsa" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-nR-9r0">
-                                        <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="grilled-halibut-peach-salsa" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-nR-9r0">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fDb-nR-9r0" secondAttribute="height" multiplier="1:1" id="4Ln-Ij-EZd"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nn5-zK-4Q8" appends="YES" id="yqN-nS-LoE"/>
+                                        </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGd-cJ-WIH">
-                                        <rect key="frame" x="116" y="15" width="202" height="71"/>
+                                        <rect key="frame" x="117" y="16" width="204" height="71"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="grilled halibut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUX-eb-hlP">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="23"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="18"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="a fresh peach and pepper salsa with halibut" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYH-P1-tJP">
-                                                <rect key="frame" x="0.0" y="27" width="202" height="44"/>
+                                                <rect key="frame" x="0.0" y="27" width="204" height="44"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Thin" family="GT Walsheim Pro Trial" pointSize="17"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -237,23 +241,23 @@
                                             <constraint firstItem="eUX-eb-hlP" firstAttribute="leading" secondItem="rGd-cJ-WIH" secondAttribute="leading" id="WTb-tw-Ep0"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="vegetarian-pad-tha" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-tS-z8z">
-                                        <rect key="frame" x="0.0" y="121" width="101" height="101"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="vegetarian-pad-tha" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-tS-z8z">
+                                        <rect key="frame" x="0.0" y="122" width="102" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Sda-tS-z8z" secondAttribute="height" multiplier="1:1" id="uMA-gj-0Us"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YT6-TE-ICj">
-                                        <rect key="frame" x="116" y="136" width="202" height="71"/>
+                                        <rect key="frame" x="117" y="138" width="204" height="71"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="rainbow pad thai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-Eh-bYw">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="23"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="18"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="a tangy pad thai with peanuts and basil" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-Ac-Hkh">
-                                                <rect key="frame" x="0.0" y="27" width="202" height="44"/>
+                                                <rect key="frame" x="0.0" y="27" width="204" height="44"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Thin" family="GT Walsheim Pro Trial" pointSize="17"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -270,23 +274,23 @@
                                             <constraint firstItem="AS8-Eh-bYw" firstAttribute="leading" secondItem="YT6-TE-ICj" secondAttribute="leading" id="mUG-Rs-10P"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bbq-cauliflower-tacos" translatesAutoresizingMaskIntoConstraints="NO" id="Ucv-qV-T0n">
-                                        <rect key="frame" x="0.0" y="242" width="101" height="101"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bbq-cauliflower-tacos" translatesAutoresizingMaskIntoConstraints="NO" id="Ucv-qV-T0n">
+                                        <rect key="frame" x="0.0" y="244" width="102" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Ucv-qV-T0n" secondAttribute="height" multiplier="1:1" id="apu-Y0-Tr1"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xcz-mO-7AT">
-                                        <rect key="frame" x="116" y="257" width="202" height="71"/>
+                                        <rect key="frame" x="117" y="260" width="204" height="71"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="mahi mahi tacos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cjn-WT-XJg">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="23"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="18"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="savory fish tacos with a creamy lime slaw" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTz-RT-Pl7">
-                                                <rect key="frame" x="0.0" y="27" width="202" height="44"/>
+                                                <rect key="frame" x="0.0" y="27" width="204" height="44"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Thin" family="GT Walsheim Pro Trial" pointSize="17"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -303,22 +307,22 @@
                                             <constraint firstItem="DTz-RT-Pl7" firstAttribute="leading" secondItem="xcz-mO-7AT" secondAttribute="leading" id="uYo-VC-Lbr"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red-pepper-penne" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-oT-WWy">
-                                        <rect key="frame" x="0.0" y="363" width="101" height="101"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="red-pepper-penne" translatesAutoresizingMaskIntoConstraints="NO" id="vZy-oT-WWy">
+                                        <rect key="frame" x="0.0" y="366" width="102" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="vZy-oT-WWy" secondAttribute="height" multiplier="1:1" id="hps-Gb-dOa"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TTZ-Lj-l4D">
-                                        <rect key="frame" x="116" y="378" width="202" height="71"/>
+                                        <rect key="frame" x="117" y="382" width="204" height="71"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="red pepper penne" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nl6-NB-DS0">
-                                                <rect key="frame" x="0.0" y="0.0" width="202" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="23"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="18"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="creamy roasted red pepper penne" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mp-Uq-QUy">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="creamy roasted red pepper penne" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mp-Uq-QUy">
                                                 <rect key="frame" x="0.0" y="27" width="204" height="44"/>
                                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Thin" family="GT Walsheim Pro Trial" pointSize="17"/>
                                                 <color key="textColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -382,7 +386,7 @@
                         <constraints>
                             <constraint firstItem="Vo8-95-frA" firstAttribute="top" secondItem="iY7-8a-Sfs" secondAttribute="bottom" id="2za-YR-9WG"/>
                             <constraint firstItem="iY7-8a-Sfs" firstAttribute="leading" secondItem="cDB-rM-NcB" secondAttribute="leading" id="62G-ZT-fWO"/>
-                            <constraint firstItem="t9o-at-gJq" firstAttribute="top" secondItem="MaW-vX-Xxh" secondAttribute="bottom" constant="20" id="65t-02-yN5"/>
+                            <constraint firstItem="t9o-at-gJq" firstAttribute="top" secondItem="MaW-vX-Xxh" secondAttribute="bottom" constant="70" id="65t-02-yN5"/>
                             <constraint firstItem="Xk1-h9-BlH" firstAttribute="trailing" secondItem="hLq-Ii-cM8" secondAttribute="trailing" id="7b0-QH-1Og"/>
                             <constraint firstItem="MaW-vX-Xxh" firstAttribute="top" secondItem="Vo8-95-frA" secondAttribute="bottom" constant="20" id="7vp-xw-OUJ"/>
                             <constraint firstAttribute="trailing" secondItem="MaW-vX-Xxh" secondAttribute="trailing" constant="20" id="8vg-eS-LXc"/>
@@ -405,15 +409,19 @@
                             </mask>
                         </variation>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="dinner" id="5T3-AU-QeZ">
                         <barButtonItem key="backBarButtonItem" title=" " id="Nb8-vq-okE"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bI8-dk-GJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nn5-zK-4Q8">
+                    <connections>
+                        <segue destination="iQM-vG-Gzd" kind="show" id="jIr-bv-kKq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1771.5" y="851.5"/>
+            <point key="canvasLocation" x="1659.5" y="871.5"/>
         </scene>
         <!--dinner-->
         <scene sceneID="k7P-mP-cAL">
@@ -611,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVO-zT-o6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2489" y="852"/>
+            <point key="canvasLocation" x="2272" y="838"/>
         </scene>
         <!--shopping list-->
         <scene sceneID="2yb-uQ-NE5">
@@ -677,13 +685,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W9F-64-pEz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="recipes" id="GIo-c1-hRL"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="oT2-T6-6eZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="30"/>
+                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

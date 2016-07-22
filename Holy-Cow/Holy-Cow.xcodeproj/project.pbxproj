@@ -42,6 +42,7 @@
 		6A6BD6E91D4176E800C98671 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6E81D4176E800C98671 /* StringExtension.swift */; };
 		6A6BD6EF1D41946100C98671 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6EE1D41946100C98671 /* User.swift */; };
 		6A6BD6F11D41AB0E00C98671 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */; };
+		6A6BD6F31D4271F600C98671 /* NewRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6F21D4271F600C98671 /* NewRecipesViewController.swift */; };
 		6AAC32301D3E371600F10964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC322F1D3E371600F10964 /* LoginViewController.swift */; };
 		6AAC32331D3E484800F10964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAC32311D3E484800F10964 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		6A6BD6E81D4176E800C98671 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6A6BD6EE1D41946100C98671 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		6A6BD6F21D4271F600C98671 /* NewRecipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRecipesViewController.swift; sourceTree = "<group>"; };
 		6AAC322F1D3E371600F10964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6AAC32321D3E484800F10964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,6 +164,7 @@
 				67963B3B1D405DC40050B871 /* ProfileViewController.swift */,
 				6AAC32311D3E484800F10964 /* Main.storyboard */,
 				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
+				6A6BD6F21D4271F600C98671 /* NewRecipesViewController.swift */,
 				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
 				6A6BD6EE1D41946100C98671 /* User.swift */,
 				6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */,
@@ -280,6 +283,7 @@
 				6AAC32301D3E371600F10964 /* LoginViewController.swift in Sources */,
 				6A6BD6E91D4176E800C98671 /* StringExtension.swift in Sources */,
 				67963B3A1D400D580050B871 /* CalendarController.swift in Sources */,
+				6A6BD6F31D4271F600C98671 /* NewRecipesViewController.swift in Sources */,
 				67963B3C1D405DC40050B871 /* ProfileViewController.swift in Sources */,
 				6A46F7A51D3CE47600A2C258 /* RegisterViewController.swift in Sources */,
 			);
