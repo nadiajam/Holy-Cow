@@ -14,6 +14,11 @@ class RecipesViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = UIColor.holyGreen
         // Do any additional setup after loading the view.
+        
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+//        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+
     }
 
     override func didReceiveMemoryWarning() {

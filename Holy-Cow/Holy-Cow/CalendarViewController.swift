@@ -30,7 +30,7 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelColorsAndFonts()
-        
+                
         //setting title to current month
         dateFormatterOverall.dateFormat = "MMM yyyy"
         monthLabel.text = dateFormatterOverall.stringFromDate(today)

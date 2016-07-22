@@ -29,6 +29,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         scrollView.contentSize = CGSizeMake(scrollView.frame.width, 2000)
         setUpLabels()
+        
     }
 
     
