@@ -72,8 +72,8 @@ class LoginViewController: UIViewController {
         closeButton.layer.borderWidth = 2
         
         facebookButton.titleLabel?.textColor = UIColor.holyRed
-        facebookButton.layer.cornerRadius = 2
-        signInButton.layer.cornerRadius = 2
+        facebookButton.layer.cornerRadius = 3
+        signInButton.layer.cornerRadius = 3
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor //this does not work
         
