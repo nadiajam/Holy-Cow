@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WJR-r6-QMK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WJR-r6-QMK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -412,26 +412,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pwY-fw-25p">
                                 <rect key="frame" x="75" y="105" width="450" height="240"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-fW-HJH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree1" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-fW-HJH">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-RR-Wri">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree3" translatesAutoresizingMaskIntoConstraints="NO" id="9P4-RR-Wri">
                                         <rect key="frame" x="0.0" y="80" width="150" height="80"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="07J-AM-h6B">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree1" translatesAutoresizingMaskIntoConstraints="NO" id="07J-AM-h6B">
                                         <rect key="frame" x="150" y="80" width="150" height="80"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-p3-2cX">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree2" translatesAutoresizingMaskIntoConstraints="NO" id="jAa-p3-2cX">
                                         <rect key="frame" x="300" y="80" width="150" height="80"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="jX1-JK-4ly">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree2" translatesAutoresizingMaskIntoConstraints="NO" id="jX1-JK-4ly">
                                         <rect key="frame" x="150" y="0.0" width="150" height="80"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-iw-hSx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree3" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-iw-hSx">
                                         <rect key="frame" x="300" y="0.0" width="150" height="80"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trees" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-4l-orJ">
-                                        <rect key="frame" x="0.0" y="160" width="150" height="80"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree3" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-4l-orJ">
+                                        <rect key="frame" x="150" y="160" width="150" height="80"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -443,17 +443,18 @@
                                     <constraint firstItem="qBI-4l-orJ" firstAttribute="width" secondItem="pwY-fw-25p" secondAttribute="width" multiplier="1/3" id="8ML-ZM-aTg"/>
                                     <constraint firstItem="9P4-RR-Wri" firstAttribute="centerY" secondItem="pwY-fw-25p" secondAttribute="centerY" id="BcI-ky-cJ5"/>
                                     <constraint firstItem="9P4-RR-Wri" firstAttribute="width" secondItem="pwY-fw-25p" secondAttribute="width" multiplier="1/3" id="CkU-4T-K07"/>
+                                    <constraint firstItem="qBI-4l-orJ" firstAttribute="leading" secondItem="07J-AM-h6B" secondAttribute="leading" id="G4a-pf-Kqg"/>
                                     <constraint firstItem="jAa-p3-2cX" firstAttribute="centerY" secondItem="pwY-fw-25p" secondAttribute="centerY" id="JmI-Wh-XJ8"/>
                                     <constraint firstItem="07J-AM-h6B" firstAttribute="height" secondItem="pwY-fw-25p" secondAttribute="height" multiplier="1/3" id="KiB-71-nif"/>
                                     <constraint firstItem="DMW-iw-hSx" firstAttribute="width" secondItem="pwY-fw-25p" secondAttribute="width" multiplier="1/3" id="LAo-YX-eDY"/>
                                     <constraint firstItem="07J-AM-h6B" firstAttribute="centerY" secondItem="pwY-fw-25p" secondAttribute="centerY" id="Nds-Uh-GCI"/>
+                                    <constraint firstItem="qBI-4l-orJ" firstAttribute="trailing" secondItem="07J-AM-h6B" secondAttribute="trailing" id="OYs-ZN-T3s"/>
                                     <constraint firstItem="jAa-p3-2cX" firstAttribute="height" secondItem="pwY-fw-25p" secondAttribute="height" multiplier="1/3" id="P3X-sR-6sE"/>
                                     <constraint firstItem="9P4-RR-Wri" firstAttribute="leading" secondItem="pwY-fw-25p" secondAttribute="leading" id="SD1-AZ-PsL"/>
                                     <constraint firstItem="E5A-fW-HJH" firstAttribute="height" secondItem="pwY-fw-25p" secondAttribute="height" multiplier="1/3" id="Sli-Bx-gJh"/>
                                     <constraint firstAttribute="bottom" secondItem="qBI-4l-orJ" secondAttribute="bottom" id="Ytd-VU-6KE"/>
                                     <constraint firstItem="jX1-JK-4ly" firstAttribute="centerX" secondItem="pwY-fw-25p" secondAttribute="centerX" id="cMY-YF-UV4"/>
                                     <constraint firstItem="DMW-iw-hSx" firstAttribute="height" secondItem="pwY-fw-25p" secondAttribute="height" multiplier="1/3" id="eLG-zX-SsR"/>
-                                    <constraint firstItem="qBI-4l-orJ" firstAttribute="leading" secondItem="pwY-fw-25p" secondAttribute="leading" id="h4f-E7-22G"/>
                                     <constraint firstItem="jX1-JK-4ly" firstAttribute="width" secondItem="pwY-fw-25p" secondAttribute="width" multiplier="1/3" id="hwk-M9-IBX"/>
                                     <constraint firstItem="jAa-p3-2cX" firstAttribute="width" secondItem="pwY-fw-25p" secondAttribute="width" multiplier="1/3" id="k8q-mN-xPG"/>
                                     <constraint firstItem="jX1-JK-4ly" firstAttribute="height" secondItem="pwY-fw-25p" secondAttribute="height" multiplier="1/3" id="m2u-X3-AW4"/>
@@ -697,7 +698,9 @@
         <image name="nav-button-3" width="1312" height="186"/>
         <image name="nav-button-4" width="1312" height="186"/>
         <image name="shower" width="568" height="908"/>
-        <image name="trees" width="704" height="589"/>
+        <image name="tree1" width="229" height="262"/>
+        <image name="tree2" width="229" height="262"/>
+        <image name="tree3" width="229" height="262"/>
         <image name="water" width="542" height="693"/>
     </resources>
     <inferredMetricsTieBreakers>
