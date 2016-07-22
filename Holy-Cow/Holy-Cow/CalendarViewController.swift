@@ -155,11 +155,14 @@ class CalendarViewController: UIViewController {
     
     func updateBlob(for senderTag: Int) {
         
+        if senderTag < 0 || senderTag >= calendarArray.count { return }
+        if calendarArray[senderTag].isEmpty { return }
+        
         guard let sender = calendarBoard.viewWithTag(senderTag) as? UIButton else { return }
         
-        let prev = CalendarController.sharedInstance.outcomeArray[senderTag - 1]
+        let prev = senderTag > 0 ? CalendarController.sharedInstance.outcomeArray[senderTag - 1] : .Unset
         let curr = CalendarController.sharedInstance.outcomeArray[senderTag]
-        let next = CalendarController.sharedInstance.outcomeArray[senderTag + 1]
+        let next = senderTag < calendarArray.count - 1 ? CalendarController.sharedInstance.outcomeArray[senderTag + 1] : .Unset
         
         if curr == .Unset {
             let goal = CalendarController.sharedInstance.goalArray[senderTag]
