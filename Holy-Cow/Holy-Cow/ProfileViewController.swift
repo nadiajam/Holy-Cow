@@ -15,17 +15,22 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var progressArc: ProgressArc! //set later
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+//    @IBOutlet weak var blueViewWidth: NSLayoutConstraint!
+    
+    
     var meatNumber:Double = 0
     var currentStreakLength:Int = 0
     var currentLongestStreakLength:Int = 0
     var futureArcValue: Double = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setting fonts and colors
+    
+        scrollView.contentSize = CGSizeMake(scrollView.frame.width, 2000)
         numberLabel.textColor = UIColor.holyPurple
-        numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
-
+        
         for subview in view.subviews {
             if let textField = subview as? UILabel {
                 
