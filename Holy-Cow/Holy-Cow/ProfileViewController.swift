@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
         
 //        meatNumber = CalendarController.sharedInstance.tallyOutcome()
 //        currentStreakLength = CalendarController.sharedInstance.currentStreakTally()
@@ -73,11 +72,11 @@ class ProfileViewController: UIViewController {
         //setting fonts and colors
         numberLabel.textColor = UIColor.holyPurple
         numberLabel.font = UIFont(name:"GTWalsheimProTrial-Bold", size: 110.0)
-=======
+
     
         scrollView.contentSize = CGSizeMake(scrollView.frame.width, 2000)
         numberLabel.textColor = UIColor.holyPurple
->>>>>>> be07eac0426b1b042fdab3e8c343288ce08754c2
+
         
         for subview in view.subviews {
             if let textField = subview as? UILabel {
