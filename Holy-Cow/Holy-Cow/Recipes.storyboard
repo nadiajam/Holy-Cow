@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-rd-RgW" userLabel="Breakfast">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="131"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="123"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="breakfast" backgroundImage="breakfast-image">
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-wo-0Pk" userLabel="Lunch">
-                                <rect key="frame" x="0.0" y="135" width="600" height="131"/>
+                                <rect key="frame" x="0.0" y="127" width="600" height="122"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="lunch" backgroundImage="lunch-image">
@@ -65,7 +65,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-Zb-J2S" userLabel="Dinner">
-                                <rect key="frame" x="0.0" y="270" width="600" height="131"/>
+                                <rect key="frame" x="0.0" y="253" width="600" height="123"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="dinner" backgroundImage="dinner-image">
@@ -76,7 +76,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dO-Lj-mge" userLabel="Shopping List">
-                                <rect key="frame" x="0.0" y="405" width="600" height="131"/>
+                                <rect key="frame" x="0.0" y="380" width="600" height="122"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="23"/>
                                 <state key="normal" title="shopping list" backgroundImage="shopping-list">
@@ -108,7 +108,7 @@
                             <constraint firstItem="7E9-wo-0Pk" firstAttribute="height" secondItem="WZA-rd-RgW" secondAttribute="height" id="qkO-vz-N0U"/>
                             <constraint firstItem="0dO-Lj-mge" firstAttribute="height" secondItem="CM4-Zb-J2S" secondAttribute="height" id="sRa-CC-4sP"/>
                             <constraint firstItem="WZA-rd-RgW" firstAttribute="top" secondItem="d3s-Fs-YY0" secondAttribute="bottom" id="sWS-uK-RAA"/>
-                            <constraint firstItem="AYc-L7-wie" firstAttribute="top" secondItem="0dO-Lj-mge" secondAttribute="bottom" id="yoj-0V-rNc"/>
+                            <constraint firstItem="AYc-L7-wie" firstAttribute="top" secondItem="0dO-Lj-mge" secondAttribute="bottom" constant="34" id="yoj-0V-rNc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -206,9 +206,13 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="grilled-halibut-peach-salsa" translatesAutoresizingMaskIntoConstraints="NO" id="fDb-nR-9r0">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fDb-nR-9r0" secondAttribute="height" multiplier="1:1" id="4Ln-Ij-EZd"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nn5-zK-4Q8" appends="YES" id="yqN-nS-LoE"/>
+                                        </connections>
                                     </imageView>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGd-cJ-WIH">
                                         <rect key="frame" x="117" y="16" width="204" height="71"/>
@@ -411,6 +415,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bI8-dk-GJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="nn5-zK-4Q8">
+                    <connections>
+                        <segue destination="iQM-vG-Gzd" kind="show" id="jIr-bv-kKq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1659.5" y="871.5"/>
         </scene>
@@ -481,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVO-zT-o6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2489" y="852"/>
+            <point key="canvasLocation" x="2272" y="838"/>
         </scene>
         <!--shopping list-->
         <scene sceneID="2yb-uQ-NE5">
