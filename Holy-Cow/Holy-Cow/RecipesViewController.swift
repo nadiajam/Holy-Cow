@@ -15,9 +15,18 @@ class RecipesViewController: UIViewController {
         
         //self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: "GTWalsheimProTrial-Medium"]
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "GTWalsheimProTrial-Medium", size: 25)!]
+        //self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "GTWalsheimProTrial-Medium", size: 25)!]
 
     }
     
 
+}
+
+extension UINavigationBar {
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "GTWalsheimProTrial-Medium", size: 25)!]
+    }
+    
 }
