@@ -1240,8 +1240,8 @@
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree1" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-jf-zE1">
-                                                        <rect key="frame" x="300" y="14" width="180" height="112"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree2" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-jf-zE1">
+                                                        <rect key="frame" x="315" y="14" width="150" height="112"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.31764705882352939" green="0.74509803921568629" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
@@ -1251,7 +1251,7 @@
                                                     <constraint firstItem="jFA-jf-zE1" firstAttribute="centerX" secondItem="Zdo-sk-ZCA" secondAttribute="centerX" multiplier="1.3" id="ZgL-dU-ZoR"/>
                                                     <constraint firstItem="Rv7-xZ-CcQ" firstAttribute="centerX" secondItem="Zdo-sk-ZCA" secondAttribute="centerX" multiplier="0.6" id="jSs-GD-Ymd"/>
                                                     <constraint firstItem="jFA-jf-zE1" firstAttribute="centerY" secondItem="Zdo-sk-ZCA" secondAttribute="centerY" id="mOc-3q-A2p"/>
-                                                    <constraint firstItem="jFA-jf-zE1" firstAttribute="width" secondItem="Zdo-sk-ZCA" secondAttribute="width" multiplier="0.3" id="um1-W9-jTs"/>
+                                                    <constraint firstItem="jFA-jf-zE1" firstAttribute="width" secondItem="Zdo-sk-ZCA" secondAttribute="width" multiplier="0.25" id="um1-W9-jTs"/>
                                                     <constraint firstItem="Rv7-xZ-CcQ" firstAttribute="centerY" secondItem="Zdo-sk-ZCA" secondAttribute="centerY" multiplier="0.5" id="vgW-D4-r0I"/>
                                                     <constraint firstItem="sP6-No-gbm" firstAttribute="centerY" secondItem="Zdo-sk-ZCA" secondAttribute="centerY" multiplier="1.4" id="yyp-6d-iw9"/>
                                                     <constraint firstItem="sP6-No-gbm" firstAttribute="trailing" secondItem="Rv7-xZ-CcQ" secondAttribute="trailing" id="zC8-Gw-Lxa"/>
@@ -1507,7 +1507,7 @@
         <image name="car" width="139" height="139"/>
         <image name="grain" width="75" height="78"/>
         <image name="newsfeed" width="38" height="29"/>
-        <image name="tree1" width="229" height="262"/>
+        <image name="tree2" width="229" height="262"/>
         <image name="user" width="32" height="34"/>
         <image name="users" width="47" height="34"/>
         <image name="water" width="542" height="693"/>
