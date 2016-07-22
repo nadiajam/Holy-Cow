@@ -12,7 +12,7 @@ class RecipesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor.holyGreen
         // Do any additional setup after loading the view.
     }
 
