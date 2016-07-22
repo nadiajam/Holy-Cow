@@ -1119,7 +1119,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.31764705879999999" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="J6J-hM-9X8" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" multiplier="1.2" id="4G6-5Z-PnH"/>
                                     <constraint firstItem="J6J-hM-9X8" firstAttribute="centerX" secondItem="rg5-Q1-q0f" secondAttribute="centerX" id="iSp-FC-aNH"/>
@@ -1273,7 +1273,7 @@
                                                         <rect key="frame" x="315" y="14" width="150" height="112"/>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.31764705882352939" green="0.74509803921568629" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="sP6-No-gbm" firstAttribute="width" secondItem="Zdo-sk-ZCA" secondAttribute="width" multiplier="0.3" id="8Oy-vn-VWu"/>
                                                     <constraint firstItem="jFA-jf-zE1" firstAttribute="height" secondItem="Zdo-sk-ZCA" secondAttribute="height" multiplier="0.8" id="CO2-c7-Ygf"/>
@@ -1412,7 +1412,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.31764705879999999" green="0.74509803919999995" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="1Yt-EI-K7u" firstAttribute="centerX" secondItem="Xdg-Mh-oIy" secondAttribute="centerX" id="XSZ-P8-P0c"/>
                                     <constraint firstItem="1Yt-EI-K7u" firstAttribute="centerY" secondItem="Xdg-Mh-oIy" secondAttribute="centerY" multiplier="1.2" id="bgi-C7-OgX"/>
