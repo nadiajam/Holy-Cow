@@ -327,6 +327,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="breakfast" id="ZpO-vV-1dt"/>
+                    <keyCommands/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oge-Jf-Ctx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
