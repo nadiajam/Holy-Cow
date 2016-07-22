@@ -34,15 +34,19 @@ class ProfileViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         meatNumber = CalendarController.sharedInstance.tallyOutcome()
         currentStreakLength = CalendarController.sharedInstance.currentStreakTally()
         currentLongestStreakLength = CalendarController.sharedInstance.longestStreakTally()
         futureArcValue = CalendarController.sharedInstance.getArcFraction()
+        progressArc.progressValue = futureArcValue
+        setUpLabels()
     }
     
     func setUpLabels() {
+        
         numberLabel.text = "\(Int(meatNumber))"
-        progressArc.progressValue = futureArcValue
+        
         
         //measurements = 4 oz of meat, for an average of chicken, beef, pork, turkey, and lamb
         
