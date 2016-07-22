@@ -94,7 +94,7 @@ class CalendarViewController: UIViewController {
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
-                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
+                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
                 }
             }
         }
