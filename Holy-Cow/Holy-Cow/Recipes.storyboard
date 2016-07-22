@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZA-rd-RgW" userLabel="Breakfast">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="107"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="breakfast" backgroundImage="breakfast-image">
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7E9-wo-0Pk" userLabel="Lunch">
-                                <rect key="frame" x="0.0" y="110" width="600" height="107"/>
+                                <rect key="frame" x="0.0" y="123" width="600" height="119"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="lunch" backgroundImage="lunch-image">
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM4-Zb-J2S" userLabel="Dinner">
-                                <rect key="frame" x="0.0" y="220" width="600" height="108"/>
+                                <rect key="frame" x="0.0" y="246" width="600" height="118"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="dinner" backgroundImage="dinner-image">
@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dO-Lj-mge" userLabel="Shopping List">
-                                <rect key="frame" x="0.0" y="331" width="600" height="107"/>
+                                <rect key="frame" x="0.0" y="368" width="600" height="119"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.20784313730000001" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="shopping list" backgroundImage="shopping-list">
@@ -65,23 +65,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.2" id="3W9-NP-PnT"/>
-                            <constraint firstItem="0dO-Lj-mge" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.2" id="4k1-I3-J1G"/>
-                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.2" id="7ZF-b5-Sqp"/>
+                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.222" id="3W9-NP-PnT"/>
+                            <constraint firstItem="0dO-Lj-mge" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.222" id="4k1-I3-J1G"/>
+                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.222" id="7ZF-b5-Sqp"/>
                             <constraint firstItem="0dO-Lj-mge" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="Fz4-oU-3TK"/>
                             <constraint firstItem="WZA-rd-RgW" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="IUK-Kh-gCP"/>
-                            <constraint firstItem="WZA-rd-RgW" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.2" id="NG6-Zo-GSr"/>
+                            <constraint firstItem="WZA-rd-RgW" firstAttribute="height" secondItem="3vc-ex-pbE" secondAttribute="height" multiplier="0.222" id="NG6-Zo-GSr"/>
+                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="height" secondItem="7E9-wo-0Pk" secondAttribute="height" id="Toh-tu-srx"/>
                             <constraint firstItem="7E9-wo-0Pk" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="a1h-Yo-BqL"/>
                             <constraint firstAttribute="trailing" secondItem="7E9-wo-0Pk" secondAttribute="trailing" id="dFD-xz-HdW"/>
                             <constraint firstItem="CM4-Zb-J2S" firstAttribute="leading" secondItem="3vc-ex-pbE" secondAttribute="leading" id="eFM-WT-7qT"/>
                             <constraint firstAttribute="trailing" secondItem="CM4-Zb-J2S" secondAttribute="trailing" id="faa-uX-Gpk"/>
-                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="top" secondItem="WZA-rd-RgW" secondAttribute="bottom" constant="3" id="fu7-W1-hvH"/>
+                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="top" secondItem="WZA-rd-RgW" secondAttribute="bottom" constant="4" id="fu7-W1-hvH"/>
                             <constraint firstAttribute="trailing" secondItem="WZA-rd-RgW" secondAttribute="trailing" id="je7-cO-FJP"/>
                             <constraint firstAttribute="trailing" secondItem="0dO-Lj-mge" secondAttribute="trailing" id="kwX-KX-3vK"/>
-                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="top" secondItem="7E9-wo-0Pk" secondAttribute="bottom" constant="3" id="nbr-fW-fdu"/>
-                            <constraint firstItem="0dO-Lj-mge" firstAttribute="top" secondItem="CM4-Zb-J2S" secondAttribute="bottom" constant="3" id="qc4-CN-EcJ"/>
+                            <constraint firstItem="CM4-Zb-J2S" firstAttribute="top" secondItem="7E9-wo-0Pk" secondAttribute="bottom" constant="4" id="nbr-fW-fdu"/>
+                            <constraint firstItem="0dO-Lj-mge" firstAttribute="top" secondItem="CM4-Zb-J2S" secondAttribute="bottom" constant="4" id="qc4-CN-EcJ"/>
+                            <constraint firstItem="7E9-wo-0Pk" firstAttribute="height" secondItem="WZA-rd-RgW" secondAttribute="height" id="qkO-vz-N0U"/>
+                            <constraint firstItem="0dO-Lj-mge" firstAttribute="height" secondItem="CM4-Zb-J2S" secondAttribute="height" id="sRa-CC-4sP"/>
                             <constraint firstItem="WZA-rd-RgW" firstAttribute="top" secondItem="d3s-Fs-YY0" secondAttribute="bottom" id="sWS-uK-RAA"/>
+                            <constraint firstItem="AYc-L7-wie" firstAttribute="top" secondItem="0dO-Lj-mge" secondAttribute="bottom" id="yoj-0V-rNc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NG6-Zo-GSr"/>
+                                <exclude reference="3W9-NP-PnT"/>
+                                <exclude reference="7ZF-b5-Sqp"/>
+                                <exclude reference="4k1-I3-J1G"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="recipes" id="wy1-SZ-4mN">
                         <barButtonItem key="backBarButtonItem" title=" " id="O3x-ov-0uW"/>
@@ -389,6 +401,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="oT2-T6-6eZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="30"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
