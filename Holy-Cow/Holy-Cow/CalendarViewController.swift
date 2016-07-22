@@ -94,7 +94,7 @@ class CalendarViewController: UIViewController {
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
-                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 20)
+                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
                 }
             }
         }
@@ -116,7 +116,7 @@ class CalendarViewController: UIViewController {
         for subview in daysView.subviews {
             if let dayLabel = subview as? UITextField {
                 dayLabel.textColor = UIColor.holyGrey
-                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
+                dayLabel.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 25)
             }
         }
     }

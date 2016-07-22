@@ -1433,14 +1433,23 @@
             <point key="canvasLocation" x="196.5" y="489.5"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="JWz-TT-fhd">
+        <scene sceneID="rNT-JR-Xpc">
             <objects>
-                <viewController id="RYo-wK-R9p" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="newsfeed" id="KmW-4t-6E9"/>
+                <viewController id="hau-Wd-b4f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ab-0l-clT"/>
+                        <viewControllerLayoutGuide type="bottom" id="kG0-G0-7lh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LcF-NG-mZD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="recipes" id="AfA-Ap-87u"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RGZ-vz-v0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zY-OK-95n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-1167"/>
+            <point key="canvasLocation" x="666" y="-1146"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Nh-Zv-W3h">
@@ -1461,15 +1470,24 @@
             </objects>
             <point key="canvasLocation" x="666" y="-459"/>
         </scene>
-        <!--Recipes View Controller-->
-        <scene sceneID="e3t-la-DFr">
+        <!--View Controller-->
+        <scene sceneID="5hM-Ew-v6t">
             <objects>
-                <viewController id="MYQ-SZ-fZl" customClass="RecipesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="recipes" id="MCn-AD-lWb"/>
+                <viewController id="KWh-5h-eP9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yai-6s-GMn"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcM-xX-90o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bBP-rM-ybz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="newsfeed" id="cHB-GZ-Co3"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UnA-j9-GcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Zl-QQ-fMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-1878"/>
+            <point key="canvasLocation" x="675" y="-1846"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="VVo-8T-6Mi">
@@ -1483,8 +1501,8 @@
                     <connections>
                         <segue destination="Dpb-29-SAG" kind="relationship" relationship="viewControllers" id="hN2-rd-0kX"/>
                         <segue destination="8Zp-ne-2ck" kind="relationship" relationship="viewControllers" id="QUP-uO-ng9"/>
-                        <segue destination="MYQ-SZ-fZl" kind="relationship" relationship="viewControllers" id="gmz-qh-kGm"/>
-                        <segue destination="RYo-wK-R9p" kind="relationship" relationship="viewControllers" id="QXD-BS-VCC"/>
+                        <segue destination="hau-Wd-b4f" kind="relationship" relationship="viewControllers" id="o4t-1P-0gl"/>
+                        <segue destination="KWh-5h-eP9" kind="relationship" relationship="viewControllers" id="fKE-jM-DLw"/>
                         <segue destination="skJ-r9-AB4" kind="relationship" relationship="viewControllers" id="sum-mb-FGQ"/>
                     </connections>
                 </tabBarController>
