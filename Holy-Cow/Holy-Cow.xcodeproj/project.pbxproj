@@ -108,6 +108,49 @@
 			name = InfoTabs;
 			sourceTree = "<group>";
 		};
+		4EAF31B51D42E28800EA3FEA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6AAC32311D3E484800F10964 /* Main.storyboard */,
+				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
+				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
+				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
+				6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */,
+				6A6BD6EE1D41946100C98671 /* User.swift */,
+				6A6BD6E81D4176E800C98671 /* StringExtension.swift */,
+			);
+			name = Onboarding;
+			sourceTree = "<group>";
+		};
+		4EAF31B61D42E2E500EA3FEA /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
+				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
+			);
+			name = Recipes;
+			sourceTree = "<group>";
+		};
+		4EAF31B71D42E30000EA3FEA /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				67963B3B1D405DC40050B871 /* ProfileViewController.swift */,
+				4EAF31B11D41149900EA3FEA /* ProgressArc.swift */,
+				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
+				67963B391D400D580050B871 /* CalendarController.swift */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		4EAF31B81D42E34B00EA3FEA /* MainApp */ = {
+			isa = PBXGroup;
+			children = (
+				6731B10E1D4178C5005B3951 /* TabBarViewController.swift */,
+				672E4C661D3CF862003906EF /* Calendar.storyboard */,
+			);
+			name = MainApp;
+			sourceTree = "<group>";
+		};
 		672E4CCF1D3E217F003906EF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,27 +194,16 @@
 		67EB30651D3BEE7C00C9B751 /* Holy-Cow */ = {
 			isa = PBXGroup;
 			children = (
-				67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */,
-				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
-				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
-				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
-				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
-				67963B391D400D580050B871 /* CalendarController.swift */,
-				6731B10E1D4178C5005B3951 /* TabBarViewController.swift */,
-				672E4C661D3CF862003906EF /* Calendar.storyboard */,
-				67963B3B1D405DC40050B871 /* ProfileViewController.swift */,
-				6AAC32311D3E484800F10964 /* Main.storyboard */,
-				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
-				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
-				6A6BD6EE1D41946100C98671 /* User.swift */,
-				6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */,
+				4EAF31B51D42E28800EA3FEA /* Onboarding */,
+				4EAF31B61D42E2E500EA3FEA /* Recipes */,
+				4EAF31B81D42E34B00EA3FEA /* MainApp */,
+				4EAF31B71D42E30000EA3FEA /* Calendar */,
+				4E73C62B1D3CF48F00F41471 /* InfoTabs */,
 				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
-				6A6BD6E81D4176E800C98671 /* StringExtension.swift */,
+				67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */,
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
 				67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */,
 				67EB30721D3BEE7C00C9B751 /* Info.plist */,
-				4E73C62B1D3CF48F00F41471 /* InfoTabs */,
-				4EAF31B11D41149900EA3FEA /* ProgressArc.swift */,
 			);
 			path = "Holy-Cow";
 			sourceTree = "<group>";
