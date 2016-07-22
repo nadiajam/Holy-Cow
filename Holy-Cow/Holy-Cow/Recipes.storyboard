@@ -239,7 +239,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="grilled-halibut-peach-salsa" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-TV-EnP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleHalibut" translatesAutoresizingMaskIntoConstraints="NO" id="Ajl-TV-EnP">
                                 <rect key="frame" x="0.0" y="64" width="600" height="156"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="grilled halibut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kar-gs-vEz">
@@ -378,6 +378,7 @@
         <image name="lunch-image" width="131" height="46"/>
         <image name="red-pepper-penne" width="160" height="239"/>
         <image name="shopping-list" width="132" height="47"/>
+        <image name="singleHalibut" width="422" height="183"/>
         <image name="vegetarian-pad-tha" width="160" height="240"/>
     </resources>
 </document>
