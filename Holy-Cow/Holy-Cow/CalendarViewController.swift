@@ -24,7 +24,6 @@ class CalendarViewController: UIViewController {
     
     var calendarArray = [String](count: 42, repeatedValue: "")
     var dayOfMonth:Int = 0
-//    var calendarController = CalendarController() // *********************************
     var dayOfWeek:Int = 0
     
     
@@ -57,7 +56,6 @@ class CalendarViewController: UIViewController {
         let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
         let startDateComponents = myCalendar.components(.Weekday, fromDate: startOfMonth)
         dayOfWeek = startDateComponents.weekday - 1
-        
         
         //array containing items 1 through days in current month
         var monthArray: [String] = []
@@ -100,6 +98,11 @@ class CalendarViewController: UIViewController {
                 }
             }
         }
+        
+        //sending updated data (calendarArray) and unaltered data (dayOfMonth & dayOfWeek) to calendar controller
+        CalendarController.sharedInstance.calendar = calendarArray
+        CalendarController.sharedInstance.dayToday = dayOfMonth
+        CalendarController.sharedInstance.startInterval = dayOfWeek
     }
 
 
@@ -127,8 +130,19 @@ class CalendarViewController: UIViewController {
            
                 if CalendarController.sharedInstance.outcomeArray[sender.tag] == DayOutcome.Unset {
                     CalendarController.sharedInstance.outcomeArray[sender.tag] = .Success
-                    sender.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
                     sender.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+                    if CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] == .Success {
+                        sender.setBackgroundImage(UIImage(named: "MiddleBlob"), forState: .Normal)
+                    }
+                    else if CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] != .Success {
+                        sender.setBackgroundImage(UIImage(named: "RightBlob"), forState: .Normal)
+                    }
+                    else if CalendarController.sharedInstance.outcomeArray[(sender.tag)+1] == .Success && CalendarController.sharedInstance.outcomeArray[(sender.tag)-1] != .Success {
+                        sender.setBackgroundImage(UIImage(named: "LeftBlob"), forState: .Normal)
+                    }
+                    else {
+                        sender.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
+                    }
                 }
                 else if CalendarController.sharedInstance.outcomeArray[sender.tag] == DayOutcome.Success {
                     CalendarController.sharedInstance.outcomeArray[sender.tag] = .Failure
@@ -160,37 +174,4 @@ class CalendarViewController: UIViewController {
 
     }
     
-    
-    
-    override func viewWillDisappear(animated: Bool) {
-        CalendarController.sharedInstance.calendar = calendarArray
-        CalendarController.sharedInstance.dayToday = dayOfMonth
-        CalendarController.sharedInstance.startInterval = dayOfWeek
-    }
-    
-    
-    
-    
-    
-/* *************************
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        calendarController.calendar = calendarArray
-        calendarController.dayToday = dayOfMonth
-        calendarController.startInterval = dayOfWeek
-
-        let successMeatless = calendarController.tallyOutcome()
-        let streakLength = calendarController.currentStreakTally()
-        let longestStreakLength = calendarController.longestStreakTally()
-        let arcFraction = calendarController.getArcFraction()
-        
-        let destination = segue.destinationViewController as! ProfileViewController
-
-        destination.meatNumber = successMeatless
-        destination.currentStreakLength = streakLength
-        destination.currentLongestStreakLength = longestStreakLength
-        destination.futureArcValue = arcFraction
-    }
- */
-
 }

@@ -17,7 +17,7 @@ enum DayGoal {
 }
 
 class CalendarController {
-    
+    //making class into singleton
     static let sharedInstance = CalendarController()
     
     //initializing goal and outcome arrays
@@ -61,7 +61,7 @@ class CalendarController {
     func currentStreakTally() -> Int {
 
         var streakNum = 0
-
+        print(dayToday)
         for i in (0...dayToday).reverse() where goalArray[i + startInterval - 1] == .Meatless {
             if outcomeArray[i + startInterval - 1] == .Success {
                 streakNum += 1
@@ -86,5 +86,4 @@ class CalendarController {
     func getArcFraction() -> Double {
         return Double(tallyOutcome() / tallyGoal())
     }
-    
 }

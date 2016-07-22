@@ -41,7 +41,6 @@ class ProfileViewController: UIViewController {
     }
     
     func setUpLabels() {
-        
         numberLabel.text = "\(Int(meatNumber))"
         progressArc.progressValue = futureArcValue
         
@@ -61,6 +60,5 @@ class ProfileViewController: UIViewController {
         grainsLabel.text = String(Int(grainAverage * meatNumber))
         carbonLabel.text = String(Int(carbonAverage * meatNumber))
     }
-    
-    
+
 }
