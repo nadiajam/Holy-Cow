@@ -31,7 +31,6 @@ class ProfileViewController: UIViewController {
         setUpLabels()
         
     }
-
     
     
     override func viewWillAppear(animated: Bool) {

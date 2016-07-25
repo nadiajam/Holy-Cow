@@ -157,12 +157,12 @@
 				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
 				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
 				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
+				6AAC32311D3E484800F10964 /* Main.storyboard */,
 				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
 				67963B391D400D580050B871 /* CalendarController.swift */,
 				6731B10E1D4178C5005B3951 /* TabBarViewController.swift */,
 				672E4C661D3CF862003906EF /* Calendar.storyboard */,
 				67963B3B1D405DC40050B871 /* ProfileViewController.swift */,
-				6AAC32311D3E484800F10964 /* Main.storyboard */,
 				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
 				6A6BD6F21D4271F600C98671 /* NewRecipesViewController.swift */,
 				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
@@ -211,7 +211,7 @@
 				TargetAttributes = {
 					67EB30621D3BEE7C00C9B751 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = A3VZR3SRTH;
+						DevelopmentTeam = UGZ3JL9C3M;
 					};
 				};
 			};
@@ -402,7 +402,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Holy-Cow/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enriquepajuelo.Holy-Cow";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadiajamrozik.iXplores;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -416,7 +416,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Holy-Cow/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.enriquepajuelo.Holy-Cow";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nadiajamrozik.iXplores;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

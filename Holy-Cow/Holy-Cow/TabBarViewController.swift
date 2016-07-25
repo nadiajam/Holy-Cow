@@ -13,8 +13,20 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-
+        
+        //setting index 1 as the loaded view controller
         self.selectedIndex = 1
+        
+        //changing background image of tab when selected
+        var tabBar = self.tabBar
+//        var selectedProfileImage = UIImage(named: "")
+        (tabBar.items![0]).selectedImage = UIImage(named: "userWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+        (tabBar.items![1]).selectedImage = UIImage(named: "UserWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+        (tabBar.items![2]).selectedImage = UIImage(named: "forkWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+        (tabBar.items![3]).selectedImage = UIImage(named: "UserWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+        (tabBar.items![4]).selectedImage = UIImage(named: "usersWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        tabBar.tintColor = UIColor.holyBlue
 
     }
     
@@ -25,4 +37,6 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
         tabFrame.origin.y = self.view.frame.size.height - 80
         self.tabBar.frame = tabFrame
     }
+    
+    
 }
