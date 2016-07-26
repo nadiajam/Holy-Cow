@@ -14,14 +14,4 @@ class RecipesViewController: UIViewController {
         super.viewDidLoad()
     }
     
-
-}
-
-extension UINavigationBar {
-    
-    public override func awakeFromNib() {
-        super.awakeFromNib()
-        titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont(name: "GTWalsheimProTrial-Medium", size: 25)!]
-    }
-    
 }

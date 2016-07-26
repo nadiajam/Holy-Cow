@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var gallonNumberLabel: UILabel!
     @IBOutlet weak var forestAreaLabel: UILabel!
@@ -29,9 +30,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         scrollView.contentSize = CGSizeMake(scrollView.frame.width, 2000)
         setUpLabels()
-        
     }
-    
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

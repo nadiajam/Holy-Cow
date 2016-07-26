@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w0m-No-VMw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="GT-Walsheim-Pro-Trial-Medium.otf">
+            <string>GTWalsheimProTrial-Medium</string>
+            <string>GTWalsheimProTrial-Medium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AgT-iL-Lf9">
+            <objects>
+                <navigationController id="w0m-No-VMw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="okK-ZU-cFo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WY1-Qd-sZN" kind="relationship" relationship="rootViewController" id="DoT-Th-1od"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9X2-td-OxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="263" y="441"/>
+        </scene>
+        <!--friends-->
+        <scene sceneID="WDM-If-JBd">
+            <objects>
+                <viewController id="WY1-Qd-sZN" customClass="FriendsViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rUA-D9-tqy"/>
+                        <viewControllerLayoutGuide type="bottom" id="t7K-rl-6WQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eZA-yr-Jd5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see how your family and friends are doing and high five them for their progress." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIp-q3-JPw">
+                                <rect key="frame" x="120" y="104" width="360" height="90"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaA-q7-Lb7">
+                                <rect key="frame" x="210" y="436" width="180" height="64"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.33725490200000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="OTQ-6Q-9FS"/>
+                                    <constraint firstAttribute="height" constant="64" id="Zsm-ov-T1O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="24"/>
+                                <state key="normal" title="invite friends">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plusbutton" translatesAutoresizingMaskIntoConstraints="NO" id="we1-o3-iNL">
+                                <rect key="frame" x="268" y="234" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="cHL-XE-63v"/>
+                                    <constraint firstAttribute="height" constant="64" id="k1d-FQ-oXo"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lIp-q3-JPw" firstAttribute="width" secondItem="eZA-yr-Jd5" secondAttribute="width" multiplier="0.6" id="Fga-vF-xxl"/>
+                            <constraint firstItem="TaA-q7-Lb7" firstAttribute="centerX" secondItem="eZA-yr-Jd5" secondAttribute="centerX" id="Jar-qZ-WTS"/>
+                            <constraint firstItem="lIp-q3-JPw" firstAttribute="top" secondItem="rUA-D9-tqy" secondAttribute="bottom" constant="40" id="dPm-46-jjS"/>
+                            <constraint firstItem="we1-o3-iNL" firstAttribute="top" secondItem="lIp-q3-JPw" secondAttribute="bottom" constant="40" id="hbc-Un-ruo"/>
+                            <constraint firstItem="t7K-rl-6WQ" firstAttribute="top" secondItem="TaA-q7-Lb7" secondAttribute="bottom" constant="100" id="jXL-mR-cen"/>
+                            <constraint firstItem="lIp-q3-JPw" firstAttribute="centerX" secondItem="eZA-yr-Jd5" secondAttribute="centerX" id="sQS-gt-W74"/>
+                            <constraint firstItem="we1-o3-iNL" firstAttribute="centerX" secondItem="eZA-yr-Jd5" secondAttribute="centerX" id="yUd-Ws-NCw"/>
+                            <constraint firstItem="lIp-q3-JPw" firstAttribute="height" secondItem="eZA-yr-Jd5" secondAttribute="height" multiplier="0.15" id="zSM-GR-zkD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="friends" id="BEx-W2-52b"/>
+                    <connections>
+                        <outlet property="inviteFriendsButton" destination="TaA-q7-Lb7" id="Ug2-l5-xhK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0b-bh-fVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="981" y="446"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plusbutton" width="143" height="143"/>
+    </resources>
+</document>

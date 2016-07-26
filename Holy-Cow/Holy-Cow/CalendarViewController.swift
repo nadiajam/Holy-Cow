@@ -72,7 +72,7 @@ class CalendarViewController: UIViewController {
                 calendarCell.backgroundColor = UIColor.whiteColor()
                 button.setTitle("\(calendarArray[button.tag])", forState: .Normal)
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
-                button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
+                button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
                 
                 //improve runtime??? INCREMENTING INDEX
                 if case .Meatless = CalendarController.sharedInstance.goalArray[button.tag] {
@@ -94,7 +94,7 @@ class CalendarViewController: UIViewController {
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
                     button.setTitleColor(UIColor.holyBlue, forState: .Normal)
-                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 15)
+                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
                 }
             }
         }
