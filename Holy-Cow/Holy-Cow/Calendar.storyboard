@@ -59,7 +59,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Calendar-->
+        <!--Title-->
         <scene sceneID="NjD-CV-mhm">
             <objects>
                 <viewController storyboardIdentifier="UserCalendar" id="8Zp-ne-2ck" customClass="CalendarViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,21 +72,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-kW-jga" userLabel="CalendarLine">
-                                <rect key="frame" x="0.0" y="60" width="600" height="3"/>
+                                <rect key="frame" x="0.0" y="49" width="600" height="3"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="3" id="0AF-bH-xeZ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="062-kQ-eRb" userLabel="MonthLine">
-                                <rect key="frame" x="0.0" y="105" width="600" height="2"/>
+                                <rect key="frame" x="0.0" y="94" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Jmn-2Q-buL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmu-sd-bJg" userLabel="Days">
-                                <rect key="frame" x="30" y="107" width="540" height="54"/>
+                                <rect key="frame" x="30" y="96" width="540" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="m" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-3w-q40">
                                         <rect key="frame" x="77" y="0.0" width="77" height="54"/>
@@ -164,7 +164,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-lw-naP" userLabel="CalendarBoard">
-                                <rect key="frame" x="30" y="181" width="540" height="300"/>
+                                <rect key="frame" x="30" y="170" width="540" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-QM-qSK" userLabel="0">
                                         <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
@@ -1137,39 +1137,38 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPs-vJ-YaC">
-                                <rect key="frame" x="0.0" y="63" width="600" height="42"/>
+                                <rect key="frame" x="0.0" y="52" width="600" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg5-Q1-q0f">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6J-hM-9X8">
-                                        <rect key="frame" x="249" y="21" width="102" height="31"/>
+                                        <rect key="frame" x="249" y="14" width="102" height="31"/>
                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3F-io-xDb">
+                                        <rect key="frame" x="516" y="15" width="24" height="19"/>
+                                        <state key="normal" title="Button" image="plusbutton"/>
+                                        <connections>
+                                            <segue destination="YhI-4b-MGN" kind="presentation" id="SxC-Vc-mWj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="J6J-hM-9X8" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" multiplier="1.2" id="4G6-5Z-PnH"/>
+                                    <constraint firstItem="v3F-io-xDb" firstAttribute="width" secondItem="rg5-Q1-q0f" secondAttribute="width" multiplier="0.04" id="SQQ-Db-g7S"/>
+                                    <constraint firstItem="v3F-io-xDb" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" id="hHQ-6R-eSB"/>
                                     <constraint firstItem="J6J-hM-9X8" firstAttribute="centerX" secondItem="rg5-Q1-q0f" secondAttribute="centerX" id="iSp-FC-aNH"/>
+                                    <constraint firstAttribute="trailing" secondItem="v3F-io-xDb" secondAttribute="trailing" constant="60" id="peD-hY-YHN"/>
+                                    <constraint firstItem="v3F-io-xDb" firstAttribute="height" secondItem="rg5-Q1-q0f" secondAttribute="height" multiplier="0.4" id="txg-fr-Ajk"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yI-gg-ynN">
-                                <rect key="frame" x="275" y="491" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.33725490200000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="2MH-VR-7bQ"/>
-                                    <constraint firstAttribute="height" constant="50" id="gob-TK-HSM"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="shower"/>
-                                <connections>
-                                    <segue destination="YhI-4b-MGN" kind="presentation" id="Y6Z-OQ-lKn"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1178,13 +1177,13 @@
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="top" secondItem="062-kQ-eRb" secondAttribute="bottom" id="5Xq-bC-8q5"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="centerX" secondItem="BnX-Nr-IQ9" secondAttribute="centerX" id="7MO-Q3-3cF"/>
                             <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="rg5-Q1-q0f" secondAttribute="bottom" id="BZK-7R-hqH"/>
+                            <constraint firstItem="rg5-Q1-q0f" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.082" id="EbU-8O-fey"/>
                             <constraint firstItem="WPs-vJ-YaC" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.07" id="IDn-h3-4pU"/>
                             <constraint firstItem="rg5-Q1-q0f" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="IvX-gG-asm"/>
                             <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="ffZ-NB-agO" secondAttribute="bottom" id="JC0-Ym-pqW"/>
                             <constraint firstAttribute="trailing" secondItem="062-kQ-eRb" secondAttribute="trailing" id="QEE-RS-BdE"/>
                             <constraint firstAttribute="trailing" secondItem="bCf-kW-jga" secondAttribute="trailing" id="SvO-Bp-j2A"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.5" id="TFc-1n-Hdq"/>
-                            <constraint firstItem="3yI-gg-ynN" firstAttribute="top" secondItem="Ldy-lw-naP" secondAttribute="bottom" constant="10" id="Usl-Up-hBx"/>
                             <constraint firstAttribute="trailing" secondItem="WPs-vJ-YaC" secondAttribute="trailing" id="VGx-Oq-U7m"/>
                             <constraint firstItem="rg5-Q1-q0f" firstAttribute="top" secondItem="BnX-Nr-IQ9" secondAttribute="top" id="b00-Dv-NyQ"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="centerX" secondItem="BnX-Nr-IQ9" secondAttribute="centerX" id="bbg-ua-Pj5"/>
@@ -1193,10 +1192,8 @@
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" multiplier="0.9" id="joO-g5-Kxv"/>
                             <constraint firstItem="WPs-vJ-YaC" firstAttribute="top" secondItem="bCf-kW-jga" secondAttribute="bottom" id="jsn-po-yqW"/>
                             <constraint firstItem="062-kQ-eRb" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="kLZ-NB-XlS"/>
-                            <constraint firstItem="3yI-gg-ynN" firstAttribute="centerX" secondItem="BnX-Nr-IQ9" secondAttribute="centerX" id="oGj-JA-gWS"/>
                             <constraint firstAttribute="trailing" secondItem="rg5-Q1-q0f" secondAttribute="trailing" id="pjb-xa-qO3"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.09" id="pqH-by-tMc"/>
-                            <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="ffZ-NB-agO" secondAttribute="bottom" multiplier="3" id="s0e-Gs-ZHu"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" multiplier="0.9" id="sla-dX-dbD"/>
                             <constraint firstItem="rg5-Q1-q0f" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" id="uWY-a5-RAY"/>
                         </constraints>
@@ -1207,7 +1204,11 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calendar" id="Ihx-hd-by0"/>
-                    <navigationItem key="navigationItem" title="Calendar" id="h4c-LD-RaY"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="FDj-u0-dTh"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="Uji-KZ-9TT"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarBoard" destination="Ldy-lw-naP" id="GQD-Fx-xfL"/>
                         <outlet property="calendarViewLabel" destination="Ldy-lw-naP" id="98D-3C-Hew"/>
@@ -1969,7 +1970,7 @@
         <image name="fork" width="21" height="45"/>
         <image name="grain" width="75" height="78"/>
         <image name="newsfeed" width="38" height="29"/>
-        <image name="shower" width="568" height="908"/>
+        <image name="plusbutton" width="143" height="143"/>
         <image name="tree2" width="229" height="262"/>
         <image name="user" width="32" height="34"/>
         <image name="users" width="47" height="34"/>

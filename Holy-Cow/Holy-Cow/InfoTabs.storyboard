@@ -660,7 +660,6 @@
                                 <rect key="frame" x="270" y="191" width="270" height="98"/>
                                 <state key="normal" image="FinalCheckerboard"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="lij-yK-hrS"/>
                                     <segue destination="gJV-L6-VcH" kind="presentation" id="Tjn-SW-5ZL"/>
                                 </connections>
                             </button>
@@ -668,7 +667,6 @@
                                 <rect key="frame" x="270" y="296" width="270" height="98"/>
                                 <state key="normal" image="FinalWeekendCarnivore"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="6Tr-eD-ZFh"/>
                                     <segue destination="gJV-L6-VcH" kind="presentation" id="EA8-K0-FHv"/>
                                 </connections>
                             </button>
@@ -676,7 +674,6 @@
                                 <rect key="frame" x="270" y="401" width="270" height="98"/>
                                 <state key="normal" image="FinalMeatlessMonth"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="bqd-Ef-6lW"/>
                                     <segue destination="gJV-L6-VcH" kind="presentation" id="tQH-4X-Lbh"/>
                                 </connections>
                             </button>
@@ -690,7 +687,6 @@
                                 <rect key="frame" x="270" y="86" width="270" height="98"/>
                                 <state key="normal" image="FinalMeatlessMonday"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Sa5-lY-QW3" eventType="touchUpInside" id="eG9-Jg-4XI"/>
                                     <segue destination="gJV-L6-VcH" kind="presentation" id="f96-jK-yHC"/>
                                 </connections>
                             </button>
