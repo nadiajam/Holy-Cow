@@ -107,15 +107,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E73C62B1D3CF48F00F41471 /* InfoTabs */ = {
-			isa = PBXGroup;
-			children = (
-				4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */,
-				4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */,
-			);
-			name = InfoTabs;
-			sourceTree = "<group>";
-		};
 		672E4CCF1D3E217F003906EF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +130,62 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		67462EED1D53318300FF585E /* Tab Screens */ = {
+			isa = PBXGroup;
+			children = (
+				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
+				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
+				672E4C661D3CF862003906EF /* Calendar.storyboard */,
+				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
+				671703151D47555700F2A250 /* Friends.storyboard */,
+				671703171D47589400F2A250 /* FriendsViewController.swift */,
+				67963B3B1D405DC40050B871 /* ProfileViewController.swift */,
+				4EAF31B11D41149900EA3FEA /* ProgressArc.swift */,
+				6731B10E1D4178C5005B3951 /* TabBarViewController.swift */,
+			);
+			name = "Tab Screens";
+			sourceTree = "<group>";
+		};
+		67462EEE1D53327D00FF585E /* Login/Register Screens */ = {
+			isa = PBXGroup;
+			children = (
+				6AAC32311D3E484800F10964 /* Main.storyboard */,
+				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
+				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
+				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
+				6A6BD6E81D4176E800C98671 /* StringExtension.swift */,
+				4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */,
+				4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */,
+			);
+			name = "Login/Register Screens";
+			sourceTree = "<group>";
+		};
+		67462EEF1D5332CE00FF585E /* Customized UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				671703101D474F7A00F2A250 /* FoodTableViewCell.xib */,
+				6717030F1D474F7A00F2A250 /* FoodTableViewCell.swift */,
+			);
+			name = "Customized UI Elements";
+			sourceTree = "<group>";
+		};
+		67462EF01D53344600FF585E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A6BD6EE1D41946100C98671 /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		67462EF21D53346100FF585E /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67963B391D400D580050B871 /* CalendarController.swift */,
+				6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
 		67EB305A1D3BEE7C00C9B751 = {
 			isa = PBXGroup;
 			children = (
@@ -160,30 +207,15 @@
 			isa = PBXGroup;
 			children = (
 				67EB30661D3BEE7C00C9B751 /* AppDelegate.swift */,
-				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
-				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
-				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
-				6AAC32311D3E484800F10964 /* Main.storyboard */,
-				672E4C681D3CF8ED003906EF /* CalendarViewController.swift */,
-				67963B391D400D580050B871 /* CalendarController.swift */,
-				6731B10E1D4178C5005B3951 /* TabBarViewController.swift */,
-				672E4C661D3CF862003906EF /* Calendar.storyboard */,
-				67963B3B1D405DC40050B871 /* ProfileViewController.swift */,
-				672E4C8B1D3D6B9D003906EF /* Recipes.storyboard */,
-				671703151D47555700F2A250 /* Friends.storyboard */,
-				671703171D47589400F2A250 /* FriendsViewController.swift */,
-				67963B331D3F8A290050B871 /* RecipesViewController.swift */,
-				6717030F1D474F7A00F2A250 /* FoodTableViewCell.swift */,
-				671703101D474F7A00F2A250 /* FoodTableViewCell.xib */,
-				6A6BD6EE1D41946100C98671 /* User.swift */,
-				6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */,
-				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
-				6A6BD6E81D4176E800C98671 /* StringExtension.swift */,
+				67462EF01D53344600FF585E /* Model */,
+				67462EF21D53346100FF585E /* Model Controller */,
+				67462EEE1D53327D00FF585E /* Login/Register Screens */,
+				67462EED1D53318300FF585E /* Tab Screens */,
+				67462EEF1D5332CE00FF585E /* Customized UI Elements */,
 				67EB306D1D3BEE7C00C9B751 /* Assets.xcassets */,
+				678078CA1D3C4F4500DF3A6A /* Colors.swift */,
 				67EB306F1D3BEE7C00C9B751 /* LaunchScreen.storyboard */,
 				67EB30721D3BEE7C00C9B751 /* Info.plist */,
-				4E73C62B1D3CF48F00F41471 /* InfoTabs */,
-				4EAF31B11D41149900EA3FEA /* ProgressArc.swift */,
 			);
 			path = "Holy-Cow";
 			sourceTree = "<group>";
