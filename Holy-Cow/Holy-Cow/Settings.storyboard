@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XRa-Ml-gbq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="ukS-Nh-A41">
+            <objects>
+                <viewController id="XRa-Ml-gbq" customClass="SettingsViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7UG-Ej-Pj9"/>
+                        <viewControllerLayoutGuide type="bottom" id="hjJ-6z-7K2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBZ-pX-dl5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hom-Kf-gZ4">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="bid-mq-o7W"/>
+                                    <constraint firstAttribute="height" constant="30" id="wt7-MW-qW0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Jb3-nC-aru" kind="show" id="Ea3-dG-uhC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hom-Kf-gZ4" firstAttribute="centerX" secondItem="wBZ-pX-dl5" secondAttribute="centerX" id="Kht-B4-agl"/>
+                            <constraint firstItem="Hom-Kf-gZ4" firstAttribute="centerY" secondItem="wBZ-pX-dl5" secondAttribute="centerY" id="SCf-QC-rsL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvq-De-fN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="639"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="GhC-LH-MDG">
+            <objects>
+                <viewController id="Jb3-nC-aru" customClass="SettingsViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZb-nW-gny"/>
+                        <viewControllerLayoutGuide type="bottom" id="aiq-yD-Xch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XKq-9s-XTV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
+                                <rect key="frame" x="236" y="220" width="128" height="30"/>
+                                <state key="normal" title="Meatless Mondays"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="4Jh-hG-GiD"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="XAw-Iu-jld"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
+                                <rect key="frame" x="252" y="300" width="97" height="30"/>
+                                <state key="normal" title="Checkerboard"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="frh-MZ-CNh"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
+                                <rect key="frame" x="233" y="380" width="134" height="30"/>
+                                <state key="normal" title="Weekend Carnivore"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="A8g-xP-HpR"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="1ML-Fa-qPu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
+                                <rect key="frame" x="245" y="460" width="110" height="30"/>
+                                <state key="normal" title="Meatless Month"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="Syf-h1-cGb"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="12h-RD-BbU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="top" secondItem="uZb-nW-gny" secondAttribute="bottom" constant="200" id="19M-eJ-XFT"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="OEv-wR-pPl"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Wdr-hy-jRN"/>
+                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Zof-rL-c8L"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="top" secondItem="emG-EO-HgK" secondAttribute="bottom" constant="50" id="dFu-w7-CsD"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="dWr-qm-ETZ"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="top" secondItem="w0q-EZ-LF5" secondAttribute="bottom" constant="50" id="lUM-EF-azq"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="50" id="yzp-Fy-jRP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8h-kO-nks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="639"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="o4h-1J-P0L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calendar" id="UaM-0j-qTm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ve3-2F-evh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViP-Cn-tec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560.5" y="617"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hhC-6B-mRU"/>
+    </inferredMetricsTieBreakers>
+</document>

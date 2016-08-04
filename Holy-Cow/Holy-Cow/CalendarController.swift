@@ -29,6 +29,8 @@ class CalendarController {
     
     //set plan here 
     func populate(challenge: [Int]) {
+        //reclearing the dataArray to avoid repeats
+        self.dataArray = [(goal: DayGoal, outcome: DayOutcome)](count: 42, repeatedValue: (goal: .Meat, outcome: .Unset))
         for item in challenge {
             dataArray[item].goal = .Meatless
         }
