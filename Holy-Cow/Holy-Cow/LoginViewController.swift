@@ -30,28 +30,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //email and password verification
     @IBAction func signInButtonTapped(sender: UIButton) {
-        if emailField.text!.isValidEmail() == false {
-            let errorAlert = UIAlertController(title: "Error", message: "User email not found", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
-        } else if passwordField.text!.characters.count < 6 {
-            let errorAlert = UIAlertController(title: "Error", message: "The password does not match the user email", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
-        } else {
-            let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-            let viewController = storyboard.instantiateInitialViewController()
-            let application = UIApplication.sharedApplication()
-            let window = application.keyWindow
-            window?.rootViewController = viewController
+
+        let onCompletion = {(user: User?, message: String?) in
+            print("inside login method")
             
-            //dismissing keyboard - returning veiw to normal bounds
-            dismissKeyboard()
-            textFieldDidEndEditing(passwordField)
-            textFieldDidEndEditing(emailField)
+            if user == nil {
+                let errorAlert = UIAlertController(title: "Error", message: "not a user", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default)  { (action: UIAlertAction) in }
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+            }
+            else {
+                let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
+                let window = UIApplication.sharedApplication().keyWindow
+                window?.rootViewController = viewController
+                
+                //dismissing keyboard - returning veiw to normal bounds
+                self.dismissKeyboard()
+                self.textFieldDidEndEditing(self.passwordField)
+                self.textFieldDidEndEditing(self.emailField)
+            }
         }
+        
+        UserController.sharedInstance.login(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+        
     }
     
     override func viewDidLoad() {
@@ -82,6 +84,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //keyboard removal by touching on screen
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
+
     }
     
     

@@ -45,7 +45,7 @@
 		6A46F7A51D3CE47600A2C258 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */; };
 		6A6BD6E91D4176E800C98671 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6E81D4176E800C98671 /* StringExtension.swift */; };
 		6A6BD6EF1D41946100C98671 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6EE1D41946100C98671 /* User.swift */; };
-		6A6BD6F11D41AB0E00C98671 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */; };
+		6A6BD6F11D41AB0E00C98671 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6F01D41AB0E00C98671 /* UserController.swift */; };
 		6AAC32301D3E371600F10964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC322F1D3E371600F10964 /* LoginViewController.swift */; };
 		6AAC32331D3E484800F10964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAC32311D3E484800F10964 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -91,7 +91,7 @@
 		6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A6BD6E81D4176E800C98671 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		6A6BD6EE1D41946100C98671 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		6A6BD6F01D41AB0E00C98671 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		6AAC322F1D3E371600F10964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6AAC32321D3E484800F10964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				67963B391D400D580050B871 /* CalendarController.swift */,
-				6A6BD6F01D41AB0E00C98671 /* UserViewController.swift */,
+				6A6BD6F01D41AB0E00C98671 /* UserController.swift */,
 			);
 			name = "Model Controller";
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				678078CB1D3C4F4500DF3A6A /* Colors.swift in Sources */,
 				67EB30691D3BEE7C00C9B751 /* ViewController.swift in Sources */,
 				671703111D474F7A00F2A250 /* FoodTableViewCell.swift in Sources */,
-				6A6BD6F11D41AB0E00C98671 /* UserViewController.swift in Sources */,
+				6A6BD6F11D41AB0E00C98671 /* UserController.swift in Sources */,
 				67EB30671D3BEE7C00C9B751 /* AppDelegate.swift in Sources */,
 				6AAC32301D3E371600F10964 /* LoginViewController.swift in Sources */,
 				6A6BD6E91D4176E800C98671 /* StringExtension.swift in Sources */,

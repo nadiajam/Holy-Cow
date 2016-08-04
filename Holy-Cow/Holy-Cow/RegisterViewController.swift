@@ -25,31 +25,42 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
         
-        if emailField.text!.isValidEmail() == false {
-            let errorAlert = UIAlertController(title: "Error", message: "Email is not valid", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
+        let onCompletion = {(user: User?, message: String?) in
+            print("inside register method")
             
-        } else if passwordField.text!.characters.count < 6 {
-            let errorAlert = UIAlertController(title: "Error", message: "Password must be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
-            
-        } else {
-            let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
-            let viewController = storyboard.instantiateInitialViewController()
-            let application = UIApplication.sharedApplication()
-            let window = application.keyWindow
-            window?.rootViewController = viewController
-            
-            //dismissing keyboard - returning veiw to normal bounds
-            dismissKeyboard()
-            textFieldDidEndEditing(passwordField)
-            textFieldDidEndEditing(emailField)
+            if user == nil {
+                let errorAlert = UIAlertController(title: "Error", message: "not a user", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default)  { (action: UIAlertAction) in }
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+            }
+            else if self.emailField.text!.isValidEmail() == false {
+                let errorAlert = UIAlertController(title: "Error", message: "Email is not valid", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+                
+            }
+            else if self.passwordField.text!.characters.count < 6 {
+                let errorAlert = UIAlertController(title: "Error", message: "Password must be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+            }
+            else {
+                let viewController = UIStoryboard(name: "InfoTabs", bundle: nil).instantiateInitialViewController()
+                let window = UIApplication.sharedApplication().keyWindow
+                window?.rootViewController = viewController
+                
+                //dismissing keyboard - returning veiw to normal bounds
+                self.dismissKeyboard()
+                self.textFieldDidEndEditing(self.passwordField)
+                self.textFieldDidEndEditing(self.emailField)
+            }
         }
-        
+
+        UserController.sharedInstance.register(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+     
     }
     
     @IBAction func closeButtonTapped(sender: AnyObject) {
@@ -83,6 +94,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
+    
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {

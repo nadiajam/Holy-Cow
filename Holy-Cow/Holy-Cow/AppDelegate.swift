@@ -12,10 +12,22 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let email = defaults.stringForKey("email"), password = defaults.stringForKey("password") {
+            UserController.sharedInstance.login(email, password: password, onCompletion: { (user, error) in
+                if user != nil {
+                    let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
+                    self.window?.rootViewController = viewController
+                }
+                else {
+                    let viewController = UIStoryboard (name: "Main", bundle: nil).instantiateInitialViewController()
+                    self.window?.rootViewController = viewController
+                }
+            })
+        }
+        
         return true
     }
 

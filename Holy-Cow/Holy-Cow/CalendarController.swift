@@ -57,7 +57,6 @@ class CalendarController {
     
     
     func currentStreakTally() -> Int {
-
         var streakNum = 0
         for i in (0...dayToday).reverse() where dataArray[i + startInterval - 1].goal == .Meatless {
             if dataArray[i + startInterval - 1].outcome == .Success {
