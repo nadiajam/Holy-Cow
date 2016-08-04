@@ -19,11 +19,11 @@ class TabBarViewController: UITabBarController {
         //changing background image of tab when selected
         let tabBar = self.tabBar
 //        var selectedProfileImage = UIImage(named: "")
-        (tabBar.items![0]).selectedImage = UIImage(named: "userWhite")?.imageWithRenderingMode(.AlwaysOriginal)
-        (tabBar.items![1]).selectedImage = UIImage(named: "UserWhite")?.imageWithRenderingMode(.AlwaysOriginal)
-        (tabBar.items![2]).selectedImage = UIImage(named: "forkWhite")?.imageWithRenderingMode(.AlwaysOriginal)
-        (tabBar.items![3]).selectedImage = UIImage(named: "UserWhite")?.imageWithRenderingMode(.AlwaysOriginal)
-        (tabBar.items![4]).selectedImage = UIImage(named: "usersWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+//        (tabBar.items![0]).selectedImage = UIImage(named: "userWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+//        (tabBar.items![1]).selectedImage = UIImage(named: "UserWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+//        (tabBar.items![2]).selectedImage = UIImage(named: "forkWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+//        (tabBar.items![3]).selectedImage = UIImage(named: "UserWhite")?.imageWithRenderingMode(.AlwaysOriginal)
+//        (tabBar.items![4]).selectedImage = UIImage(named: "usersWhite")?.imageWithRenderingMode(.AlwaysOriginal)
         
         tabBar.tintColor = UIColor.holyBlue
 

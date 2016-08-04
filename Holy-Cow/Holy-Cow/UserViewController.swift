@@ -22,7 +22,7 @@ class UserController: NSObject {
         
         for user in userList {
             if user.email == email {
-                
+                print("you are already a user")
             }
         }
 
@@ -31,7 +31,7 @@ class UserController: NSObject {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(email, forKey: "email")
         defaults.setObject(password, forKey: "password")
-        NSUserDefaults.standardUserDefaults().synchronize()
+//        NSUserDefaults.standardUserDefaults().synchronize()
         
     }
     

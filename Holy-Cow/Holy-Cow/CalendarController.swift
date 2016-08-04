@@ -20,9 +20,8 @@ class CalendarController {
     //making class into singleton
     static let sharedInstance = CalendarController()
     
-    //initializing goal and outcome arrays
-    var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
-    var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
+    var dataArray = [(goal: DayGoal, outcome: DayOutcome)](count: 42, repeatedValue: (goal: .Meat, outcome: .Unset))
+    
     var longestStreak = 0
     var calendar: [String] = []
     var dayToday: Int = 0
@@ -31,26 +30,25 @@ class CalendarController {
     //set plan here 
     func populate(challenge: [Int]) {
         for item in challenge {
-            goalArray[item] = .Meatless
-        }  
+            dataArray[item].goal = .Meatless
+        }
     }
     
     //tally how many days with goal of meatless in array
     func tallyGoal() -> Double {
         var goalNum: Double = 0.0
         for day in calendar {
-            if (day != "") && (goalArray[calendar.indexOf(day)!] == .Meatless) {
+            if (day != "") && (dataArray[calendar.indexOf(day)!].goal == .Meatless) {
                 goalNum += 1.0
             }
-            
         }
         return goalNum
     }
     
     func tallyOutcome() -> Double {
         var outcomeNum: Double = 0.0
-        for item in outcomeArray {
-            if item == .Success {
+        for item in dataArray {
+            if item.outcome == .Success {
                 outcomeNum += 1
             }
         }
@@ -61,8 +59,8 @@ class CalendarController {
     func currentStreakTally() -> Int {
 
         var streakNum = 0
-        for i in (0...dayToday).reverse() where goalArray[i + startInterval - 1] == .Meatless {
-            if outcomeArray[i + startInterval - 1] == .Success {
+        for i in (0...dayToday).reverse() where dataArray[i + startInterval - 1].goal == .Meatless {
+            if dataArray[i + startInterval - 1].outcome == .Success {
                 streakNum += 1
             } else {
                 break
