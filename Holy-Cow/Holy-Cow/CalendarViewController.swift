@@ -82,12 +82,10 @@ class CalendarViewController: UIViewController {
                 
                 //past day saved data
                 if case .Success = CalendarController.sharedInstance.dataArray[button.tag].outcome {
-//                    button.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
                     updateBlob(for: button.tag)
                 }
                 
                 if case .Failure = CalendarController.sharedInstance.dataArray[button.tag].outcome {
-//                    button.setBackgroundImage(UIImage(named: "RedFilled"), forState: .Normal)
                     updateBlob(for: button.tag)
                 }
                 
@@ -106,8 +104,8 @@ class CalendarViewController: UIViewController {
                 
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
-                    button.setTitleColor(UIColor.holyBlue, forState: .Normal)
-                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
+                    button.setTitleColor(UIColor.yellowColor(), forState: .Normal)
+                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18)
                 }
             }
         }
@@ -139,18 +137,18 @@ class CalendarViewController: UIViewController {
         
         // if days is in the past
         if sender.tag <= dayOfMonth + (dayOfWeek - 1) {
-            
-            // if it is set as meatless (goal)
+            // if meat day
             if CalendarController.sharedInstance.dataArray[sender.tag].goal  != .Meatless { return }
-            // if unset, set to Success (...)
+            // unset -> success
             if CalendarController.sharedInstance.dataArray[sender.tag].outcome != .Success {
                 CalendarController.sharedInstance.dataArray[sender.tag].outcome = .Success
-            } else {
+            }
+            // sucess -> failure
+            else {
                 CalendarController.sharedInstance.dataArray[sender.tag].outcome = .Failure
             }
-            
         }
-        
+            
         // if day is in the future
         else {
             if CalendarController.sharedInstance.dataArray[sender.tag].goal == .Meat {
@@ -174,6 +172,7 @@ class CalendarViewController: UIViewController {
         
         if senderTag < 0 || senderTag >= calendarArray.count { return }
         if calendarArray[senderTag].isEmpty { return }
+        
         
         guard let sender = calendarBoard.viewWithTag(senderTag) as? UIButton else { return }
         
@@ -215,6 +214,11 @@ class CalendarViewController: UIViewController {
         else {
             sender.setTitleColor(.whiteColor(), forState: .Normal)
             sender.setBackgroundImage(UIImage(named: "MiddleBlob"), forState: .Normal)
+        }
+        
+        // if current day
+        if senderTag ==  dayOfMonth + (dayOfWeek - 1) {
+            sender.setTitleColor(UIColor.yellowColor(), forState: .Normal)
         }
     }
 

@@ -38,6 +38,11 @@ class CalendarController {
     //set plan here 
     func populate(challenge: [Int]) {
         
+        dataArray = []
+        for _ in 0...41{
+            dataArray.append(CalendarDate(goal: .Meat, outcome: .Unset))
+        }
+        
         for number in (0...dataArray.count-1) {
             for day in challenge {
                 if number == day {
