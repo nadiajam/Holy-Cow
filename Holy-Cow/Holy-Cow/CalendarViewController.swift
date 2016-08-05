@@ -74,10 +74,23 @@ class CalendarViewController: UIViewController {
                 button.setTitleColor(UIColor.holyBlack, forState: .Normal)
                 button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
                 
-                //improve runtime??? INCREMENTING INDEX
+                //future day saved data
                 if case .Meatless = CalendarController.sharedInstance.dataArray[button.tag].goal {
                     button.setBackgroundImage(UIImage(named: "GreenRing"), forState: .Normal)
                 }
+                
+                
+                //past day saved data
+                if case .Success = CalendarController.sharedInstance.dataArray[button.tag].outcome {
+//                    button.setBackgroundImage(UIImage(named: "GreenFilled"), forState: .Normal)
+                    updateBlob(for: button.tag)
+                }
+                
+                if case .Failure = CalendarController.sharedInstance.dataArray[button.tag].outcome {
+//                    button.setBackgroundImage(UIImage(named: "RedFilled"), forState: .Normal)
+                    updateBlob(for: button.tag)
+                }
+                
                 
                 //disabling button tap for inexistent calendar days
                 if calendarArray[button.tag] == "" {
@@ -132,10 +145,8 @@ class CalendarViewController: UIViewController {
             // if unset, set to Success (...)
             if CalendarController.sharedInstance.dataArray[sender.tag].outcome != .Success {
                 CalendarController.sharedInstance.dataArray[sender.tag].outcome = .Success
-                print("setting to success: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             } else {
                 CalendarController.sharedInstance.dataArray[sender.tag].outcome = .Failure
-                print("setting to failure: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             }
             
         }
@@ -144,16 +155,19 @@ class CalendarViewController: UIViewController {
         else {
             if CalendarController.sharedInstance.dataArray[sender.tag].goal == .Meat {
                 CalendarController.sharedInstance.dataArray[sender.tag].goal = .Meatless
-                 print("setting to meatless: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             } else {
                 CalendarController.sharedInstance.dataArray[sender.tag].goal = .Meat
-                print("setting to meat: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             }
         }
         
         updateBlob(for: sender.tag)
         updateBlob(for: sender.tag - 1)
         updateBlob(for: sender.tag + 1)
+    
+        let manager = NSFileManager.defaultManager()
+        let document = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = document.URLByAppendingPathComponent("calendarData.txt")
+        NSKeyedArchiver.archiveRootObject(CalendarController.sharedInstance.dataArray, toFile: fileURL.path!)
     }
     
     func updateBlob(for senderTag: Int) {

@@ -27,21 +27,16 @@ class CalendarController {
             
         if let dataEntry = NSKeyedUnarchiver.unarchiveObjectWithFile(fileURL.path!) as? [CalendarDate] {
             self.dataArray = dataEntry
-            print("\(dataArray)")
         } else{
             for _ in 0...41{
                 dataArray.append(CalendarDate(goal: .Meat, outcome: .Unset))
             }
+            
         }
     }
     
     //set plan here 
     func populate(challenge: [Int]) {
-        //reclearing the dataArray to avoid repeats
-//        for item in 0...41{
-//            self.dataArray[item].goal = .Meat
-//            self.dataArray[item].outcome = .Unset
-//        }
         
         for number in (0...dataArray.count-1) {
             for day in challenge {
