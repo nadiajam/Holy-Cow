@@ -27,6 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             })
         }
+    
+        UINavigationBar.appearance().barTintColor = UIColor.holyGreen
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         return true
     }

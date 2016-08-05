@@ -1152,18 +1152,18 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3F-io-xDb">
-                                        <rect key="frame" x="516" y="15" width="24" height="19"/>
+                                        <rect key="frame" x="504" y="22" width="36" height="19"/>
                                         <state key="normal" title="Button" image="plusbutton"/>
                                         <connections>
-                                            <segue destination="YhI-4b-MGN" kind="presentation" id="SxC-Vc-mWj"/>
+                                            <segue destination="YhI-4b-MGN" kind="show" id="GEU-Lk-gWV"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="J6J-hM-9X8" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" multiplier="1.2" id="4G6-5Z-PnH"/>
-                                    <constraint firstItem="v3F-io-xDb" firstAttribute="width" secondItem="rg5-Q1-q0f" secondAttribute="width" multiplier="0.04" id="SQQ-Db-g7S"/>
-                                    <constraint firstItem="v3F-io-xDb" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" id="hHQ-6R-eSB"/>
+                                    <constraint firstItem="v3F-io-xDb" firstAttribute="width" secondItem="rg5-Q1-q0f" secondAttribute="width" multiplier="0.06" id="SQQ-Db-g7S"/>
+                                    <constraint firstItem="v3F-io-xDb" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" multiplier="1.3" id="hHQ-6R-eSB"/>
                                     <constraint firstItem="J6J-hM-9X8" firstAttribute="centerX" secondItem="rg5-Q1-q0f" secondAttribute="centerX" id="iSp-FC-aNH"/>
                                     <constraint firstAttribute="trailing" secondItem="v3F-io-xDb" secondAttribute="trailing" constant="60" id="peD-hY-YHN"/>
                                     <constraint firstItem="v3F-io-xDb" firstAttribute="height" secondItem="rg5-Q1-q0f" secondAttribute="height" multiplier="0.4" id="txg-fr-Ajk"/>

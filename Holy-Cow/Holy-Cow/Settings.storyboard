@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XRa-Ml-gbq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8xs-Re-uPt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Settings View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="2Tl-dX-vCx">
+            <objects>
+                <navigationController id="8xs-Re-uPt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vb3-1R-Tei">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XRa-Ml-gbq" kind="relationship" relationship="rootViewController" id="WwC-DP-GWg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mB1-lW-Tw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416" y="665"/>
+        </scene>
+        <!--Settings-->
         <scene sceneID="ukS-Nh-A41">
             <objects>
                 <viewController id="XRa-Ml-gbq" customClass="SettingsViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,30 +44,23 @@
                                     <segue destination="Jb3-nC-aru" kind="show" id="Ea3-dG-uhC"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDM-RW-x82">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
-                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="QDM-RW-x82" secondAttribute="trailing" id="0un-6W-05O"/>
-                            <constraint firstItem="QDM-RW-x82" firstAttribute="leading" secondItem="wBZ-pX-dl5" secondAttribute="leading" id="F0L-Vg-HfN"/>
                             <constraint firstItem="Hom-Kf-gZ4" firstAttribute="centerX" secondItem="wBZ-pX-dl5" secondAttribute="centerX" id="Kht-B4-agl"/>
                             <constraint firstItem="Hom-Kf-gZ4" firstAttribute="centerY" secondItem="wBZ-pX-dl5" secondAttribute="centerY" id="SCf-QC-rsL"/>
-                            <constraint firstItem="QDM-RW-x82" firstAttribute="top" secondItem="wBZ-pX-dl5" secondAttribute="top" id="bag-W8-4qL"/>
-                            <constraint firstItem="QDM-RW-x82" firstAttribute="height" secondItem="wBZ-pX-dl5" secondAttribute="height" multiplier="0.082" id="pCs-mY-FsP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Qqe-nu-THr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvq-De-fN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="639"/>
+            <point key="canvasLocation" x="2137" y="665"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Challenges-->
         <scene sceneID="GhC-LH-MDG">
             <objects>
-                <viewController id="Jb3-nC-aru" customClass="SettingsViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jb3-nC-aru" customClass="ChallengesViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uZb-nW-gny"/>
                         <viewControllerLayoutGuide type="bottom" id="aiq-yD-Xch"/>
@@ -61,7 +69,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
                                 <rect key="frame" x="236" y="220" width="128" height="30"/>
                                 <state key="normal" title="Meatless Mondays"/>
                                 <connections>
@@ -69,7 +77,7 @@
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="XAw-Iu-jld"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
                                 <rect key="frame" x="252" y="300" width="97" height="30"/>
                                 <state key="normal" title="Checkerboard"/>
                                 <connections>
@@ -77,7 +85,7 @@
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
                                 <rect key="frame" x="233" y="380" width="134" height="30"/>
                                 <state key="normal" title="Weekend Carnivore"/>
                                 <connections>
@@ -85,7 +93,7 @@
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="1ML-Fa-qPu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
                                 <rect key="frame" x="245" y="460" width="110" height="30"/>
                                 <state key="normal" title="Meatless Month"/>
                                 <connections>
@@ -106,10 +114,11 @@
                             <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="50" id="yzp-Fy-jRP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Challenges" id="DrE-WI-kqX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8h-kO-nks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="639"/>
+            <point key="canvasLocation" x="2882" y="665"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="o4h-1J-P0L">
@@ -119,7 +128,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViP-Cn-tec" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.5" y="617"/>
+            <point key="canvasLocation" x="3372.5" y="617"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
