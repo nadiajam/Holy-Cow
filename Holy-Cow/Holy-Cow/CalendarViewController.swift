@@ -128,13 +128,14 @@ class CalendarViewController: UIViewController {
         if sender.tag <= dayOfMonth + (dayOfWeek - 1) {
             
             // if it is set as meatless (goal)
-            if CalendarController.sharedInstance.dataArray[sender.tag].goal != .Meatless { return }
-            
+            if CalendarController.sharedInstance.dataArray[sender.tag].goal  != .Meatless { return }
             // if unset, set to Success (...)
             if CalendarController.sharedInstance.dataArray[sender.tag].outcome != .Success {
                 CalendarController.sharedInstance.dataArray[sender.tag].outcome = .Success
+                print("setting to success: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             } else {
                 CalendarController.sharedInstance.dataArray[sender.tag].outcome = .Failure
+                print("setting to failure: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             }
             
         }
@@ -143,8 +144,10 @@ class CalendarViewController: UIViewController {
         else {
             if CalendarController.sharedInstance.dataArray[sender.tag].goal == .Meat {
                 CalendarController.sharedInstance.dataArray[sender.tag].goal = .Meatless
+                 print("setting to meatless: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             } else {
                 CalendarController.sharedInstance.dataArray[sender.tag].goal = .Meat
+                print("setting to meat: \(CalendarController.sharedInstance.dataArray[sender.tag].goal)")
             }
         }
         

@@ -69,36 +69,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
-                                <rect key="frame" x="236" y="220" width="128" height="30"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
+                                <rect key="frame" x="236" y="264" width="128" height="30"/>
                                 <state key="normal" title="Meatless Mondays"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="4Jh-hG-GiD"/>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="uPX-As-PdL"/>
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="XAw-Iu-jld"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
-                                <rect key="frame" x="252" y="300" width="97" height="30"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
+                                <rect key="frame" x="252" y="344" width="97" height="30"/>
                                 <state key="normal" title="Checkerboard"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="frh-MZ-CNh"/>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="8pb-si-0mm"/>
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
-                                <rect key="frame" x="233" y="380" width="134" height="30"/>
-                                <state key="normal" title="Weekend Carnivore"/>
-                                <connections>
-                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="A8g-xP-HpR"/>
-                                    <segue destination="UaM-0j-qTm" kind="presentation" id="1ML-Fa-qPu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
-                                <rect key="frame" x="245" y="460" width="110" height="30"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
+                                <rect key="frame" x="245" y="504" width="110" height="30"/>
                                 <state key="normal" title="Meatless Month"/>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="Syf-h1-cGb"/>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="9Ve-yh-vjj"/>
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="12h-RD-BbU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
+                                <rect key="frame" x="233" y="424" width="134" height="30"/>
+                                <state key="normal" title="Weekend Carnivore"/>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="Zm6-fA-Kl4"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="1ML-Fa-qPu"/>
                                 </connections>
                             </button>
                         </subviews>

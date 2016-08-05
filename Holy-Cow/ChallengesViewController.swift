@@ -12,7 +12,6 @@ class ChallengesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
 
@@ -22,7 +21,7 @@ class ChallengesViewController: UIViewController {
     }
     
     
-    var destinationController = CalendarController()
+//    var destinationController = CalendarController.sharedInstance
     var challengeArray:[Int] = []
     
     @IBAction func challengeButtonTapped(sender: UIButton) {
@@ -40,9 +39,13 @@ class ChallengesViewController: UIViewController {
             //send weekend carnivore
             challengeArray = [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 22, 23, 24, 25, 26, 29, 30, 31, 32, 33, 36, 37, 38, 39, 40]
             break
-        default:
+        case 4:
             //send meatless month
             challengeArray += 0...41
+            break
+        default:
+            //send empty calendar
+            challengeArray = []
             break
         }
     }
