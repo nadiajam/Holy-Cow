@@ -50,6 +50,10 @@ class CalendarController {
                 }
             }
         }
+        
+//        for data in dataArray {
+//            print("\(data.goal)")
+//        }
 
         let manager = NSFileManager.defaultManager()
         let document = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]

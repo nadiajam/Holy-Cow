@@ -14,6 +14,9 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var monthLabel: UILabel!
     @IBOutlet weak var calendarBoard: UIView!
     @IBOutlet weak var calendarViewLabel: UIView!
+    @IBAction func settingsButton(sender: AnyObject) {
+        self.navigationController?.pushViewController(SettingsTableViewController(), animated: true)
+    }
     
     let today = NSDate()
     let dateFormatterYear = NSDateFormatter()
@@ -104,8 +107,8 @@ class CalendarViewController: UIViewController {
                 
                 //setting current day label to blue color
                 if dayOfMonth ==  (button.tag - dayOfWeek + 1) {
-                    button.setTitleColor(UIColor.yellowColor(), forState: .Normal)
-                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 18)
+                    button.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
+                    button.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 18)
                 }
             }
         }
@@ -218,9 +221,8 @@ class CalendarViewController: UIViewController {
         
         // if current day
         if senderTag ==  dayOfMonth + (dayOfWeek - 1) {
-            sender.setTitleColor(UIColor.yellowColor(), forState: .Normal)
+            sender.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
         }
     }
-
     
 }

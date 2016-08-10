@@ -1,27 +1,21 @@
 //
-//  SettingsViewController.swift
+//  ChallengeViewController.swift
 //  Holy-Cow
 //
-//  Created by Nadia Jamrozik on 8/4/16.
+//  Created by Nadia Jamrozik on 8/8/16.
 //  Copyright © 2016 Nadia Jamrozik. All rights reserved.
 //
 
 import UIKit
 
-class ChallengesViewController: UIViewController {
-
+class ChallengeViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    
-//    var destinationController = CalendarController.sharedInstance
+    //    var destinationController = CalendarController.sharedInstance
     var challengeArray:[Int] = []
     
     @IBAction func challengeButtonTapped(sender: UIButton) {
@@ -51,13 +45,16 @@ class ChallengesViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         if let tabController = segue.destinationViewController as? TabBarViewController {
-            if tabController.viewControllers![1] is CalendarViewController {
+//            if tabController.viewControllers![1] is CalendarViewController {
                 CalendarController.sharedInstance.populate(challengeArray)
-            }
+//            }
         }
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
 }
