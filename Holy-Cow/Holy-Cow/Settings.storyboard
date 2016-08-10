@@ -17,36 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
-                                <rect key="frame" x="252" y="200" width="97" height="30"/>
-                                <state key="normal" title="Checkerboard"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
+                                <rect key="frame" x="225" y="120" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ha4-LW-eZg"/>
+                                    <constraint firstAttribute="width" constant="150" id="YDP-tl-0kJ"/>
+                                </constraints>
+                                <state key="normal" title="Meatless Mondays">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="8pb-si-0mm"/>
-                                    <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="uPX-As-PdL"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="XAw-Iu-jld"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
-                                <rect key="frame" x="245" y="360" width="110" height="30"/>
-                                <state key="normal" title="Meatless Month"/>
+                                <rect key="frame" x="225" y="360" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0hj-D7-Kb6"/>
+                                    <constraint firstAttribute="height" constant="50" id="YoD-JA-6yg"/>
+                                </constraints>
+                                <state key="normal" title="Meatless Month">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="9Ve-yh-vjj"/>
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="12h-RD-BbU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
-                                <rect key="frame" x="233" y="280" width="134" height="30"/>
-                                <state key="normal" title="Weekend Carnivore"/>
+                                <rect key="frame" x="225" y="280" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4w7-L6-Tn7"/>
+                                    <constraint firstAttribute="width" constant="150" id="Z4L-hR-9YM"/>
+                                </constraints>
+                                <state key="normal" title="Weekend Carnivore">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="Zm6-fA-Kl4"/>
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="1ML-Fa-qPu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
-                                <rect key="frame" x="236" y="120" width="128" height="30"/>
-                                <state key="normal" title="Meatless Mondays"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
+                                <rect key="frame" x="225" y="200" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Rc8-sf-8dx"/>
+                                    <constraint firstAttribute="height" constant="50" id="dmi-1V-Hsw"/>
+                                </constraints>
+                                <state key="normal" title="Checkerboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="uPX-As-PdL"/>
-                                    <segue destination="UaM-0j-qTm" kind="presentation" id="XAw-Iu-jld"/>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="8pb-si-0mm"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,13 +84,19 @@
                             <constraint firstItem="jJC-kh-opi" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="OEv-wR-pPl"/>
                             <constraint firstItem="emG-EO-HgK" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Wdr-hy-jRN"/>
                             <constraint firstItem="w0q-EZ-LF5" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Zof-rL-c8L"/>
-                            <constraint firstItem="jJC-kh-opi" firstAttribute="top" secondItem="emG-EO-HgK" secondAttribute="bottom" constant="50" id="dFu-w7-CsD"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="top" secondItem="emG-EO-HgK" secondAttribute="bottom" constant="30" id="dFu-w7-CsD"/>
                             <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="dWr-qm-ETZ"/>
-                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="top" secondItem="w0q-EZ-LF5" secondAttribute="bottom" constant="50" id="lUM-EF-azq"/>
-                            <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="50" id="yzp-Fy-jRP"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="top" secondItem="w0q-EZ-LF5" secondAttribute="bottom" constant="30" id="lUM-EF-azq"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="30" id="yzp-Fy-jRP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Challenges" id="DrE-WI-kqX"/>
+                    <connections>
+                        <outlet property="checkerboard" destination="ZlJ-wL-0Pr" id="cuQ-5l-cRu"/>
+                        <outlet property="meatlessMondays" destination="w0q-EZ-LF5" id="ZGv-56-Wuu"/>
+                        <outlet property="meatlessMonth" destination="jJC-kh-opi" id="suE-Ae-6Xm"/>
+                        <outlet property="weekendCarnivore" destination="emG-EO-HgK" id="xZ7-6x-bKo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8h-kO-nks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

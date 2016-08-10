@@ -10,9 +10,17 @@ import UIKit
 
 class ChallengeViewController: UIViewController {
     
+    @IBOutlet weak var meatlessMondays: UIButton!
+    @IBOutlet weak var checkerboard: UIButton!
+    @IBOutlet weak var weekendCarnivore: UIButton!
+    @IBOutlet weak var meatlessMonth: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        meatlessMondays.layer.cornerRadius = 3
+        checkerboard.layer.cornerRadius = 3
+        weekendCarnivore.layer.cornerRadius = 3
+        meatlessMonth.layer.cornerRadius = 3
     }
     
     //    var destinationController = CalendarController.sharedInstance
