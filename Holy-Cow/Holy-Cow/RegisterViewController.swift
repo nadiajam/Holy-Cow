@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var facebookButton: UIButton!
@@ -20,45 +20,59 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     
+    //amount that screen moves with keyboard
+    let movement: CGFloat = 150.0
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
         
-        if emailField.text!.isValidEmail() == false {
-            let errorAlert = UIAlertController(title: "Error", message: "Email is not valid", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
+        let onCompletion = {(user: User?, message: String?) in
+            print("inside register method")
             
-        } else if passwordField.text!.characters.count < 6 {
-            let errorAlert = UIAlertController(title: "Error", message: "Password must be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
-            
-        } else {
-            let storyboard = UIStoryboard(name: "InfoTabs", bundle: nil)
-            let viewController = storyboard.instantiateInitialViewController()
-            let application = UIApplication.sharedApplication()
-            let window = application.keyWindow
-            window?.rootViewController = viewController
+            if user == nil {
+                let errorAlert = UIAlertController(title: "Error", message: "not a user", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default)  { (action: UIAlertAction) in }
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+            }
+            else if self.emailField.text!.isValidEmail() == false {
+                let errorAlert = UIAlertController(title: "Error", message: "Email is not valid", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+                
+            }
+            else if self.passwordField.text!.characters.count < 6 {
+                let errorAlert = UIAlertController(title: "Error", message: "Password must be at least six characters long", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+            }
+            else {
+                let viewController = UIStoryboard(name: "InfoTabs", bundle: nil).instantiateInitialViewController()
+                let window = UIApplication.sharedApplication().keyWindow
+                window?.rootViewController = viewController
+                
+                //dismissing keyboard - returning veiw to normal bounds
+                self.dismissKeyboard()
+                self.textFieldDidEndEditing(self.passwordField)
+                self.textFieldDidEndEditing(self.emailField)
+            }
         }
-        
+
+        UserController.sharedInstance.register(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+     
     }
     
     @IBAction func closeButtonTapped(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func emailFieldReturned(sender: UITextField) {
-        passwordField.becomeFirstResponder()
-    }
-    
-    @IBAction func passwordFieldReturned(sender: UITextField) {
-        passwordField.resignFirstResponder()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setting text field delegates
+        passwordField.delegate = self
+        emailField.delegate = self
         
         orLabel.layer.bounds = CGRectMake(0, 0, 70, 70)
         orLabel.layer.masksToBounds = true
@@ -80,21 +94,21 @@ class RegisterViewController: UIViewController {
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
-        
-        // Setting customized fonts
-        
-        orLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        facebookButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 12.0)
-        emailField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        passwordField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        emailLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
-        passwordLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
-        signUpButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        connectLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 32.0)
-        
+    
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        UIView.animateWithDuration(0.3, animations: {
+            self.view.bounds = CGRectOffset(self.view.bounds, 0, self.movement)
+        })
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        UIView.animateWithDuration(0.3, animations: {
+            self.view.bounds = CGRectOffset(self.view.bounds, 0, -self.movement)
+        })
+    }
+
     func dismissKeyboard(){
         self.view.endEditing(true)
     }

@@ -8,49 +8,74 @@
 
 import UIKit
 
-enum DayOutcome {
-    case Success, Failure, Unset
-}
-
-enum DayGoal {
-    case Meat, Meatless
-}
-
 class CalendarController {
     //making class into singleton
     static let sharedInstance = CalendarController()
-    
-    //initializing goal and outcome arrays
-    var outcomeArray = [DayOutcome](count: 42, repeatedValue: .Unset)
-    var goalArray = [DayGoal](count: 42, repeatedValue: .Meat)
+    var dataArray = [CalendarDate]()
     var longestStreak = 0
     var calendar: [String] = []
     var dayToday: Int = 0
     var startInterval: Int = 0
     
+    //adding persistence 
+    
+
+    private init() {
+        let manager = NSFileManager.defaultManager()
+        let document = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = document.URLByAppendingPathComponent("calendarData.txt")
+            
+        if let dataEntry = NSKeyedUnarchiver.unarchiveObjectWithFile(fileURL.path!) as? [CalendarDate] {
+            self.dataArray = dataEntry
+        } else{
+            for _ in 0...41{
+                dataArray.append(CalendarDate(goal: .Meat, outcome: .Unset))
+            }
+            
+        }
+    }
+    
     //set plan here 
     func populate(challenge: [Int]) {
-        for item in challenge {
-            goalArray[item] = .Meatless
-        }  
+        
+        dataArray = []
+        for _ in 0...41{
+            dataArray.append(CalendarDate(goal: .Meat, outcome: .Unset))
+        }
+        
+        for number in (0...dataArray.count-1) {
+            for day in challenge {
+                if number == day {
+                    dataArray[number].goal = .Meatless
+                }
+            }
+        }
+        
+//        for data in dataArray {
+//            print("\(data.goal)")
+//        }
+
+        let manager = NSFileManager.defaultManager()
+        let document = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        let fileURL = document.URLByAppendingPathComponent("calendarData.txt")
+        NSKeyedArchiver.archiveRootObject(self.dataArray, toFile: fileURL.path!)
     }
     
     //tally how many days with goal of meatless in array
     func tallyGoal() -> Double {
         var goalNum: Double = 0.0
         for day in calendar {
-            if (day != "") && (goalArray[calendar.indexOf(day)!] == .Meatless) {
+            if (day != "") && (dataArray[calendar.indexOf(day)!].goal == .Meatless) {
                 goalNum += 1.0
             }
-            
         }
         return goalNum
     }
     
     func tallyOutcome() -> Double {
         var outcomeNum: Double = 0.0
-        for item in outcomeArray {
-            if item == .Success {
+        for item in dataArray {
+            if item.outcome == .Success {
                 outcomeNum += 1
             }
         }
@@ -59,10 +84,9 @@ class CalendarController {
     
     
     func currentStreakTally() -> Int {
-
         var streakNum = 0
-        for i in (0...dayToday).reverse() where goalArray[i + startInterval - 1] == .Meatless {
-            if outcomeArray[i + startInterval - 1] == .Success {
+        for i in (0...dayToday).reverse() where dataArray[i + startInterval - 1].goal == .Meatless {
+            if dataArray[i + startInterval - 1].outcome == .Success {
                 streakNum += 1
             } else {
                 break

@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "tree3.png",
+      "filename" : "userWhite.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tree3@2x.png",
+      "filename" : "userWhite@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "tree3@3x.png",
+      "filename" : "userWhite@3x.png",
       "scale" : "3x"
     }
   ],

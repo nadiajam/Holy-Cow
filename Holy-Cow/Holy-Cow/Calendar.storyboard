@@ -26,10 +26,6 @@
             <string>GTWalsheimProTrial-Medium</string>
             <string>GTWalsheimProTrial-Medium</string>
             <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
         </mutableArray>
         <mutableArray key="GT-Walsheim-Pro-Trial-Regular.otf">
             <string>GTWalsheimProTrial-Regular</string>
@@ -61,7 +57,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Calendar-->
+        <!--calendar-->
         <scene sceneID="NjD-CV-mhm">
             <objects>
                 <viewController storyboardIdentifier="UserCalendar" id="8Zp-ne-2ck" customClass="CalendarViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,22 +69,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCf-kW-jga" userLabel="CalendarLine">
-                                <rect key="frame" x="0.0" y="60" width="600" height="3"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="3" id="0AF-bH-xeZ"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="062-kQ-eRb" userLabel="MonthLine">
-                                <rect key="frame" x="0.0" y="105" width="600" height="2"/>
+                                <rect key="frame" x="0.0" y="106" width="600" height="2"/>
                                 <color key="backgroundColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="Jmn-2Q-buL"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmu-sd-bJg" userLabel="Days">
-                                <rect key="frame" x="30" y="107" width="540" height="54"/>
+                                <rect key="frame" x="30" y="108" width="540" height="54"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="m" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-3w-q40">
                                         <rect key="frame" x="77" y="0.0" width="77" height="54"/>
@@ -166,7 +155,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-lw-naP" userLabel="CalendarBoard">
-                                <rect key="frame" x="30" y="181" width="540" height="300"/>
+                                <rect key="frame" x="30" y="182" width="540" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bp-QM-qSK" userLabel="0">
                                         <rect key="frame" x="0.0" y="0.0" width="77" height="50"/>
@@ -1139,63 +1128,45 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPs-vJ-YaC">
-                                <rect key="frame" x="0.0" y="63" width="600" height="42"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg5-Q1-q0f">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6J-hM-9X8">
-                                        <rect key="frame" x="249" y="21" width="102" height="31"/>
-                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="J6J-hM-9X8" firstAttribute="centerY" secondItem="rg5-Q1-q0f" secondAttribute="centerY" multiplier="1.2" id="4G6-5Z-PnH"/>
-                                    <constraint firstItem="J6J-hM-9X8" firstAttribute="centerX" secondItem="rg5-Q1-q0f" secondAttribute="centerX" id="iSp-FC-aNH"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="top" secondItem="pmu-sd-bJg" secondAttribute="bottom" constant="20" id="19I-4z-jEB"/>
-                            <constraint firstItem="bCf-kW-jga" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="5W8-EQ-J1g"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="top" secondItem="062-kQ-eRb" secondAttribute="bottom" id="5Xq-bC-8q5"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="centerX" secondItem="BnX-Nr-IQ9" secondAttribute="centerX" id="7MO-Q3-3cF"/>
-                            <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="rg5-Q1-q0f" secondAttribute="bottom" id="BZK-7R-hqH"/>
                             <constraint firstItem="WPs-vJ-YaC" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.07" id="IDn-h3-4pU"/>
-                            <constraint firstItem="rg5-Q1-q0f" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="IvX-gG-asm"/>
-                            <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="ffZ-NB-agO" secondAttribute="bottom" id="JC0-Ym-pqW"/>
                             <constraint firstAttribute="trailing" secondItem="062-kQ-eRb" secondAttribute="trailing" id="QEE-RS-BdE"/>
-                            <constraint firstAttribute="trailing" secondItem="bCf-kW-jga" secondAttribute="trailing" id="SvO-Bp-j2A"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.5" id="TFc-1n-Hdq"/>
                             <constraint firstAttribute="trailing" secondItem="WPs-vJ-YaC" secondAttribute="trailing" id="VGx-Oq-U7m"/>
-                            <constraint firstItem="rg5-Q1-q0f" firstAttribute="top" secondItem="BnX-Nr-IQ9" secondAttribute="top" id="b00-Dv-NyQ"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="centerX" secondItem="BnX-Nr-IQ9" secondAttribute="centerX" id="bbg-ua-Pj5"/>
+                            <constraint firstItem="WPs-vJ-YaC" firstAttribute="top" secondItem="ffZ-NB-agO" secondAttribute="bottom" id="cgh-ie-FYO"/>
                             <constraint firstItem="062-kQ-eRb" firstAttribute="top" secondItem="WPs-vJ-YaC" secondAttribute="bottom" id="fcT-Cb-3uD"/>
                             <constraint firstItem="WPs-vJ-YaC" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="gQZ-PB-jHt"/>
                             <constraint firstItem="Ldy-lw-naP" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" multiplier="0.9" id="joO-g5-Kxv"/>
-                            <constraint firstItem="WPs-vJ-YaC" firstAttribute="top" secondItem="bCf-kW-jga" secondAttribute="bottom" id="jsn-po-yqW"/>
                             <constraint firstItem="062-kQ-eRb" firstAttribute="leading" secondItem="BnX-Nr-IQ9" secondAttribute="leading" id="kLZ-NB-XlS"/>
-                            <constraint firstAttribute="trailing" secondItem="rg5-Q1-q0f" secondAttribute="trailing" id="pjb-xa-qO3"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="height" secondItem="BnX-Nr-IQ9" secondAttribute="height" multiplier="0.09" id="pqH-by-tMc"/>
-                            <constraint firstItem="bCf-kW-jga" firstAttribute="top" secondItem="ffZ-NB-agO" secondAttribute="bottom" multiplier="3" id="s0e-Gs-ZHu"/>
                             <constraint firstItem="pmu-sd-bJg" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" multiplier="0.9" id="sla-dX-dbD"/>
-                            <constraint firstItem="rg5-Q1-q0f" firstAttribute="width" secondItem="BnX-Nr-IQ9" secondAttribute="width" id="uWY-a5-RAY"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="JC0-Ym-pqW"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="calendar" id="Ihx-hd-by0"/>
-                    <navigationItem key="navigationItem" title="Calendar" id="h4c-LD-RaY"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="calendar" id="Uji-KZ-9TT">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="yKS-fs-C1Q">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kWt-Lw-Iyx">
+                                <rect key="frame" x="550" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="plusbutton"/>
+                                <connections>
+                                    <action selector="settingsButton:" destination="8Zp-ne-2ck" eventType="touchUpInside" id="a95-8e-bws"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="calendarBoard" destination="Ldy-lw-naP" id="GQD-Fx-xfL"/>
                         <outlet property="calendarViewLabel" destination="Ldy-lw-naP" id="98D-3C-Hew"/>
@@ -1205,12 +1176,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aw5-MR-CLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-527" y="296"/>
+            <point key="canvasLocation" x="-658" y="842"/>
         </scene>
-        <!--jenny hall-->
+        <!--Settings-->
+        <scene sceneID="zHL-0g-t99">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="Iwa-Pl-3AT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IMm-Is-64w"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlJ-er-zdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-661.5" y="1286"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="sbE-WB-eZm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="YhI-4b-MGN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CJF-o3-fHZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46u-86-wQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527.5" y="782"/>
+        </scene>
+        <!--profile-->
         <scene sceneID="lEX-tB-Iwc">
             <objects>
-                <viewController id="Dpb-29-SAG" customClass="ProfileViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Dpb-29-SAG" userLabel="profile" customClass="ProfileViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cV0-4N-Go8"/>
                         <viewControllerLayoutGuide type="bottom" id="Bcz-QI-dTz"/>
@@ -1219,10 +1210,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AYd-A3-U6T" customClass="ProgressArc" customModule="Holy_Cow" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AYd-A3-U6T" customClass="ProgressArc" customModule="Holy_Cow" customModuleProvider="target">
                                 <rect key="frame" x="120" y="114" width="360" height="360"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-ha-oDb">
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOD-ha-oDb">
                                         <rect key="frame" x="156" y="73" width="48" height="160"/>
                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="130"/>
                                         <color key="textColor" red="0.30588235294117649" green="0.26666666666666666" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
@@ -1236,43 +1227,43 @@
                                     <constraint firstItem="OOD-ha-oDb" firstAttribute="centerX" secondItem="AYd-A3-U6T" secondAttribute="centerX" id="to4-f9-3Hp"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by not eating meat for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-iN-DNF">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="by not eating meat for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-iN-DNF">
                                 <rect key="frame" x="120" y="70" width="360" height="24"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
                                 <color key="textColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="you've saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-uR-Ywp">
+                            <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="you've saved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyG-uR-Ywp">
                                 <rect key="frame" x="180" y="494" width="240" height="30"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
                                 <color key="textColor" red="0.74117647060000003" green="0.79607843140000001" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-Ty-fbc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgd-Ty-fbc">
                                 <rect key="frame" x="281" y="327" width="38" height="22"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="17"/>
                                 <color key="textColor" red="0.30588235294117649" green="0.26666666666666666" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryB-cN-0KA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ryB-cN-0KA">
                                 <rect key="frame" x="0.0" y="544" width="600" height="7"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t7y-ew-5Nt">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t7y-ew-5Nt">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="615"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-8f-hLB" userLabel="BlueSection">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-8f-hLB" userLabel="BlueSection">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vz-Hq-ko0">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vz-Hq-ko0">
                                                         <rect key="frame" x="330" y="-8" width="41" height="87"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="70"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="9v2-BL-K5a">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="water" translatesAutoresizingMaskIntoConstraints="NO" id="9v2-BL-K5a">
                                                         <rect key="frame" x="120" y="17" width="120" height="106"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gallons of water" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xE7-SY-aVm">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="gallons of water" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xE7-SY-aVm">
                                                         <rect key="frame" x="330" y="67" width="180" height="62"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="25"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1293,22 +1284,22 @@
                                                     <constraint firstItem="xE7-SY-aVm" firstAttribute="centerY" secondItem="mYd-8f-hLB" secondAttribute="centerY" multiplier="1.4" id="yz4-iZ-ZD7"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zdo-sk-ZCA" userLabel="GreenSection">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zdo-sk-ZCA" userLabel="GreenSection">
                                                 <rect key="frame" x="0.0" y="145" width="600" height="140"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv7-xZ-CcQ">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rv7-xZ-CcQ">
                                                         <rect key="frame" x="160" y="-8" width="41" height="87"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="70"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m² of land" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP6-No-gbm">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="m² of land" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP6-No-gbm">
                                                         <rect key="frame" x="21" y="83" width="180" height="31"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="25"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree2" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-jf-zE1">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="tree2" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-jf-zE1">
                                                         <rect key="frame" x="315" y="14" width="150" height="112"/>
                                                     </imageView>
                                                 </subviews>
@@ -1325,22 +1316,22 @@
                                                     <constraint firstItem="sP6-No-gbm" firstAttribute="trailing" secondItem="Rv7-xZ-CcQ" secondAttribute="trailing" id="zC8-Gw-Lxa"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx3-YU-MQm" userLabel="OrangeSection">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dx3-YU-MQm" userLabel="OrangeSection">
                                                 <rect key="frame" x="0.0" y="290" width="600" height="140"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojw-za-BeL">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojw-za-BeL">
                                                         <rect key="frame" x="330" y="-8" width="41" height="87"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="70"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lbs of grains" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnC-nr-0hl">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="lbs of grains" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnC-nr-0hl">
                                                         <rect key="frame" x="330" y="83" width="180" height="31"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="25"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grain" translatesAutoresizingMaskIntoConstraints="NO" id="3Hw-G0-YSA">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="grain" translatesAutoresizingMaskIntoConstraints="NO" id="3Hw-G0-YSA">
                                                         <rect key="frame" x="120" y="14" width="120" height="112"/>
                                                     </imageView>
                                                 </subviews>
@@ -1355,22 +1346,22 @@
                                                     <constraint firstItem="dnC-nr-0hl" firstAttribute="width" secondItem="Dx3-YU-MQm" secondAttribute="width" multiplier="0.3" id="xtZ-SA-57d"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-Av-Zzx" userLabel="GreySection">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qdt-Av-Zzx" userLabel="GreySection">
                                                 <rect key="frame" x="0.0" y="435" width="600" height="140"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQB-we-WIT">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQB-we-WIT">
                                                         <rect key="frame" x="160" y="-8" width="41" height="87"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="70"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lbs of CO₂" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPg-CA-Gi5">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="lbs of CO₂" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPg-CA-Gi5">
                                                         <rect key="frame" x="21" y="83" width="180" height="31"/>
                                                         <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="25"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="CEQ-sh-8EQ">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="CEQ-sh-8EQ">
                                                         <rect key="frame" x="300" y="14" width="180" height="112"/>
                                                     </imageView>
                                                 </subviews>
@@ -1441,22 +1432,6 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdg-Mh-oIy">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jenny hall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yt-EI-K7u">
-                                        <rect key="frame" x="245" y="14" width="111" height="31"/>
-                                        <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.80784313725490198" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="1Yt-EI-K7u" firstAttribute="centerX" secondItem="Xdg-Mh-oIy" secondAttribute="centerX" id="XSZ-P8-P0c"/>
-                                    <constraint firstItem="1Yt-EI-K7u" firstAttribute="centerY" secondItem="Xdg-Mh-oIy" secondAttribute="centerY" multiplier="1.2" id="bgi-C7-OgX"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1469,22 +1444,17 @@
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.04" id="ASV-lk-bEs"/>
                             <constraint firstItem="IyG-uR-Ywp" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.4" id="BAx-ud-GvS"/>
                             <constraint firstItem="ryB-cN-0KA" firstAttribute="top" secondItem="IyG-uR-Ywp" secondAttribute="bottom" constant="20" id="EXA-RP-VZ8"/>
-                            <constraint firstItem="Xdg-Mh-oIy" firstAttribute="leading" secondItem="Ciz-SC-PgJ" secondAttribute="leading" id="HWi-sY-Rg4"/>
                             <constraint firstItem="ryB-cN-0KA" firstAttribute="leading" secondItem="Ciz-SC-PgJ" secondAttribute="leading" id="Hcu-tX-gCP"/>
                             <constraint firstItem="ryB-cN-0KA" firstAttribute="top" secondItem="IyG-uR-Ywp" secondAttribute="bottom" constant="20" id="KmY-nQ-Isj"/>
                             <constraint firstItem="IyG-uR-Ywp" firstAttribute="top" secondItem="AYd-A3-U6T" secondAttribute="bottom" constant="20" id="Kzy-Qa-J4T"/>
-                            <constraint firstAttribute="trailing" secondItem="Xdg-Mh-oIy" secondAttribute="trailing" id="L1L-N3-jE3"/>
                             <constraint firstItem="AYd-A3-U6T" firstAttribute="top" secondItem="Zhb-iN-DNF" secondAttribute="bottom" constant="20" id="Unf-AM-3iQ"/>
                             <constraint firstAttribute="trailing" secondItem="ryB-cN-0KA" secondAttribute="trailing" id="V7u-iD-nkS"/>
                             <constraint firstItem="IyG-uR-Ywp" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.05" id="Vcb-as-cBy"/>
-                            <constraint firstItem="Xdg-Mh-oIy" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" id="XuG-q6-vWh"/>
                             <constraint firstItem="Hgd-Ty-fbc" firstAttribute="top" secondItem="OOD-ha-oDb" secondAttribute="bottom" constant="-20" id="big-cK-B7Z"/>
                             <constraint firstItem="IyG-uR-Ywp" firstAttribute="centerX" secondItem="Ciz-SC-PgJ" secondAttribute="centerX" id="cFn-3w-ZFM"/>
                             <constraint firstAttribute="bottom" secondItem="ryB-cN-0KA" secondAttribute="bottom" id="dR1-EC-68n"/>
                             <constraint firstItem="Zhb-iN-DNF" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" multiplier="0.6" id="dc2-gK-e51"/>
-                            <constraint firstItem="Xdg-Mh-oIy" firstAttribute="top" secondItem="Ciz-SC-PgJ" secondAttribute="top" id="jhc-sS-Zfw"/>
                             <constraint firstItem="t7y-ew-5Nt" firstAttribute="width" secondItem="Ciz-SC-PgJ" secondAttribute="width" id="kTl-G9-F1i"/>
-                            <constraint firstItem="Xdg-Mh-oIy" firstAttribute="height" secondItem="Ciz-SC-PgJ" secondAttribute="height" multiplier="0.082" id="zgK-EK-f8f"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -1493,8 +1463,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="user" id="ODA-b7-pKg"/>
-                    <navigationItem key="navigationItem" title="jenny hall" id="b6i-ne-4e2"/>
+                    <navigationItem key="navigationItem" title="profile" id="b6i-ne-4e2" userLabel="user name"/>
                     <connections>
                         <outlet property="carbonLabel" destination="yQB-we-WIT" id="8oS-XN-Xx4"/>
                         <outlet property="forestAreaLabel" destination="Rv7-xZ-CcQ" id="jtw-KZ-Xmw"/>
@@ -1507,7 +1476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1n-JR-TaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="489"/>
+            <point key="canvasLocation" x="13" y="842"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5hM-Ew-v6t">
@@ -1896,17 +1865,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zl-QQ-fMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="-1846"/>
+            <point key="canvasLocation" x="460" y="-992"/>
         </scene>
         <!--Recipes-->
         <scene sceneID="QO2-5v-I87">
             <objects>
                 <viewControllerPlaceholder storyboardName="Recipes" id="wWt-b1-Q6Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="50Q-WB-fyM"/>
+                    <tabBarItem key="tabBarItem" title="" image="fork" id="50Q-WB-fyM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWm-oG-yG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="-1046"/>
+            <point key="canvasLocation" x="255" y="-590"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="VVo-8T-6Mi">
@@ -1918,116 +1887,67 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Dpb-29-SAG" kind="relationship" relationship="viewControllers" id="hN2-rd-0kX"/>
-                        <segue destination="8Zp-ne-2ck" kind="relationship" relationship="viewControllers" id="QUP-uO-ng9"/>
-                        <segue destination="wWt-b1-Q6Z" kind="relationship" relationship="viewControllers" id="KA9-Ek-iLH"/>
-                        <segue destination="KWh-5h-eP9" kind="relationship" relationship="viewControllers" id="fKE-jM-DLw"/>
-                        <segue destination="D0O-gB-sZY" kind="relationship" relationship="viewControllers" id="L1P-gJ-44X"/>
+                        <segue destination="Cht-ic-1lG" kind="relationship" relationship="viewControllers" id="hN2-rd-0kX"/>
+                        <segue destination="Jbd-wL-ovD" kind="relationship" relationship="viewControllers" id="QUP-uO-ng9"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bD-Lu-Dwh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-329" y="-703"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="qKy-AO-hU2">
+        <!--Friends-->
+        <scene sceneID="r7Z-YU-QTZ">
             <objects>
-                <viewController id="D0O-gB-sZY" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="liX-ft-Pnf"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q4g-AF-8XG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ffX-Go-geI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bg-3o-nFj" userLabel="Status Bar">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
-                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="t5o-yJ-ZUJ"/>
-                                </constraints>
-                            </view>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQQ-Qo-lbA">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <color key="barTintColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="25"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="friends" id="ZAo-5W-YnW"/>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see how your family and friends are doing and high-five them for their progress." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEQ-vg-OLK">
-                                <rect key="frame" x="50" y="94" width="500" height="50"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq3-ne-X0n">
-                                <rect key="frame" x="210" y="417" width="180" height="64"/>
-                                <color key="backgroundColor" red="0.99607843139999996" green="0.33725490200000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="X8B-eq-a4I"/>
-                                    <constraint firstAttribute="height" constant="64" id="gsx-BP-JxI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="24"/>
-                                <state key="normal" title="invite friends">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plusbutton" translatesAutoresizingMaskIntoConstraints="NO" id="NRt-wH-iCd">
-                                <rect key="frame" x="268" y="185" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="0vX-U2-QMX"/>
-                                    <constraint firstAttribute="height" constant="64" id="PJx-tO-kuL"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.98999999999999999" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="NRt-wH-iCd" firstAttribute="centerX" secondItem="ffX-Go-geI" secondAttribute="centerX" id="7Cq-98-27C"/>
-                            <constraint firstItem="Oq3-ne-X0n" firstAttribute="centerX" secondItem="ffX-Go-geI" secondAttribute="centerX" id="7rM-hb-b5d"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2Bg-3o-nFj" secondAttribute="trailing" id="AQF-eS-6JU"/>
-                            <constraint firstItem="hQQ-Qo-lbA" firstAttribute="top" secondItem="liX-ft-Pnf" secondAttribute="bottom" id="Ckf-Bb-LoT"/>
-                            <constraint firstAttribute="trailing" secondItem="2Bg-3o-nFj" secondAttribute="trailing" id="D34-KI-nyY"/>
-                            <constraint firstItem="bEQ-vg-OLK" firstAttribute="leading" secondItem="ffX-Go-geI" secondAttribute="leading" constant="50" id="Fpg-Fp-BJc"/>
-                            <constraint firstItem="2Bg-3o-nFj" firstAttribute="leading" secondItem="ffX-Go-geI" secondAttribute="leading" id="HMN-t2-NZI"/>
-                            <constraint firstItem="NRt-wH-iCd" firstAttribute="top" secondItem="bEQ-vg-OLK" secondAttribute="bottom" constant="41" id="Uz8-kg-Zrj"/>
-                            <constraint firstAttribute="trailing" secondItem="hQQ-Qo-lbA" secondAttribute="trailing" id="ZLy-gX-dEz"/>
-                            <constraint firstItem="2Bg-3o-nFj" firstAttribute="top" secondItem="ffX-Go-geI" secondAttribute="topMargin" id="Zmz-nB-xE6"/>
-                            <constraint firstItem="hQQ-Qo-lbA" firstAttribute="leading" secondItem="ffX-Go-geI" secondAttribute="leading" id="aal-w9-QI0"/>
-                            <constraint firstItem="NRt-wH-iCd" firstAttribute="leading" secondItem="bEQ-vg-OLK" secondAttribute="leading" id="mdp-eV-hKR"/>
-                            <constraint firstItem="Q4g-AF-8XG" firstAttribute="top" secondItem="Oq3-ne-X0n" secondAttribute="bottom" constant="70" id="nM4-bL-Lff"/>
-                            <constraint firstItem="2Bg-3o-nFj" firstAttribute="leading" secondItem="ffX-Go-geI" secondAttribute="leadingMargin" id="nop-fy-90m"/>
-                            <constraint firstAttribute="trailing" secondItem="bEQ-vg-OLK" secondAttribute="trailing" constant="50" id="sFX-j3-Jx4"/>
-                            <constraint firstItem="bEQ-vg-OLK" firstAttribute="top" secondItem="hQQ-Qo-lbA" secondAttribute="bottom" constant="30" id="vdX-js-XzG"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="AQF-eS-6JU"/>
-                                <exclude reference="nop-fy-90m"/>
-                                <exclude reference="mdp-eV-hKR"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="users" id="lod-hH-KVU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ta6-Vb-FxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Friends" id="oVs-G5-Y9f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="users" id="yY6-Vm-MBm"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gek-ON-3QC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="619" y="-585"/>
+            <point key="canvasLocation" x="186" y="-449"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yeG-hu-alZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jbd-wL-ovD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="calendar" id="Ihx-hd-by0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TrV-Uf-S5B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Zp-ne-2ck" kind="relationship" relationship="rootViewController" id="ElU-Bm-erg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wwc-aC-9rP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BKj-Sw-tKI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cht-ic-1lG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="user" id="ODA-b7-pKg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="r2R-NH-aGd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dpb-29-SAG" kind="relationship" relationship="rootViewController" id="Qb0-mQ-cc0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXf-Ld-xUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="101"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" width="34" height="34"/>
         <image name="car" width="139" height="139"/>
+        <image name="fork" width="21" height="45"/>
         <image name="grain" width="75" height="78"/>
         <image name="newsfeed" width="38" height="29"/>
         <image name="plusbutton" width="143" height="143"/>

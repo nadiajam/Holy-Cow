@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NZt-Qq-UOX">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Challenges-->
+        <scene sceneID="GhC-LH-MDG">
+            <objects>
+                <viewController storyboardIdentifier="ChallengeViewController" id="Jb3-nC-aru" customClass="ChallengeViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uZb-nW-gny"/>
+                        <viewControllerLayoutGuide type="bottom" id="aiq-yD-Xch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XKq-9s-XTV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
+                                <rect key="frame" x="225" y="120" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ha4-LW-eZg"/>
+                                    <constraint firstAttribute="width" constant="150" id="YDP-tl-0kJ"/>
+                                </constraints>
+                                <state key="normal" title="Meatless Mondays">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="uPX-As-PdL"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="XAw-Iu-jld"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
+                                <rect key="frame" x="225" y="360" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0hj-D7-Kb6"/>
+                                    <constraint firstAttribute="height" constant="50" id="YoD-JA-6yg"/>
+                                </constraints>
+                                <state key="normal" title="Meatless Month">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="9Ve-yh-vjj"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="12h-RD-BbU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
+                                <rect key="frame" x="225" y="280" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4w7-L6-Tn7"/>
+                                    <constraint firstAttribute="width" constant="150" id="Z4L-hR-9YM"/>
+                                </constraints>
+                                <state key="normal" title="Weekend Carnivore">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="Zm6-fA-Kl4"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="1ML-Fa-qPu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
+                                <rect key="frame" x="225" y="200" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Rc8-sf-8dx"/>
+                                    <constraint firstAttribute="height" constant="50" id="dmi-1V-Hsw"/>
+                                </constraints>
+                                <state key="normal" title="Checkerboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="challengeButtonTapped:" destination="Jb3-nC-aru" eventType="touchUpInside" id="8pb-si-0mm"/>
+                                    <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="top" secondItem="uZb-nW-gny" secondAttribute="bottom" constant="100" id="19M-eJ-XFT"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="OEv-wR-pPl"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Wdr-hy-jRN"/>
+                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Zof-rL-c8L"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="top" secondItem="emG-EO-HgK" secondAttribute="bottom" constant="30" id="dFu-w7-CsD"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="dWr-qm-ETZ"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="top" secondItem="w0q-EZ-LF5" secondAttribute="bottom" constant="30" id="lUM-EF-azq"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="30" id="yzp-Fy-jRP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Challenges" id="DrE-WI-kqX"/>
+                    <connections>
+                        <outlet property="checkerboard" destination="ZlJ-wL-0Pr" id="cuQ-5l-cRu"/>
+                        <outlet property="meatlessMondays" destination="w0q-EZ-LF5" id="ZGv-56-Wuu"/>
+                        <outlet property="meatlessMonth" destination="jJC-kh-opi" id="suE-Ae-6Xm"/>
+                        <outlet property="weekendCarnivore" destination="emG-EO-HgK" id="xZ7-6x-bKo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8h-kO-nks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3609" y="665"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="o4h-1J-P0L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calendar" id="UaM-0j-qTm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ve3-2F-evh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViP-Cn-tec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4184.5" y="617"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bx9-8N-MOU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NZt-Qq-UOX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wlz-ym-rxF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lnb-bI-bP8" kind="show" id="gs5-5u-asm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHB-Ps-nlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="665"/>
+        </scene>
+        <!--settings-->
+        <scene sceneID="63Z-8q-Ivi">
+            <objects>
+                <tableViewController id="lnb-bI-bP8" customClass="SettingsTableViewController" customModule="Holy_Cow" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6PA-oV-jJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9Qq-gR-2hz">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Qq-gR-2hz" id="JOA-tS-kKS">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lnb-bI-bP8" id="lNq-bQ-uFF"/>
+                            <outlet property="delegate" destination="lnb-bI-bP8" id="muS-S6-Vkk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="settings" id="oKr-Yj-z7q"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXr-bY-42P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2904" y="665"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XAw-Iu-jld"/>
+    </inferredMetricsTieBreakers>
+</document>

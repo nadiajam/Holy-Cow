@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var facebookButton: UIButton!
@@ -20,44 +20,48 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    //amount that screen moves with keyboard
+    let movement: CGFloat = 150.0
     
-    @IBAction func emailFieldReturned(sender: UITextField) {
-        passwordField.becomeFirstResponder()
-    }
-    
-    @IBAction func passwordFieldReturned(sender: UITextField) {
-        passwordField.resignFirstResponder()
-    }
-    
+    //makes the close button work
     @IBAction func closeButton(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
+    //email and password verification
     @IBAction func signInButtonTapped(sender: UIButton) {
-        
-        if emailField.text!.isValidEmail() == false {
-            let errorAlert = UIAlertController(title: "Error", message: "User email not found", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
-        } else if passwordField.text!.characters.count < 6 {
-            let errorAlert = UIAlertController(title: "Error", message: "The password does not match the user email", preferredStyle: UIAlertControllerStyle.Alert)
-            let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default, handler: { (action) in })
-            errorAlert.addAction(dismissErrorAlert)
-            self.presentViewController(errorAlert, animated: true, completion: nil)
-        } else {
-            let storyboard = UIStoryboard(name: "Calendar", bundle: nil)
-            let viewController = storyboard.instantiateInitialViewController()
-            let application = UIApplication.sharedApplication()
-            let window = application.keyWindow
-            window?.rootViewController = viewController
+
+        let onCompletion = {(user: User?, message: String?) in
+            print("inside login method")
+            
+            if user == nil {
+                let errorAlert = UIAlertController(title: "Error", message: "not a user", preferredStyle: UIAlertControllerStyle.Alert)
+                let dismissErrorAlert = UIAlertAction(title: "Dismiss", style: .Default)  { (action: UIAlertAction) in }
+                errorAlert.addAction(dismissErrorAlert)
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+            }
+            else {
+                let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
+                let window = UIApplication.sharedApplication().keyWindow
+                window?.rootViewController = viewController
+                
+                //dismissing keyboard - returning veiw to normal bounds
+                self.dismissKeyboard()
+                self.textFieldDidEndEditing(self.passwordField)
+                self.textFieldDidEndEditing(self.emailField)
+            }
         }
+        
+        UserController.sharedInstance.login(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //setting text field delegates
+        passwordField.delegate = self
+        emailField.delegate = self
         
         orLabel.layer.bounds = CGRectMake(0, 0, 70, 70)
         orLabel.layer.masksToBounds = true
@@ -77,56 +81,27 @@ class LoginViewController: UIViewController {
         
         view.layer.backgroundColor = UIColor.holyRed.CGColor //this does not work
         
+        //keyboard removal by touching on screen
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(recognizer)
-        
-        // Setting customized fonts
-        
-        orLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        facebookButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        closeButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 12.0)
-        emailField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        passwordField.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        emailLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
-        passwordLabel.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 14.0)
-        signInButton.titleLabel!.font = UIFont(name: "GTWalsheimProTrial-Medium", size: 20.0)
-        connectLabel.font = UIFont(name: "GTWalsheimProTrial-Bold", size: 32.0)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: UIKeyboardWillShowNotification, object: nil)
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: UIKeyboardWillHideNotification, object: nil)
-        
+
     }
     
-    func dismissKeyboard(){
-        self.view.endEditing(true)
-    }
     
-    func keyboardWillShow(notification:NSNotification) {
-        adjustingHeight(true, notification: notification)
-    }
-    
-    func keyboardWillHide(notification:NSNotification) {
-        adjustingHeight(false, notification: notification)
-    }
-    
-    func adjustingHeight(show:Bool, notification:NSNotification) {
-        var userInfo = notification.userInfo!
-        
-        let keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
-        
-        let animationDuration = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSTimeInterval
-        
-        let changeInHeight = (CGRectGetHeight(keyboardFrame) + 40) * (show ? 1 : -1)
-        
-        UIView.animateWithDuration(animationDuration, animations: { () -> Void in
-            self.bottomConstraint.constant += changeInHeight
+    func textFieldDidBeginEditing(textField: UITextField) {
+        UIView.animateWithDuration(0.3, animations: {
+            self.view.bounds = CGRectOffset(self.view.bounds, 0, self.movement)
         })
     }
-    
-    override func viewWillDisappear(animated: Bool) {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
+
+    func textFieldDidEndEditing(textField: UITextField) {
+        UIView.animateWithDuration(0.3, animations: {
+            self.view.bounds = CGRectOffset(self.view.bounds, 0, -self.movement)
+        })
+    }
+
+    func dismissKeyboard(){
+        self.view.endEditing(true)
     }
     
 }
