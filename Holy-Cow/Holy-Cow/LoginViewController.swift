@@ -165,8 +165,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     
     func returnUserData()
     {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, gender, picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
             
             if ((error) != nil)
             {
@@ -176,12 +177,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             else
             {
                 print("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
+                
+                let userID = result.valueForKey("id")
+                print("User ID is: \(userID)")
+                UserController.sharedInstance.userID = userID as! String
+                
+                let userName = result.valueForKey("name")
                 print("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
+                UserController.sharedInstance.userName = userName as! String
+                
+                let userEmail = (result.valueForKey("email"))
                 print("User Email is: \(userEmail)")
+                UserController.sharedInstance.userEmail = userEmail as! String
+                
+                let userGender = result.valueForKey("gender")
+                print("User Gender is: \(userGender)")
+                UserController.sharedInstance.userGender = userGender as! String
+                
+                let userPicture = "http://graph.facebook.com/\(userID)/picture?type=large"
+                UserController.sharedInstance.userProfilePic = userPicture
             }
         })
+        
     }
     
     //self.returnUserData()    ^to call
