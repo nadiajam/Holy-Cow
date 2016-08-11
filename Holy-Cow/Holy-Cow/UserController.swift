@@ -13,6 +13,12 @@ class UserController: NSObject {
     static var sharedInstance = UserController()
     var currentUser: User?
     private var userList: [User] = []
+    var userID:String = ""
+    var userName:String = ""
+    var userEmail:String = ""
+    var userGender:String = ""
+    var userProfilePic:String = ""
+    var isLoggedIn:Bool = false
     
     func register(email:String, password:String, onCompletion:(User?,String?) -> ()) {
 

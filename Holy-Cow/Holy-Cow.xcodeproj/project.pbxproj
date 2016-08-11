@@ -52,6 +52,7 @@
 		6A6BD6F11D41AB0E00C98671 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6BD6F01D41AB0E00C98671 /* UserController.swift */; };
 		6AAC32301D3E371600F10964 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAC322F1D3E371600F10964 /* LoginViewController.swift */; };
 		6AAC32331D3E484800F10964 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AAC32311D3E484800F10964 /* Main.storyboard */; };
+		7F0417662CD190A46F4E6393 /* Pods_Holy_Cow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF59E077FF86B97894B8E3ED /* Pods_Holy_Cow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,9 @@
 		6A6BD6F01D41AB0E00C98671 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		6AAC322F1D3E371600F10964 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6AAC32321D3E484800F10964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85FA3BDBB490E8C06646EF19 /* Pods-Holy-Cow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holy-Cow.release.xcconfig"; path = "Pods/Target Support Files/Pods-Holy-Cow/Pods-Holy-Cow.release.xcconfig"; sourceTree = "<group>"; };
+		BF59E077FF86B97894B8E3ED /* Pods_Holy_Cow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Holy_Cow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0949604457044D5B6856D66 /* Pods-Holy-Cow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Holy-Cow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Holy-Cow/Pods-Holy-Cow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0417662CD190A46F4E6393 /* Pods_Holy_Cow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,8 +164,8 @@
 			children = (
 				6AAC32311D3E484800F10964 /* Main.storyboard */,
 				67EB30681D3BEE7C00C9B751 /* ViewController.swift */,
-				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
 				6A46F7A41D3CE47600A2C258 /* RegisterViewController.swift */,
+				6AAC322F1D3E371600F10964 /* LoginViewController.swift */,
 				6A6BD6E81D4176E800C98671 /* StringExtension.swift */,
 				4E80E53A1D3E566B00778E6D /* InfoTabs.storyboard */,
 				4E73C6251D3CD72D00F41471 /* InfoTabsViewController.swift */,
@@ -201,6 +206,8 @@
 				672E4CCF1D3E217F003906EF /* Fonts */,
 				67EB30651D3BEE7C00C9B751 /* Holy-Cow */,
 				67EB30641D3BEE7C00C9B751 /* Products */,
+				D410EC6E5FC22C2A4E230341 /* Pods */,
+				6A8335452254170F719F00F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +239,23 @@
 			path = "Holy-Cow";
 			sourceTree = "<group>";
 		};
+		6A8335452254170F719F00F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF59E077FF86B97894B8E3ED /* Pods_Holy_Cow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D410EC6E5FC22C2A4E230341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C0949604457044D5B6856D66 /* Pods-Holy-Cow.debug.xcconfig */,
+				85FA3BDBB490E8C06646EF19 /* Pods-Holy-Cow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,9 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67EB30751D3BEE7C00C9B751 /* Build configuration list for PBXNativeTarget "Holy-Cow" */;
 			buildPhases = (
+				E1AECD1A824A899E74654E5A /* [CP] Check Pods Manifest.lock */,
 				67EB305F1D3BEE7C00C9B751 /* Sources */,
 				67EB30601D3BEE7C00C9B751 /* Frameworks */,
 				67EB30611D3BEE7C00C9B751 /* Resources */,
+				2198F0E60666568224D64C74 /* [CP] Embed Pods Frameworks */,
+				372C4012012700E8F7134E0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,6 +347,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2198F0E60666568224D64C74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holy-Cow/Pods-Holy-Cow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		372C4012012700E8F7134E0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Holy-Cow/Pods-Holy-Cow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1AECD1A824A899E74654E5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67EB305F1D3BEE7C00C9B751 /* Sources */ = {
@@ -456,6 +531,7 @@
 		};
 		67EB30761D3BEE7C00C9B751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0949604457044D5B6856D66 /* Pods-Holy-Cow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -470,6 +546,7 @@
 		};
 		67EB30771D3BEE7C00C9B751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85FA3BDBB490E8C06646EF19 /* Pods-Holy-Cow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

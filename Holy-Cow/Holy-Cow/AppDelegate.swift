@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         let defaults = NSUserDefaults.standardUserDefaults()
+        
+        //user login through email
         if let email = defaults.stringForKey("email"), password = defaults.stringForKey("password") {
             UserController.sharedInstance.login(email, password: password, onCompletion: { (user, error) in
                 if user != nil {
@@ -27,17 +32,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             })
         }
+        
+        //user login through fb
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
+            self.window?.rootViewController = viewController
+        } else {
+            let viewController = UIStoryboard (name: "Main", bundle: nil).instantiateInitialViewController()
+            self.window?.rootViewController = viewController
+        }
+
     
+        //nav bar
         UINavigationBar.appearance().barTintColor = UIColor.holyGreen
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        
-        return true
+
+        //fb integration
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        FBSDKAppEvents.activateApp()
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -51,6 +73,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+//        FBSDKAppEvents.activateApp()
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
+            self.window?.rootViewController = viewController
+        } else {
+            let viewController = UIStoryboard (name: "Main", bundle: nil).instantiateInitialViewController()
+            self.window?.rootViewController = viewController
+        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
