@@ -79,31 +79,31 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalMeatlessMonday" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-ED-0Ib">
-                                <rect key="frame" x="273" y="98" width="150" height="70"/>
+                                <rect key="frame" x="273" y="98" width="130" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="WEc-JT-b9T"/>
+                                    <constraint firstAttribute="width" constant="130" id="WEc-JT-b9T"/>
                                     <constraint firstAttribute="height" constant="70" id="igv-0z-1Qn"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalCheckerboard" translatesAutoresizingMaskIntoConstraints="NO" id="4Ji-5g-kwa">
-                                <rect key="frame" x="273" y="198" width="150" height="70"/>
+                                <rect key="frame" x="273" y="198" width="130" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="9uD-0r-Vq9"/>
+                                    <constraint firstAttribute="width" constant="130" id="9uD-0r-Vq9"/>
                                     <constraint firstAttribute="height" constant="70" id="E3w-0g-WeU"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalWeekendCarnivore" translatesAutoresizingMaskIntoConstraints="NO" id="mXY-DT-OUA">
-                                <rect key="frame" x="273" y="298" width="150" height="70"/>
+                                <rect key="frame" x="273" y="298" width="130" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="0g1-1o-lNW"/>
-                                    <constraint firstAttribute="width" constant="150" id="XX9-5m-ERy"/>
+                                    <constraint firstAttribute="width" constant="130" id="XX9-5m-ERy"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalMeatlessMonth" translatesAutoresizingMaskIntoConstraints="NO" id="ps9-fo-hN1">
-                                <rect key="frame" x="273" y="398" width="150" height="70"/>
+                                <rect key="frame" x="273" y="398" width="130" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="jUD-pa-BXs"/>
-                                    <constraint firstAttribute="width" constant="150" id="tTE-gk-DrB"/>
+                                    <constraint firstAttribute="width" constant="130" id="tTE-gk-DrB"/>
                                 </constraints>
                             </imageView>
                         </subviews>

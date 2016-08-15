@@ -118,6 +118,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
             loginView.frame = CGRect(x: screenWidth*0.2, y: 130, width: screenWidth*0.6, height: screenHeight*0.083)
+            loginView.titleLabel?.font = UIFont(name: "GTWalsheimProTrial-Regular", size: 16.0)
         }
 
         //keyboard removal by touching on screen
