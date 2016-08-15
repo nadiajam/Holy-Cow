@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
         scrollView.contentSize = CGSizeMake(scrollView.frame.width, 2000)
         setUpLabels()
         
-        navigationItem.title = UserController.sharedInstance.userName
+//        navigationItem.title = UserController.sharedInstance.userName
     }
     
     override func viewWillAppear(animated: Bool) {

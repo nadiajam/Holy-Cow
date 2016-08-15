@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             }
         }
         
-        UserController.sharedInstance.login(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+        UserController.sharedInstance.emailLogin(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
         
     }
     
@@ -163,44 +163,50 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         print("User Logged Out")
     }
     
-    func returnUserData()
-    {
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, gender, picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             
-            if ((error) != nil)
-            {
-                // Process error
-                print("Error: \(error)")
+            let onCompletion = {(user: User?, message: String?) in
+                
+                if ((error) != nil) {
+                    // Process error
+                    print("Error: \(error)")
+                }
+                else {
+                    print("no errors")
+                }
             }
-            else
-            {
+            
+            if ((error) == nil) {
+                
                 print("fetched user: \(result)")
                 
-                let userID = result.valueForKey("id")
+                let userID: String = result.valueForKey("id") as! String
                 print("User ID is: \(userID)")
-                UserController.sharedInstance.userID = userID as! String
+                //                UserController.sharedInstance.userID = userID
                 
                 let userName = result.valueForKey("name")
                 print("User Name is: \(userName)")
-                UserController.sharedInstance.userName = userName as! String
+                //                UserController.sharedInstance.userName = userName as! String
                 
-                let userEmail = (result.valueForKey("email"))
+                let userEmail: String = (result.valueForKey("email")) as! String
                 print("User Email is: \(userEmail)")
-                UserController.sharedInstance.userEmail = userEmail as! String
+                //                UserController.sharedInstance.userEmail = userEmail
                 
                 let userGender = result.valueForKey("gender")
                 print("User Gender is: \(userGender)")
-                UserController.sharedInstance.userGender = userGender as! String
+                //                UserController.sharedInstance.userGender = userGender as! String
                 
                 let userPicture = "http://graph.facebook.com/\(userID)/picture?type=large"
-                UserController.sharedInstance.userProfilePic = userPicture
+                //                UserController.sharedInstance.userProfilePic = userPicture
+                
+                UserController.sharedInstance.facebookRegister(userEmail, fbID: userID, onCompletion: onCompletion)
             }
         })
         
+        //self.returnUserData()    ^to call
     }
-    
-    //self.returnUserData()    ^to call
     
 }

@@ -13,15 +13,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
     
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var connectLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var passwordLabel: UILabel!
     
     //amount that screen moves with keyboard
-    let movement: CGFloat = 150.0
+    let movement: CGFloat = 205.0
     
     @IBAction func signUpButtonTapped(sender: AnyObject) {
         
@@ -59,7 +58,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
             }
         }
 
-        UserController.sharedInstance.register(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+        UserController.sharedInstance.emailRegister(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
      
     }
     
@@ -71,8 +70,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
         super.viewDidLoad()
         
         //setting text field delegates
-        passwordField.delegate = self
+        nameField.delegate = self
+        nameField.tag = 1
         emailField.delegate = self
+        emailField.tag = 2
+        passwordField.delegate = self
+        passwordField.tag = 3
         
         orLabel.layer.bounds = CGRectMake(0, 0, 70, 70)
         orLabel.layer.masksToBounds = true
@@ -87,7 +90,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
         closeButton.layer.borderWidth = 2
         
         signUpButton.layer.cornerRadius = 3
-
+        
+        //blinker color
+        nameField.tintColor = UIColor.whiteColor()
+        emailField.tintColor = UIColor.whiteColor()
+        passwordField.tintColor = UIColor.whiteColor()
+        
+        //placeholder text color
+        nameField.attributedPlaceholder = NSAttributedString(string:"full name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        emailField.attributedPlaceholder = NSAttributedString(string:"email address", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        passwordField.attributedPlaceholder = NSAttributedString(string:"password", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+        
+        let screenWidth = UIScreen.mainScreen().bounds.size.width
+        let screenHeight = UIScreen.mainScreen().bounds.size.height
         
         //fb button
         if (FBSDKAccessToken.currentAccessToken() != nil)
@@ -102,6 +117,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
             loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
+            loginView.frame = CGRect(x: screenWidth*0.2, y: 130, width: screenWidth*0.6, height: screenHeight*0.083)
         }
 
         //keyboard removal by touching on screen
@@ -114,12 +130,39 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
         UIView.animateWithDuration(0.3, animations: {
             self.view.bounds = CGRectOffset(self.view.bounds, 0, self.movement)
         })
+        
+        textField.placeholder = ""
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
         UIView.animateWithDuration(0.3, animations: {
             self.view.bounds = CGRectOffset(self.view.bounds, 0, -self.movement)
         })
+        
+        if textField.placeholder == nil || textField.placeholder == "" {
+            if textField == nameField {
+                nameField.attributedPlaceholder = NSAttributedString(string:"full name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+            }
+            else if textField == emailField {
+                emailField.attributedPlaceholder = NSAttributedString(string:"email address", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+            }
+            else if textField == passwordField {
+                passwordField.attributedPlaceholder = NSAttributedString(string:"password", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let nextTag = textField.tag + 1;
+        // Try to find next responder
+        if let nextResponder: UIResponder! = textField.superview!.viewWithTag(nextTag){
+            nextResponder.becomeFirstResponder()
+        }
+        else {
+            // Not found, so remove keyboard.
+            dismissKeyboard()
+        }
+        return false // We do not want UITextField to insert line-breaks.
     }
 
     func dismissKeyboard(){
@@ -159,8 +202,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
                 
                 self.returnUserData()
                 
-                UserController.sharedInstance.isLoggedIn = true
-                
                 let viewController = UIStoryboard(name: "InfoTabs", bundle: nil).instantiateInitialViewController()
                 let window = UIApplication.sharedApplication().keyWindow
                 window?.rootViewController = viewController
@@ -172,48 +213,52 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
-        UserController.sharedInstance.isLoggedIn = false
     }
     
-    func returnUserData()
-    {
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, gender, picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             
-            if ((error) != nil)
-            {
-                // Process error
-                print("Error: \(error)")
+            let onCompletion = {(user: User?, message: String?) in
+                
+                if ((error) != nil) {
+                    // Process error
+                    print("Error: \(error)")
+                }
+                else {
+                    print("no errors")
+                }
             }
-            else
-            {
+            
+            if ((error) == nil) {
+            
                 print("fetched user: \(result)")
                 
-                let userID = result.valueForKey("id")
+                let userID: String = result.valueForKey("id") as! String
                 print("User ID is: \(userID)")
-                UserController.sharedInstance.userID = userID as! String
+//                UserController.sharedInstance.userID = userID
                 
                 let userName = result.valueForKey("name")
                 print("User Name is: \(userName)")
-                UserController.sharedInstance.userName = userName as! String
+//                UserController.sharedInstance.userName = userName as! String
                 
-                let userEmail = (result.valueForKey("email"))
+                let userEmail: String = (result.valueForKey("email")) as! String
                 print("User Email is: \(userEmail)")
-                UserController.sharedInstance.userEmail = userEmail as! String
+//                UserController.sharedInstance.userEmail = userEmail
                 
                 let userGender = result.valueForKey("gender")
                 print("User Gender is: \(userGender)")
-                UserController.sharedInstance.userGender = userGender as! String
+//                UserController.sharedInstance.userGender = userGender as! String
                 
                 let userPicture = "http://graph.facebook.com/\(userID)/picture?type=large"
-                UserController.sharedInstance.userProfilePic = userPicture
+//                UserController.sharedInstance.userProfilePic = userPicture
+            
+                UserController.sharedInstance.facebookRegister(userEmail, fbID: userID, onCompletion: onCompletion)
             }
         })
-        
-    }
 
     //self.returnUserData()    ^to call
-
     
+    }
 }

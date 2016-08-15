@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Challenges-->
@@ -18,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-EZ-LF5">
-                                <rect key="frame" x="225" y="120" width="150" height="50"/>
+                                <rect key="frame" x="108" y="110" width="145" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Ha4-LW-eZg"/>
-                                    <constraint firstAttribute="width" constant="150" id="YDP-tl-0kJ"/>
+                                    <constraint firstAttribute="height" constant="45" id="Ha4-LW-eZg"/>
+                                    <constraint firstAttribute="width" constant="145" id="YDP-tl-0kJ"/>
                                 </constraints>
                                 <state key="normal" title="Meatless Mondays">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,11 +34,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJC-kh-opi">
-                                <rect key="frame" x="225" y="360" width="150" height="50"/>
+                                <rect key="frame" x="108" y="410" width="145" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="0hj-D7-Kb6"/>
-                                    <constraint firstAttribute="height" constant="50" id="YoD-JA-6yg"/>
+                                    <constraint firstAttribute="width" constant="145" id="0hj-D7-Kb6"/>
+                                    <constraint firstAttribute="height" constant="45" id="YoD-JA-6yg"/>
                                 </constraints>
                                 <state key="normal" title="Meatless Month">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,11 +49,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emG-EO-HgK">
-                                <rect key="frame" x="225" y="280" width="150" height="50"/>
+                                <rect key="frame" x="108" y="310" width="145" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4w7-L6-Tn7"/>
-                                    <constraint firstAttribute="width" constant="150" id="Z4L-hR-9YM"/>
+                                    <constraint firstAttribute="height" constant="45" id="4w7-L6-Tn7"/>
+                                    <constraint firstAttribute="width" constant="145" id="Z4L-hR-9YM"/>
                                 </constraints>
                                 <state key="normal" title="Weekend Carnivore">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,11 +64,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-wL-0Pr">
-                                <rect key="frame" x="225" y="200" width="150" height="50"/>
+                                <rect key="frame" x="108" y="210" width="145" height="45"/>
                                 <color key="backgroundColor" red="0.0" green="0.80784313730000001" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Rc8-sf-8dx"/>
-                                    <constraint firstAttribute="height" constant="50" id="dmi-1V-Hsw"/>
+                                    <constraint firstAttribute="width" constant="145" id="Rc8-sf-8dx"/>
+                                    <constraint firstAttribute="height" constant="45" id="dmi-1V-Hsw"/>
                                 </constraints>
                                 <state key="normal" title="Checkerboard">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,17 +78,53 @@
                                     <segue destination="UaM-0j-qTm" kind="presentation" id="hhC-6B-mRU"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalMeatlessMonday" translatesAutoresizingMaskIntoConstraints="NO" id="YFh-ED-0Ib">
+                                <rect key="frame" x="273" y="98" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="WEc-JT-b9T"/>
+                                    <constraint firstAttribute="height" constant="70" id="igv-0z-1Qn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalCheckerboard" translatesAutoresizingMaskIntoConstraints="NO" id="4Ji-5g-kwa">
+                                <rect key="frame" x="273" y="198" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9uD-0r-Vq9"/>
+                                    <constraint firstAttribute="height" constant="70" id="E3w-0g-WeU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalWeekendCarnivore" translatesAutoresizingMaskIntoConstraints="NO" id="mXY-DT-OUA">
+                                <rect key="frame" x="273" y="298" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="0g1-1o-lNW"/>
+                                    <constraint firstAttribute="width" constant="150" id="XX9-5m-ERy"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalMeatlessMonth" translatesAutoresizingMaskIntoConstraints="NO" id="ps9-fo-hN1">
+                                <rect key="frame" x="273" y="398" width="150" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jUD-pa-BXs"/>
+                                    <constraint firstAttribute="width" constant="150" id="tTE-gk-DrB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="top" secondItem="uZb-nW-gny" secondAttribute="bottom" constant="100" id="19M-eJ-XFT"/>
-                            <constraint firstItem="jJC-kh-opi" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="OEv-wR-pPl"/>
-                            <constraint firstItem="emG-EO-HgK" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Wdr-hy-jRN"/>
-                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="Zof-rL-c8L"/>
-                            <constraint firstItem="jJC-kh-opi" firstAttribute="top" secondItem="emG-EO-HgK" secondAttribute="bottom" constant="30" id="dFu-w7-CsD"/>
-                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" id="dWr-qm-ETZ"/>
-                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="top" secondItem="w0q-EZ-LF5" secondAttribute="bottom" constant="30" id="lUM-EF-azq"/>
-                            <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="30" id="yzp-Fy-jRP"/>
+                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="top" secondItem="uZb-nW-gny" secondAttribute="bottom" constant="90" id="19M-eJ-XFT"/>
+                            <constraint firstItem="YFh-ED-0Ib" firstAttribute="leading" secondItem="w0q-EZ-LF5" secondAttribute="trailing" constant="20" id="1V2-1h-vYS"/>
+                            <constraint firstItem="4Ji-5g-kwa" firstAttribute="centerY" secondItem="ZlJ-wL-0Pr" secondAttribute="centerY" id="75g-fc-3HE"/>
+                            <constraint firstItem="mXY-DT-OUA" firstAttribute="centerY" secondItem="emG-EO-HgK" secondAttribute="centerY" id="7aB-Ss-Eu2"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" multiplier="0.6" id="OEv-wR-pPl"/>
+                            <constraint firstItem="4Ji-5g-kwa" firstAttribute="leading" secondItem="ZlJ-wL-0Pr" secondAttribute="trailing" constant="20" id="Uvo-yW-lbI"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" multiplier="0.6" id="Wdr-hy-jRN"/>
+                            <constraint firstItem="w0q-EZ-LF5" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" multiplier="0.6" id="Zof-rL-c8L"/>
+                            <constraint firstItem="YFh-ED-0Ib" firstAttribute="centerY" secondItem="w0q-EZ-LF5" secondAttribute="centerY" id="bRT-yl-qoM"/>
+                            <constraint firstItem="jJC-kh-opi" firstAttribute="top" secondItem="emG-EO-HgK" secondAttribute="bottom" constant="55" id="dFu-w7-CsD"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="centerX" secondItem="XKq-9s-XTV" secondAttribute="centerX" multiplier="0.6" id="dWr-qm-ETZ"/>
+                            <constraint firstItem="ps9-fo-hN1" firstAttribute="leading" secondItem="jJC-kh-opi" secondAttribute="trailing" constant="20" id="esC-vk-MlZ"/>
+                            <constraint firstItem="ZlJ-wL-0Pr" firstAttribute="top" secondItem="w0q-EZ-LF5" secondAttribute="bottom" constant="55" id="lUM-EF-azq"/>
+                            <constraint firstItem="ps9-fo-hN1" firstAttribute="centerY" secondItem="jJC-kh-opi" secondAttribute="centerY" id="pYG-I6-V2a"/>
+                            <constraint firstItem="mXY-DT-OUA" firstAttribute="leading" secondItem="emG-EO-HgK" secondAttribute="trailing" constant="20" id="yhG-47-fET"/>
+                            <constraint firstItem="emG-EO-HgK" firstAttribute="top" secondItem="ZlJ-wL-0Pr" secondAttribute="bottom" constant="55" id="yzp-Fy-jRP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Challenges" id="DrE-WI-kqX"/>
@@ -160,6 +197,12 @@
             <point key="canvasLocation" x="2904" y="665"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FinalCheckerboard" width="236" height="138"/>
+        <image name="FinalMeatlessMonday" width="236" height="138"/>
+        <image name="FinalMeatlessMonth" width="236" height="138"/>
+        <image name="FinalWeekendCarnivore" width="236" height="138"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XAw-Iu-jld"/>
     </inferredMetricsTieBreakers>

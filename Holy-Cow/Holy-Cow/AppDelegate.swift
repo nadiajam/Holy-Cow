@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         //user login through email
+        
         if let email = defaults.stringForKey("email"), password = defaults.stringForKey("password") {
-            UserController.sharedInstance.login(email, password: password, onCompletion: { (user, error) in
+            UserController.sharedInstance.emailLogin(email, password: password, onCompletion: { (user, error) in
                 if user != nil {
                     let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
                     self.window?.rootViewController = viewController
@@ -33,16 +34,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         }
         
-        //user login through fb
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
-            self.window?.rootViewController = viewController
-        } else {
-            let viewController = UIStoryboard (name: "Main", bundle: nil).instantiateInitialViewController()
-            self.window?.rootViewController = viewController
+        
+        // user login through facebook 
+        
+        if let email = defaults.stringForKey("email"), fbID = defaults.stringForKey("fbID") {
+            UserController.sharedInstance.facebookLogin(email, fbID: fbID, onCompletion: { (user, error) in
+                if user != nil {
+                    let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
+                    self.window?.rootViewController = viewController
+                }
+                else {
+                    let viewController = UIStoryboard (name: "Main", bundle: nil).instantiateInitialViewController()
+                    self.window?.rootViewController = viewController
+                }
+            })
         }
-
-    
+        
         //nav bar
         UINavigationBar.appearance().barTintColor = UIColor.holyGreen
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
@@ -73,21 +80,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-//        FBSDKAppEvents.activateApp()
         
-        if (FBSDKAccessToken.currentAccessToken() != nil) {
-            let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
-            self.window?.rootViewController = viewController
-        } else {
-            let viewController = UIStoryboard (name: "Main", bundle: nil).instantiateInitialViewController()
-            self.window?.rootViewController = viewController
-        }
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

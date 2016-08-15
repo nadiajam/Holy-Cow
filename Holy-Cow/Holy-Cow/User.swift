@@ -11,11 +11,13 @@ import UIKit
 class User: NSObject {
         
     var email: String
-    var password: String
+    var password: String?
+    var fbID: String?
     
-    init(email:String,password:String) {
+    init(email:String, password:String?, fbID:String?) {
         self.email = email
         self.password = password
+        self.fbID = fbID
     }
 
 }

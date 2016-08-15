@@ -18,13 +18,13 @@
             <string>GTWalsheimProTrial-Medium</string>
             <string>GTWalsheimProTrial-Medium</string>
             <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
-            <string>GTWalsheimProTrial-Medium</string>
+        </mutableArray>
+        <mutableArray key="GT-Walsheim-Pro-Trial-Regular.otf">
+            <string>GTWalsheimProTrial-Regular</string>
+            <string>GTWalsheimProTrial-Regular</string>
+            <string>GTWalsheimProTrial-Regular</string>
         </mutableArray>
         <mutableArray key="GT-Walsheim-Pro-Trial-Ultra-Bold.otf">
-            <string>GTWalsheimProTrialUltra-Bold</string>
             <string>GTWalsheimProTrialUltra-Bold</string>
         </mutableArray>
     </customFonts>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjd-hk-RTu">
-                                <rect key="frame" x="180" y="455" width="240" height="50"/>
+                                <rect key="frame" x="180" y="458" width="240" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="sign in">
@@ -78,7 +78,7 @@
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Fjd-hk-RTu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.6" id="2Us-JT-qNj"/>
+                            <constraint firstItem="Fjd-hk-RTu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.61" id="2Us-JT-qNj"/>
                             <constraint firstItem="kfD-Z8-nEH" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="2jx-dU-fEF"/>
                             <constraint firstItem="ZMA-ew-rkb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.085" id="4AF-XQ-Hmv"/>
                             <constraint firstItem="ZMA-ew-rkb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="7VI-Dw-Bas"/>
@@ -142,18 +142,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="connect with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6V-KT-V1x" userLabel="Connect">
-                                <rect key="frame" x="187" y="150" width="226" height="45"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrialUltra-Bold" family="GT Walsheim Pro Trial" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9JF-bl-BuC" userLabel="LeftLine">
-                                <rect key="frame" x="50" y="310" width="204" height="2"/>
+                                <rect key="frame" x="20" y="253" width="245" height="3"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJD-om-PcU" userLabel="Or">
-                                <rect key="frame" x="275" y="285" width="50" height="50"/>
+                                <rect key="frame" x="275" y="230" width="50" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="gR7-nw-TF5"/>
@@ -163,38 +157,10 @@
                                 <color key="textColor" red="0.99607843139999996" green="0.33725490200000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your email address" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d1d-fj-pR8" userLabel="Email">
-                                <rect key="frame" x="50" y="375" width="500" height="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhe-q6-GBf" userLabel="RightLine">
-                                <rect key="frame" x="340" y="310" width="210" height="2"/>
+                                <rect key="frame" x="335" y="253" width="245" height="3"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="U3R-72-lpM" userLabel="Password">
-                                <rect key="frame" x="50" y="435" width="500" height="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trM-qi-Z3z" userLabel="Address">
-                                <rect key="frame" x="256" y="367" width="89" height="18"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBz-b8-ehm" userLabel="Close">
                                 <rect key="frame" x="20" y="40" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,7 +177,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgI-0T-QKW" userLabel="Register">
-                                <rect key="frame" x="180" y="505" width="240" height="50"/>
+                                <rect key="frame" x="120" y="538" width="360" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="20"/>
                                 <state key="normal" title="sign up">
@@ -226,63 +192,106 @@
                                     <action selector="signUpButtonTapped:" destination="Jwl-az-qcA" eventType="touchUpInside" id="SQ2-aJ-S9r"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmR-zj-dW0">
-                                <rect key="frame" x="269" y="427" width="62" height="18"/>
-                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Medium" family="GT Walsheim Pro Trial" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q02-7r-bmL" userLabel="Email Input">
+                                <rect key="frame" x="120" y="383" width="360" height="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HKD-Wm-ot7">
+                                <rect key="frame" x="120" y="410" width="360" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6La-It-psY"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRb-4V-vMb">
+                                <rect key="frame" x="120" y="352" width="360" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ZxM-tj-mTx"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="gk8-y6-C4Y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gk8-y6-C4Y"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOF-MQ-dkC">
+                                <rect key="frame" x="120" y="468" width="360" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="aD6-XT-iqB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="lcn-gT-Ord"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7M-Kz-QlS" userLabel="Password Input">
+                                <rect key="frame" x="120" y="441" width="360" height="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="full name" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJW-85-Nys" userLabel="Email Input">
+                                <rect key="frame" x="120" y="325" width="360" height="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="GTWalsheimProTrial-Regular" family="GT Walsheim Pro Trial" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843139999996" green="0.33725490200000002" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="U3R-72-lpM" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.083" id="0HI-si-iT3"/>
-                            <constraint firstItem="d1d-fj-pR8" firstAttribute="trailing" secondItem="dhe-q6-GBf" secondAttribute="trailing" id="0xE-q5-jGX"/>
-                            <constraint firstItem="d1d-fj-pR8" firstAttribute="top" secondItem="qJD-om-PcU" secondAttribute="bottom" constant="40" id="9HI-WE-yLP"/>
-                            <constraint firstItem="d1d-fj-pR8" firstAttribute="top" secondItem="trM-qi-Z3z" secondAttribute="bottom" constant="-10" id="AIk-lP-9eV"/>
+                            <constraint firstItem="q02-7r-bmL" firstAttribute="leading" secondItem="dgI-0T-QKW" secondAttribute="leading" id="0hp-Pt-w2e"/>
+                            <constraint firstItem="o7M-Kz-QlS" firstAttribute="top" secondItem="HKD-Wm-ot7" secondAttribute="bottom" constant="30" id="2NA-y8-PTf"/>
+                            <constraint firstItem="dhe-q6-GBf" firstAttribute="top" secondItem="92R-Wg-yQK" secondAttribute="bottom" constant="233" id="2aV-06-if2"/>
+                            <constraint firstItem="HKD-Wm-ot7" firstAttribute="leading" secondItem="q02-7r-bmL" secondAttribute="leading" id="4X1-M9-fuh"/>
+                            <constraint firstItem="rOF-MQ-dkC" firstAttribute="leading" secondItem="o7M-Kz-QlS" secondAttribute="leading" id="51U-wY-yCJ"/>
                             <constraint firstItem="IBz-b8-ehm" firstAttribute="leading" secondItem="4oj-ke-gOF" secondAttribute="leading" constant="20" id="CRd-9T-l9J"/>
-                            <constraint firstItem="dgI-0T-QKW" firstAttribute="width" secondItem="4oj-ke-gOF" secondAttribute="width" multiplier="0.4" id="Ele-ls-KDJ"/>
-                            <constraint firstItem="U3R-72-lpM" firstAttribute="trailing" secondItem="dhe-q6-GBf" secondAttribute="trailing" id="EqJ-SU-7qt"/>
+                            <constraint firstItem="YJW-85-Nys" firstAttribute="top" secondItem="qJD-om-PcU" secondAttribute="bottom" constant="45" id="DPQ-6O-ydg"/>
+                            <constraint firstItem="dgI-0T-QKW" firstAttribute="width" secondItem="4oj-ke-gOF" secondAttribute="width" multiplier="0.6" id="Ele-ls-KDJ"/>
+                            <constraint firstItem="HKD-Wm-ot7" firstAttribute="top" secondItem="q02-7r-bmL" secondAttribute="bottom" id="Fuf-P5-luv"/>
                             <constraint firstItem="IBz-b8-ehm" firstAttribute="top" secondItem="92R-Wg-yQK" secondAttribute="bottom" constant="20" id="HXd-wv-Xsz"/>
-                            <constraint firstItem="M6V-KT-V1x" firstAttribute="top" secondItem="92R-Wg-yQK" secondAttribute="bottom" constant="130" id="Hxf-N8-Emg"/>
-                            <constraint firstItem="dhe-q6-GBf" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.0033" id="M3T-7f-1JZ"/>
-                            <constraint firstItem="qJD-om-PcU" firstAttribute="top" secondItem="4oj-ke-gOF" secondAttribute="top" constant="285" id="NII-e6-zhI"/>
-                            <constraint firstItem="9JF-bl-BuC" firstAttribute="top" secondItem="4oj-ke-gOF" secondAttribute="top" constant="310" id="NXa-kA-CHY"/>
-                            <constraint firstItem="trM-qi-Z3z" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="TLf-YD-VKs"/>
-                            <constraint firstItem="qJD-om-PcU" firstAttribute="leading" secondItem="9JF-bl-BuC" secondAttribute="trailing" constant="21" id="Vcr-Ma-iJV"/>
-                            <constraint firstItem="9JF-bl-BuC" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.0033" id="WTN-nW-9EJ"/>
-                            <constraint firstItem="d1d-fj-pR8" firstAttribute="leading" secondItem="9JF-bl-BuC" secondAttribute="leading" id="WbV-yA-6LS"/>
+                            <constraint firstItem="o7M-Kz-QlS" firstAttribute="leading" secondItem="dgI-0T-QKW" secondAttribute="leading" id="IGb-n5-OdF"/>
+                            <constraint firstItem="q02-7r-bmL" firstAttribute="trailing" secondItem="dgI-0T-QKW" secondAttribute="trailing" id="JjH-oB-8NX"/>
+                            <constraint firstItem="YJW-85-Nys" firstAttribute="centerX" secondItem="dgI-0T-QKW" secondAttribute="centerX" id="K11-mv-9sP"/>
+                            <constraint firstItem="YJW-85-Nys" firstAttribute="trailing" secondItem="dgI-0T-QKW" secondAttribute="trailing" id="LBY-hB-F63"/>
+                            <constraint firstItem="dhe-q6-GBf" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.005" id="M3T-7f-1JZ"/>
+                            <constraint firstItem="YJW-85-Nys" firstAttribute="leading" secondItem="dgI-0T-QKW" secondAttribute="leading" id="MJD-VL-D4G"/>
+                            <constraint firstItem="q02-7r-bmL" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="Ngp-W6-b2A"/>
+                            <constraint firstItem="dgI-0T-QKW" firstAttribute="top" secondItem="o7M-Kz-QlS" secondAttribute="bottom" constant="70" id="V3T-64-ilf"/>
+                            <constraint firstItem="qJD-om-PcU" firstAttribute="leading" secondItem="9JF-bl-BuC" secondAttribute="trailing" constant="10" id="Vcr-Ma-iJV"/>
+                            <constraint firstItem="aRb-4V-vMb" firstAttribute="top" secondItem="YJW-85-Nys" secondAttribute="bottom" id="WGU-9a-dJi"/>
+                            <constraint firstItem="9JF-bl-BuC" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.005" id="WTN-nW-9EJ"/>
+                            <constraint firstItem="o7M-Kz-QlS" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.045" id="WnT-q6-jWu"/>
                             <constraint firstItem="dgI-0T-QKW" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.083" id="XC7-qW-lSO"/>
-                            <constraint firstItem="d1d-fj-pR8" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="Yqr-4U-fXm"/>
-                            <constraint firstItem="9JF-bl-BuC" firstAttribute="leading" secondItem="4oj-ke-gOF" secondAttribute="leading" constant="50" id="Ywk-gQ-HKn"/>
-                            <constraint firstItem="DmR-zj-dW0" firstAttribute="top" secondItem="d1d-fj-pR8" secondAttribute="bottom" constant="-17" id="a92-oj-RQ1"/>
-                            <constraint firstItem="U3R-72-lpM" firstAttribute="leading" secondItem="9JF-bl-BuC" secondAttribute="leading" id="gSE-Si-XnA"/>
-                            <constraint firstAttribute="trailing" secondItem="dhe-q6-GBf" secondAttribute="trailing" constant="50" id="ghc-pZ-TLf"/>
-                            <constraint firstItem="DmR-zj-dW0" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="hr4-fZ-9Wm"/>
-                            <constraint firstItem="dgI-0T-QKW" firstAttribute="top" secondItem="U3R-72-lpM" secondAttribute="bottom" constant="20" id="nrp-if-ORR"/>
-                            <constraint firstItem="d1d-fj-pR8" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.083" id="skM-VL-1sl"/>
-                            <constraint firstItem="M6V-KT-V1x" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="smu-c0-7tR"/>
-                            <constraint firstItem="dhe-q6-GBf" firstAttribute="top" secondItem="4oj-ke-gOF" secondAttribute="top" constant="310" id="t58-8b-AI6"/>
+                            <constraint firstItem="rOF-MQ-dkC" firstAttribute="centerX" secondItem="o7M-Kz-QlS" secondAttribute="centerX" id="YQQ-o4-1hw"/>
+                            <constraint firstItem="9JF-bl-BuC" firstAttribute="leading" secondItem="4oj-ke-gOF" secondAttribute="leading" constant="20" id="Ywk-gQ-HKn"/>
+                            <constraint firstItem="aRb-4V-vMb" firstAttribute="trailing" secondItem="YJW-85-Nys" secondAttribute="trailing" id="ZPs-M5-QwQ"/>
+                            <constraint firstItem="o7M-Kz-QlS" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="aN2-R1-xlu"/>
+                            <constraint firstItem="q02-7r-bmL" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.045" id="bqI-36-1jr"/>
+                            <constraint firstItem="qJD-om-PcU" firstAttribute="top" secondItem="92R-Wg-yQK" secondAttribute="bottom" constant="210" id="cQI-LF-bU0"/>
+                            <constraint firstItem="q02-7r-bmL" firstAttribute="top" secondItem="aRb-4V-vMb" secondAttribute="bottom" constant="30" id="fZc-cA-bnV"/>
+                            <constraint firstAttribute="trailing" secondItem="dhe-q6-GBf" secondAttribute="trailing" constant="20" id="ghc-pZ-TLf"/>
+                            <constraint firstItem="o7M-Kz-QlS" firstAttribute="trailing" secondItem="dgI-0T-QKW" secondAttribute="trailing" id="kZ5-HU-RYe"/>
+                            <constraint firstItem="rOF-MQ-dkC" firstAttribute="trailing" secondItem="o7M-Kz-QlS" secondAttribute="trailing" id="m9f-z4-PMH"/>
+                            <constraint firstItem="rOF-MQ-dkC" firstAttribute="top" secondItem="o7M-Kz-QlS" secondAttribute="bottom" id="mcD-DQ-OCb"/>
+                            <constraint firstItem="HKD-Wm-ot7" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="nFK-bx-TLT"/>
+                            <constraint firstItem="aRb-4V-vMb" firstAttribute="leading" secondItem="YJW-85-Nys" secondAttribute="leading" id="r3J-Db-EEJ"/>
                             <constraint firstItem="qJD-om-PcU" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="uCq-lB-52W"/>
-                            <constraint firstItem="U3R-72-lpM" firstAttribute="top" secondItem="DmR-zj-dW0" secondAttribute="bottom" constant="-10" id="vf7-Fs-FPx"/>
-                            <constraint firstItem="dhe-q6-GBf" firstAttribute="leading" secondItem="qJD-om-PcU" secondAttribute="trailing" constant="15" id="wA1-Th-gYT"/>
+                            <constraint firstItem="YJW-85-Nys" firstAttribute="height" secondItem="4oj-ke-gOF" secondAttribute="height" multiplier="0.045" id="uEE-xX-0Ta"/>
+                            <constraint firstItem="aRb-4V-vMb" firstAttribute="centerX" secondItem="YJW-85-Nys" secondAttribute="centerX" id="vSh-po-gXr"/>
+                            <constraint firstItem="dhe-q6-GBf" firstAttribute="leading" secondItem="qJD-om-PcU" secondAttribute="trailing" constant="10" id="wA1-Th-gYT"/>
                             <constraint firstItem="dgI-0T-QKW" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="x7D-jY-Z3W"/>
-                            <constraint firstItem="U3R-72-lpM" firstAttribute="centerX" secondItem="4oj-ke-gOF" secondAttribute="centerX" id="xdJ-mh-sSM"/>
-                            <constraint firstItem="U3R-72-lpM" firstAttribute="top" secondItem="d1d-fj-pR8" secondAttribute="bottom" constant="10" id="zMB-EO-arw"/>
+                            <constraint firstItem="9JF-bl-BuC" firstAttribute="top" secondItem="92R-Wg-yQK" secondAttribute="bottom" constant="233" id="xHJ-9x-CeD"/>
+                            <constraint firstItem="HKD-Wm-ot7" firstAttribute="trailing" secondItem="q02-7r-bmL" secondAttribute="trailing" id="zho-4I-ftc"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="a92-oj-RQ1"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="closeButton" destination="IBz-b8-ehm" id="mcW-ug-TaE"/>
-                        <outlet property="connectLabel" destination="M6V-KT-V1x" id="KCR-Ul-KEK"/>
-                        <outlet property="emailField" destination="d1d-fj-pR8" id="0YJ-8g-aEU"/>
-                        <outlet property="emailLabel" destination="trM-qi-Z3z" id="pwy-bL-4I3"/>
+                        <outlet property="emailField" destination="q02-7r-bmL" id="HaJ-7j-bzN"/>
+                        <outlet property="nameField" destination="YJW-85-Nys" id="e12-uQ-hXC"/>
                         <outlet property="orLabel" destination="qJD-om-PcU" id="ji8-op-Ibd"/>
-                        <outlet property="passwordField" destination="U3R-72-lpM" id="wzm-PF-rdu"/>
-                        <outlet property="passwordLabel" destination="DmR-zj-dW0" id="HAZ-zb-zQD"/>
+                        <outlet property="passwordField" destination="o7M-Kz-QlS" id="XcO-JK-kWA"/>
                         <outlet property="signUpButton" destination="dgI-0T-QKW" id="sQ7-1B-fdn"/>
                     </connections>
                 </viewController>
