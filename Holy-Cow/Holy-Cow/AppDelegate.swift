@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //user login through email
         
-        if let email = defaults.stringForKey("email"), password = defaults.stringForKey("password") {
-            UserController.sharedInstance.emailLogin(email, password: password, onCompletion: { (user, error) in
+        if let fullName = defaults.stringForKey("fullName"), email = defaults.stringForKey("email"), password = defaults.stringForKey("password") {
+            UserController.sharedInstance.emailLogin(fullName, email: email, password: password, onCompletion: { (user, error) in
                 if user != nil {
                     let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
                     self.window?.rootViewController = viewController
@@ -37,8 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // user login through facebook 
         
-        if let email = defaults.stringForKey("email"), fbID = defaults.stringForKey("fbID") {
-            UserController.sharedInstance.facebookLogin(email, fbID: fbID, onCompletion: { (user, error) in
+        if let fullName = defaults.stringForKey("fullName"), email = defaults.stringForKey("email"), fbID = defaults.stringForKey("fbID") {
+            UserController.sharedInstance.facebookLogin(fullName, email: email, fbID: fbID, onCompletion: { (user, error) in
                 if user != nil {
                     let viewController = UIStoryboard(name: "Calendar", bundle: nil).instantiateInitialViewController()
                     self.window?.rootViewController = viewController

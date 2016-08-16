@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var connectLabel: UILabel!
@@ -52,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             }
         }
         
-        UserController.sharedInstance.emailLogin(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+        UserController.sharedInstance.emailLogin(nameField.text!, email: emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
         
     }
     
@@ -187,7 +188,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
                 print("User ID is: \(userID)")
                 //                UserController.sharedInstance.userID = userID
                 
-                let userName = result.valueForKey("name")
+                let userName: String = result.valueForKey("name") as! String
                 print("User Name is: \(userName)")
                 //                UserController.sharedInstance.userName = userName as! String
                 
@@ -202,7 +203,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
                 let userPicture = "http://graph.facebook.com/\(userID)/picture?type=large"
                 //                UserController.sharedInstance.userProfilePic = userPicture
                 
-                UserController.sharedInstance.facebookRegister(userEmail, fbID: userID, onCompletion: onCompletion)
+                UserController.sharedInstance.facebookRegister(userName, email: userEmail, fbID: userID, onCompletion: onCompletion)
             }
         })
         

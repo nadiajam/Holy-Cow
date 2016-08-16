@@ -58,7 +58,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
             }
         }
 
-        UserController.sharedInstance.emailRegister(emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
+        UserController.sharedInstance.emailRegister(nameField.text!, email: emailField.text!, password: passwordField.text!, onCompletion: onCompletion)
      
     }
     
@@ -240,7 +240,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
                 print("User ID is: \(userID)")
 //                UserController.sharedInstance.userID = userID
                 
-                let userName = result.valueForKey("name")
+                let userName: String = result.valueForKey("name") as! String
                 print("User Name is: \(userName)")
 //                UserController.sharedInstance.userName = userName as! String
                 
@@ -255,7 +255,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
                 let userPicture = "http://graph.facebook.com/\(userID)/picture?type=large"
 //                UserController.sharedInstance.userProfilePic = userPicture
             
-                UserController.sharedInstance.facebookRegister(userEmail, fbID: userID, onCompletion: onCompletion)
+                UserController.sharedInstance.facebookRegister(userName, email: userEmail, fbID: userID, onCompletion: onCompletion)
             }
         })
 

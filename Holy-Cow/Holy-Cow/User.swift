@@ -9,12 +9,14 @@
 import UIKit
 
 class User: NSObject {
-        
+    
+    var fullName: String
     var email: String
     var password: String?
     var fbID: String?
     
-    init(email:String, password:String?, fbID:String?) {
+    init(fullName:String, email:String, password:String?, fbID:String?) {
+        self.fullName = fullName
         self.email = email
         self.password = password
         self.fbID = fbID
