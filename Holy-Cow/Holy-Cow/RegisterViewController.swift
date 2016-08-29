@@ -53,6 +53,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
                 
                 //dismissing keyboard - returning veiw to normal bounds
                 self.dismissKeyboard()
+                self.textFieldDidEndEditing(self.nameField)
                 self.textFieldDidEndEditing(self.passwordField)
                 self.textFieldDidEndEditing(self.emailField)
             }
@@ -128,19 +129,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, FBSDKLoginB
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
+        
         UIView.animateWithDuration(0.3, animations: {
             self.view.bounds = CGRectOffset(self.view.bounds, 0, self.movement)
         })
         
-        textField.placeholder = ""
+        if textField.placeholder?.characters.count > 0 {           //if the placeholder exists
+                textField.placeholder = ""                        //clears placeholder
+        }
     }
     
+    
     func textFieldDidEndEditing(textField: UITextField) {
+        
         UIView.animateWithDuration(0.3, animations: {
             self.view.bounds = CGRectOffset(self.view.bounds, 0, -self.movement)
         })
         
-        if textField.placeholder == nil || textField.placeholder == "" {
+        if (textField.placeholder?.characters.count == 0) {
             if textField == nameField {
                 nameField.attributedPlaceholder = NSAttributedString(string:"full name", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
             }
