@@ -1,0 +1,6 @@
+framework module Pods_Holy_Cow {
+  umbrella header "Pods-Holy-Cow-umbrella.h"
+
+  export *
+  module * { export * }
+}

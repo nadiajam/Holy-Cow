@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
 
-    
+    var transitionTag = 0
     let titleArray:[String] = ["account", "holy cow"]
     let sectionArray = [["about", "FAQ", "terms + conditions", "legal"], ["challenge", "edit profile", "change password", "log out"]]
 
@@ -48,6 +48,10 @@ class SettingsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if sectionArray[indexPath.section][indexPath.row] == "challenge" {
+            transitionTag = 1
+            transition()
+        } else if sectionArray[indexPath.section][indexPath.row] == "edit profile" {
+            transitionTag = 2
             transition()
         } else {
             let errorAlert = UIAlertController(title: "Error", message: "page not completed yet :(", preferredStyle: UIAlertControllerStyle.Alert)
@@ -65,9 +69,18 @@ class SettingsTableViewController: UITableViewController {
     }
     
     func transition() {
-        let settingsStoryboard = UIStoryboard(name: "Settings", bundle: nil)
-        let nextViewController = settingsStoryboard.instantiateViewControllerWithIdentifier("ChallengeViewController") as! ChallengeViewController
-        self.navigationController?.pushViewController(nextViewController, animated: true)
+        switch transitionTag {
+            case 1 :
+                let settingsStoryboard = UIStoryboard(name: "Settings", bundle: nil)
+                let nextViewController = settingsStoryboard.instantiateViewControllerWithIdentifier("ChallengeViewController") as! ChallengeViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            case 2 :
+                let settingsStoryboard = UIStoryboard(name: "Settings", bundle: nil)
+                let nextViewController = settingsStoryboard.instantiateViewControllerWithIdentifier("PersonalViewController") as! PersonalViewController
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            default :
+                break
+        }
     }
 
 }
