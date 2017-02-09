@@ -175,7 +175,6 @@
                                     <constraint firstAttribute="height" constant="2" id="a83-3z-xj3"/>
                                 </constraints>
                             </view>
-<<<<<<< HEAD
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xk1-h9-BlH">
                                 <rect key="frame" x="64" y="35" width="61" height="3"/>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.76862745098039209" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -525,12 +524,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-=======
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dox-M7-hzm">
-                                <rect key="frame" x="0.0" y="50" width="600" height="486"/>
->>>>>>> 7a719c9e65dfe018fe78e88ca85ce9da59b128fe
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -570,11 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTD-O9-OoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1785" y="1732"/>
-=======
             <point key="canvasLocation" x="963" y="1213"/>
->>>>>>> 7a719c9e65dfe018fe78e88ca85ce9da59b128fe
         </scene>
         <!--breakfast-->
         <scene sceneID="AYq-gP-nFY">
